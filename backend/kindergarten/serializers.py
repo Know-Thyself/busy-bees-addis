@@ -2,7 +2,7 @@ from django.contrib.auth.models import User, Group
 
 from rest_framework import serializers
 
-from kindergarten.models import Intro, TypicalDay, CompoundImage
+from kindergarten.models import Intro, TypicalDay, Feature, CompoundImage
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -25,10 +25,9 @@ class IntroSerializer(serializers.HyperlinkedModelSerializer):
             'url',
             'logo',
             'hero_image',
-            'reading_bee_image',
             'brand',
             'motto',
-            'section_title',
+            'program_title',
             'program',
         ]
         read_only_fields = ['id']
@@ -41,7 +40,21 @@ class TypicalDaySerializer(serializers.HyperlinkedModelSerializer):
             'id',
             'url',
             'title',
+            'reading_bee_image',
             'activities',
+        ]
+        read_only_fields = ['id']
+
+
+class FeatureSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Feature
+        fields = [
+            'id',
+            'url',
+            'title',
+            'description',
+            'icon_name',
         ]
         read_only_fields = ['id']
 
@@ -53,5 +66,6 @@ class CompoundImageSerializer(serializers.HyperlinkedModelSerializer):
             'id',
             'url',
             'compound_image',
+            'caption',
         ]
         read_only_fields = ['id']
