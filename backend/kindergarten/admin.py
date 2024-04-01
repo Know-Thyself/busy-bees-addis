@@ -1,11 +1,12 @@
 from django.contrib import admin
 
-from .models import Intro, TypicalDay, CompoundImage
+from .models import Intro, TypicalDay, Feature, CompoundImage
 
 # Registering models
 
 admin.site.register(Intro)
 admin.site.register(TypicalDay)
+admin.site.register(Feature)
 admin.site.register(CompoundImage)
 
 # Renaming admin portal header and title

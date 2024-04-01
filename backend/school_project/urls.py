@@ -25,7 +25,8 @@ router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'intro', views.IntroViewSet)
 router.register(r'typical-day', views.TypicalDayViewSet)
-router.register(r'compound-image', views.CompoundImageViewSet)
+router.register(r'features', views.FeatureViewSet)
+router.register(r'compound-images', views.CompoundImageViewSet)
 
 
 urlpatterns = [
