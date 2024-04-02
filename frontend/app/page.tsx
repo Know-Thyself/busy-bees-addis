@@ -1,5 +1,13 @@
 import Image from 'next/image'
 import styles from '@/styles/home.module.css'
+import {
+	montserrat,
+	raleway,
+	playfairDisplay,
+	playfairDisplayItalic,
+	oswald,
+	concertOne,
+} from '@/styles/fonts'
 
 async function getIntro() {
 	const res = await fetch('http://localhost:8000/intro')
@@ -35,8 +43,12 @@ export default async function Home() {
 					height={500}
 				/>
 				<div className={styles.overlay}>
-					<h1>{intro[0].brand}</h1>
-					<h3>{intro[0].motto}</h3>
+					<h1 className={`${styles.brand} ${oswald.className}`}>
+						{intro[0].brand}
+					</h1>
+					<h2 className={`${styles.motto} ${raleway.className}`}>
+						{intro[0].motto.replace(/\b[a-z]/g, (x: string) => x.toUpperCase())}
+					</h2>
 				</div>
 			</section>
 		</main>
