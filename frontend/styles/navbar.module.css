@@ -157,6 +157,7 @@
 	.custom-nav-item .active {
 		font-size: 0.9rem;
 		border-bottom: 2px solid var(--active-nav-links-boarder);
+		margin-top: 2px;
 		color: var(--nav-links-color);
 		font-weight: 600;
 		cursor: default;
@@ -165,6 +166,7 @@
 	.custom-nav-item .menu__item {
 		font-size: 0.9rem;
 		border-bottom: 2px solid var(--header-background);
+		margin-top: 2px;
 		font-weight: 600;
 		color: var(--nav-links-color);
 	}

@@ -1,6 +1,12 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets, permissions
-from kindergarten.models import Intro, TypicalDay, Feature, CompoundImage
+from kindergarten.models import (
+    Intro,
+    TypicalDay,
+    Feature,
+    CompoundImage,
+    OpenHouseImage,
+)
 from kindergarten.serializers import (
     UserSerializer,
     GroupSerializer,
@@ -8,6 +14,7 @@ from kindergarten.serializers import (
     TypicalDaySerializer,
     FeatureSerializer,
     CompoundImageSerializer,
+    OpenHouseImageSerializer,
 )
 
 
@@ -45,4 +52,10 @@ class FeatureViewSet(viewsets.ModelViewSet):
 class CompoundImageViewSet(viewsets.ModelViewSet):
     queryset = CompoundImage.objects.all()
     serializer_class = CompoundImageSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+class OpenHouseImageViewSet(viewsets.ModelViewSet):
+    queryset = OpenHouseImage.objects.all()
+    serializer_class = OpenHouseImageSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
