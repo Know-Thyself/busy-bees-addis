@@ -63,8 +63,8 @@
 	position: absolute;
 	width: 100%;
 	height: 3px;
-	background-color: var(--accent-color);
 	background-color: var(--nav-links-color);
+	background-color: var(--accent-color);
 	transition-duration: 0.25s;
 }
 
@@ -157,8 +157,11 @@
 	.custom-nav-item .active {
 		font-size: 0.9rem;
 		border-bottom: 2px solid var(--active-nav-links-boarder);
+		border-bottom: 2px solid var(--accent-color);
 		margin-top: 2px;
+		color: var(--accent-color);
 		color: var(--nav-links-color);
+
 		font-weight: 600;
 		cursor: default;
 	}
@@ -168,11 +171,15 @@
 		border-bottom: 2px solid var(--header-background);
 		margin-top: 2px;
 		font-weight: 600;
+		color: var(--accent-color);
 		color: var(--nav-links-color);
+
 	}
 
 	.custom-nav-item .menu__item:hover {
 		border-bottom: 2px solid var(--active-nav-links-boarder) !important;
+		border-bottom: 2px solid var(--accent-color) !important;
+
 	}
 	.menu__btn {
 		display: none;

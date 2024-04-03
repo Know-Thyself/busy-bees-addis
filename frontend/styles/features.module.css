@@ -1,0 +1,90 @@
+.heading {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem 0;
+	color: var(--nav-links-color);
+}
+
+.card {
+    padding: 1rem auto;
+    padding-top: 2rem;
+}
+
+.comments {
+    background-color: lightcoral;
+    background-color: #E4C4FF;
+    background-color: #C4DFFF;
+    background-color: #F38FB9;
+    background-color: var(--accent-color-light);
+    background-color: #acbfe6;
+
+    background-color: #E5E5F8;
+    background-color: #7ed5ea;
+
+}
+
+.bullhorn {
+    background-color: cornflowerblue;
+    background-color: #C4FFE4;
+    background-color: #C4FFC6;
+    background-color: #978FF3;
+    background-color: #4fcbe9;
+
+    background-color: #E5F8E5;
+    background-color: #EA7ED5;
+    background-color: #C97EEA;
+    
+    
+}
+
+.users {
+    background-color: bisque;
+    background-color: #FFC4FC;
+    background-color: #EBF38F;
+    background-color: var(--light-green);
+    background-color: #CBE94F;
+    background-color: #f8e5e5;
+    background-color: #D5EA7E;
+
+    background-color: #EA937E;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    background-color: blue;
+    background-color: var(--header-background);
+    background-color: black;
+    
+    
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    margin: auto;
+}
+
+/* .comments {
+    background-color: orangered;
+} */
+
+.icon {
+    font-size: 5rem;
+    /* color: red; */
+    color: var(--accent-color);
+}
+
+.title {
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: black;
+}

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Navbar from '@/components/navbar'
+import Features from './features'
 import {
 	montserrat,
 	raleway,
@@ -12,6 +13,10 @@ import {
 	concertOne,
 } from '@/styles/fonts'
 import styles from '@/styles/home.module.css'
+
+interface Intro {
+	intro: string[]
+}
 
 type IntroProps = {
 	id: number
@@ -29,16 +34,27 @@ type TypicalDayProps = {
 	activities: string[]
 }
 
+type FeatureProps = {
+	id: number
+	title: string
+	description: string
+	icon_name: string
+}
+
 export default function Home({
 	intro,
 	day,
+	features,
 }: {
-	intro: IntroProps
+	intro: Intro
 	day: TypicalDayProps[]
+	features: FeatureProps[]
 }) {
 	const left: string[] = []
 	const right: string[] = []
-	intro.program
+	const introOb: object | any = intro
+	const introObject = introOb[0]
+	introObject.program
 		.split('\r\n')
 		.forEach((paragraph: string, index: number) =>
 			index <= 1 ? left.push(paragraph) : right.push(paragraph)
@@ -94,27 +110,31 @@ export default function Home({
 		<main className={`${styles.main} ${raleway.className}`}>
 			<Navbar links={links} activeSection={activeSection} />
 			<section id='hero' className={styles.hero}>
-				<Image
-					src={intro.hero_image.split('/public')[1]}
-					className={styles['hero-img']}
-					alt={intro.brand}
-					width={700}
-					height={500}
-				/>
-				<div className={styles.overlay}>
-					<h1 className={`${styles.brand} ${playfairDisplay.className}`}>
-						{intro.brand}
-					</h1>
-					<h2 className={`${styles.motto} ${raleway.className}`}>
-						{intro.motto.replace(/\b[a-z]/g, (x: string) => x.toUpperCase())}
-					</h2>
+				<div className={styles['hero-image-container']}>
+					<Image
+						src={introObject.hero_image.split('/public')[1]}
+						className={styles['hero-img']}
+						alt={introObject.brand}
+						width={700}
+						height={500}
+					/>
+					<div className={styles.overlay}>
+						<h1 className={`${styles.brand} ${playfairDisplay.className}`}>
+							{introObject.brand}
+						</h1>
+						<h2 className={`${styles.motto} ${raleway.className}`}>
+							{introObject.motto.replace(/\b[a-z]/g, (x: string) =>
+								x.toUpperCase()
+							)}
+						</h2>
+					</div>
 				</div>
 			</section>
 			<section id='program' className={styles['program-section']}>
 				<h1
 					className={`${styles['program-title']} ${playfairDisplay.className}`}
 				>
-					{intro.program_title}
+					{introObject.program_title}
 				</h1>
 				<div className={styles.line}></div>
 				<div className={styles.program}>
@@ -129,37 +149,40 @@ export default function Home({
 						))}
 					</div>
 				</div>
-			</section>
-			<section id='activities' className={styles['activities-section']}>
-				<h1
-					className={`${styles['activities-title']} ${playfairDisplay.className}`}
-				>
-					{day[0].title.replace(/\b[a-z]/g, (x: string) => x.toUpperCase())}
-				</h1>
-				<div className={styles['activities-grid-container']}>
-					{day.map((activity: object | any, index: number) =>
-						activity.id === 1 ? (
-							<div
-								key={index}
-								className={styles['reading-bee-image-container']}
-							>
-								<Image
-									src={activity.reading_bee_image.split('/public')[1]}
-									width={300}
-									height={200}
-									alt='Reading bee'
-									className={styles['reading-bee-image']}
-								/>
-							</div>
-						) : (
-							<ul key={activity.id}>
-								{activity.activities.map((act: string, index: number) => (
-									<li key={index}>{act}</li>
-								))}
-							</ul>
-						)
-					)}
+				<div className={styles['activities-section']}>
+					<h1
+						className={`${styles['activities-title']} ${playfairDisplay.className}`}
+					>
+						{day[0].title.replace(/\b[a-z]/g, (x: string) => x.toUpperCase())}
+					</h1>
+					<div className={styles['activities-grid-container']}>
+						{day.map((activity: object | any, index: number) =>
+							activity.id === 1 ? (
+								<div
+									key={index}
+									className={styles['reading-bee-image-container']}
+								>
+									<Image
+										src={activity.reading_bee_image.split('/public')[1]}
+										width={300}
+										height={200}
+										alt='Reading bee'
+										className={styles['reading-bee-image']}
+									/>
+								</div>
+							) : (
+								<ul key={activity.id}>
+									{activity.activities.map((act: string, index: number) => (
+										<li key={index}>{act}</li>
+									))}
+								</ul>
+							)
+						)}
+					</div>
 				</div>
+			</section>
+			<section id='features'>
+				<Features features={features} />
 			</section>
 		</main>
 	)

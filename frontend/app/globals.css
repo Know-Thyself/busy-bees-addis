@@ -4,6 +4,32 @@
 	--font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
 		'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
 		'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+	--primary-color: yellow;
+	--secondary-color: lightblue;
+	--complementary-color: orange;
+	--light-green: #8ff397;
+	--light-green: #8FF3C9;
+	--accent-color: #0516ff;
+	--accent-color: red;
+	--accent-color: #df3062;
+	--accent-color-light: #e24572;
+	--accent-color-light: #f07e74;
+	--accent-color-light: #f28b82;
+	--accent-color-light: #f3978f;
+	--accent-color-light: #f3978f;
+
+	--accent-color-light: #fab162;
+	--accent-color-light: #f1e821;
+	--accent-color-light: #acbfe6;
+	--accent-color-light: #f8e5e5;
+	--accent-color-light: #f4abaa;
+
+
+
+
+
+
+
 	--header-background: #ffee05;
 	--header-background: #f7cd46;
 	--header-background: #abf62d;
@@ -24,13 +50,22 @@
 	--active-nav-links-boarder: #45af2a;
 	--active-nav-links-boarder: #4bac3f;
 
+	--active-nav-links-boarder: #5daa68;
+
+
+
 	--nav-links-color: #825f1d;
-	--accent-color: #0516ff;
 	--mobile-active-nav: #000ed1;
 	--overlay-text-bg: rgba(130, 224, 22, 0.4);
-	--overlay-text-bg: rgba(37, 104, 251, 0.3);
 	--overlay-text-bg: rgba(255, 238, 5, 0.3);
-	--overlay-text-bg: rgba(75, 172, 63, 0.5);
+	--overlay-text-bg: rgba(151, 143, 243, 0.5);
+	--overlay-text-bg: rgba(37, 104, 251, 0.4);
+	--overlay-text-bg: rgba(253, 217, 53, 0.4);
+	--overlay-text-bg: rgba(75, 172, 63, 0.4);
+	--overlay-text-bg: rgba(63, 132, 235, 0.4);
+
+	
+
 
 	--overlay-text-shadow: #2568fb;
 	--overlay-text-shadow: #4a2c40;
@@ -84,6 +119,7 @@ body {
 	background: var(--body-background);
 	color: var(--primary-text-color);
 	font-size: 20px;
+	font-weight: 500;
 }
 
 a {

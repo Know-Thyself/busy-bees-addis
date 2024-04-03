@@ -14,13 +14,12 @@ import {
 import 'bootswatch/dist/sandstone/bootstrap.min.css'
 import styles from '@/styles/navbar.module.css'
 
-export default function Navbar({
-	links,
-	activeSection,
-}: {
+interface Links {
 	links: string[]
 	activeSection: string
-}) {
+}
+
+export default function Navbar({ links, activeSection }: Links) {
 	const [toggleMenu, setToggleMenu] = useState(false)
 	const [isChecked, setIsChecked] = useState(false)
 	const [screenWidth, setScreenWidth] = useState(1348)
