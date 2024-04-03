@@ -11,15 +11,24 @@ import {
 	oswald,
 	raleway,
 } from '@/styles/fonts'
-import { usePathname } from 'next/navigation'
 import 'bootswatch/dist/sandstone/bootstrap.min.css'
 import styles from '@/styles/navbar.module.css'
 
-export default function Navbar() {
-	const pathname = usePathname()
+export default function Navbar({
+	links,
+	activeSection,
+}: {
+	links: string[]
+	activeSection: string
+}) {
 	const [toggleMenu, setToggleMenu] = useState(false)
 	const [isChecked, setIsChecked] = useState(false)
 	const [screenWidth, setScreenWidth] = useState(1348)
+	const [activeNav, setActiveNav] = useState(`#${activeSection}`)
+
+	const handleClick = (href: string) => {
+		setActiveNav(`#${href}`)
+	}
 
 	const toggleNav = () => {
 		setToggleMenu(!toggleMenu)
@@ -69,70 +78,26 @@ export default function Navbar() {
 					<div
 						className={`text-center ${styles['menu__box']} ${raleway.className}`}
 					>
-						<ul
-							className={`navbar-nav ms-auto border-0`}
-						>
-							<li className={`nav-item me-1 ${styles['custom-nav-item']}`}>
-								<Link
-									href='/'
-									className={`nav-link px-3 border-start-0 border-end-0 ${
-										pathname === '/' ? styles.active : styles['menu__item']
-									}`}
-									onClick={screenTest}
+						<ul className={`navbar-nav ms-auto border-0`}>
+							{links.map((link, index) => (
+								<li
+									key={index}
+									className={`nav-item me-1 ${styles['custom-nav-item']}`}
+									onClick={() => handleClick(link)}
 								>
-									Home
-								</Link>
-							</li>
-							<li className={`nav-item me-1 ${styles['custom-nav-item']}`}>
-								<Link
-									href='/features'
-									className={`nav-link px-3 border-start-0 border-end-0 ${
-										pathname === '/features'
-											? styles.active
-											: styles['menu__item']
-									}`}
-									onClick={screenTest}
-								>
-									Features
-								</Link>
-							</li>
-							<li className={`nav-item me-1 ${styles['custom-nav-item']}`}>
-								<Link
-									href='/our-program'
-									className={`nav-link px-3 border-start-0 border-end-0 ${
-										pathname === '/our-program'
-											? styles.active
-											: styles['menu__item']
-									}`}
-									onClick={screenTest}
-								>
-									Our Program
-								</Link>
-							</li>
-							<li className={`nav-item me-1 ${styles['custom-nav-item']}`}>
-								<Link
-									href='/team'
-									className={`nav-link px-3 border-start-0 border-end-0 ${
-										pathname === '/team' ? styles.active : styles['menu__item']
-									}`}
-									onClick={screenTest}
-								>
-									Team
-								</Link>
-							</li>
-							<li className={`nav-item ${styles['custom-nav-item']}`}>
-								<Link
-									href='/contact'
-									className={`nav-link px-3 border-start-0 ${
-										pathname === '/contact'
-											? styles.active
-											: styles['menu__item']
-									}`}
-									onClick={screenTest}
-								>
-									Contact
-								</Link>
-							</li>
+									<Link
+										href={`#${link}`}
+										className={`nav-link px-3 border-start-0 border-end-0 ${
+											activeNav === link || activeSection === link
+												? styles.active
+												: styles['menu__item']
+										}`}
+										onClick={screenTest}
+									>
+										{link === 'program' ? 'our program' : link}
+									</Link>
+								</li>
+							))}
 						</ul>
 					</div>
 				)}
