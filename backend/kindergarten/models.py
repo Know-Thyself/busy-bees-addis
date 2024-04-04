@@ -38,3 +38,10 @@ class CompoundImage(models.Model):
 class OpenHouseImage(models.Model):
     open_house_image = models.ImageField(upload_to='images/open-house/')
     caption = models.CharField(max_length=255, default='')
+
+
+class Team(models.Model):
+    name = models.CharField(max_length=255)
+    position = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='images/team/')
+    about = models.TextField()

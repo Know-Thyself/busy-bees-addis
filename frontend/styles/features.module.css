@@ -19,12 +19,19 @@
     margin-bottom: 3rem;
     margin-top: -6px;
 }
-
+.grid {
+    background-color: var(--accent-color);
+    background-color: #1d1d2c;
+    row-gap: 0 !important;
+    column-gap: 0 !important;
+    gap: 0 !important;
+}
 .card {
     padding-top: 2rem;
     padding-bottom: 1rem;
     /* margin: 0; */
     height: 100%;
+
 }
 
 .comments {
@@ -33,10 +40,13 @@
     background-color: #C4DFFF;
     background-color: #F38FB9;
     background-color: var(--accent-color-light);
-    background-color: #acbfe6;
-
+    
     background-color: #E5E5F8;
+    
+    background-color: #EA937E;
+    background-color: #acbfe6;
     background-color: #7ed5ea;
+
 
 }
 
@@ -44,12 +54,15 @@
     background-color: cornflowerblue;
     background-color: #C4FFE4;
     background-color: #C4FFC6;
-    background-color: #978FF3;
-    background-color: #4fcbe9;
-
+    
     background-color: #E5F8E5;
-    background-color: #EA7ED5;
     background-color: #C97EEA;
+    
+    background-color: #EA937E;
+    background-color: #4fcbe9;
+    background-color: #EA7ED5;
+    background-color: #978FF3;
+
     
     
 }

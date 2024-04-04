@@ -28,6 +28,7 @@ router.register(r'typical-day', views.TypicalDayViewSet)
 router.register(r'features', views.FeatureViewSet)
 router.register(r'compound-images', views.CompoundImageViewSet)
 router.register(r'open-house-images', views.OpenHouseImageViewSet)
+router.register(r'team', views.TeamViewSet)
 
 
 urlpatterns = [
