@@ -48,6 +48,15 @@ async function getOpenHouseImages() {
 	return res.json()
 }
 
+async function getTeam() {
+	const res = await fetch('http://localhost:8000/team')
+	if (!res.ok) {
+		throw new Error('Failed to fetch data')
+	}
+
+	return res.json()
+}
+
 export default async function HomePage() {
 	const intro = await getIntro()
 	// const introObject = intro[0]
@@ -61,6 +70,8 @@ export default async function HomePage() {
 
 	const openHouseImages = await getOpenHouseImages()
 
+	const team = await getTeam()
+
 	return (
 		<Home
 			intro={intro}
@@ -68,6 +79,7 @@ export default async function HomePage() {
 			features={features}
 			compound_images={compoundImages}
 			open_house_images={openHouseImages}
+			team={team}
 		/>
 	)
 }

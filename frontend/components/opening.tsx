@@ -20,7 +20,6 @@ export default function OpenHouse({
 }: {
 	open_house_images: OpenHouseImagesProps[]
 }) {
-	console.log(open_house_images)
 	return (
 		<div>
 			<h1 className={`${styles.heading} ${playfairDisplay.className}`}>

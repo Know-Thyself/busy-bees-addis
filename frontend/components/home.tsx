@@ -45,18 +45,28 @@ type OpenHouseImagesProps = {
 	caption: string
 }
 
+type TeamProps = {
+	id: number
+	name: string
+	position: string
+	image: string
+	about: string
+}
+
 export default function Home({
 	intro,
 	day,
 	features,
 	compound_images,
 	open_house_images,
+	team,
 }: {
 	intro: Intro
 	day: TypicalDayProps[]
 	features: FeatureProps[]
 	compound_images: ImagesProps[]
 	open_house_images: OpenHouseImagesProps[]
+	team: TeamProps[]
 }) {
 	const left: string[] = []
 	const right: string[] = []
@@ -70,13 +80,7 @@ export default function Home({
 
 	const [activeSection, setActiveSection] = useState<string>('')
 
-	const links: string[] = [
-		'program',
-		'features',
-		'gallery',
-		'team',
-		'contact',
-	]
+	const links: string[] = ['program', 'features', 'gallery', 'team', 'contact']
 
 	useEffect(() => {
 		const program = document.getElementById('program')
