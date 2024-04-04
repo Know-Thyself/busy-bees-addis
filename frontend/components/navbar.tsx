@@ -35,7 +35,7 @@ export default function Navbar({ links, activeSection }: Links) {
 	}
 
 	function screenTest() {
-		if (window.innerWidth <= 767) {
+		if (window.innerWidth <= 868) {
 			toggleNav()
 		}
 	}
@@ -73,7 +73,7 @@ export default function Navbar({ links, activeSection }: Links) {
 				<label className={styles['menu__btn']} htmlFor='menu__toggle'>
 					<span></span>
 				</label>
-				{(toggleMenu || screenWidth > 767) && (
+				{(toggleMenu || screenWidth > 868) && (
 					<div
 						className={`text-center ${styles['menu__box']} ${raleway.className}`}
 					>

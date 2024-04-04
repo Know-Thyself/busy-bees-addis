@@ -27,8 +27,8 @@
 }
 
 .hero .hero-image-container .hero-img {
-	height: 594px;
-	width: auto;
+	width: 100%;
+	height: auto;
 }
 
 .overlay {
@@ -38,23 +38,19 @@
 	transform: translate(-50%, -50%);
 	background-color: var(--overlay-text-bg);
 	color: var(--accent-color);
-	color: white;
+	color: var(--overlay-text-color);
 	padding: 10px 20px;
 	text-align: center;
 	width: 100%;
 }
 
-/* .brand {
-    text-shadow: 3px 3px var(--overlay-text-shadow);
-    text-shadow: 3px 3px var(--header-background);
+.brand {
+	font-weight: 800;
+} 
 
-} */
-
-/* .motto {
-    text-shadow: 2px 2px var(--overlay-text-shadow);
-    text-shadow: 3px 3px var(--header-background);
-
-} */
+.motto {
+	font-weight: 300;
+}
 
 .program-section {
 	width: 90%;
@@ -72,6 +68,12 @@
 	/* text-align: center; */
 	color: var(--nav-links-color);
 	text-align: left;
+	font-size: 1.5rem;
+}
+
+.program-title {
+	font-size: 2rem;
+	font-weight: 500;
 }
 
 .line {
@@ -85,7 +87,21 @@
 	list-style-type: square;
 }
 
+.features,
+.compound {
+	scroll-margin: 83px;
+}
+
+.features {
+	scroll-margin: 108px;
+}
+
 @media only screen and (min-width: 768px) {
+	.hero .hero-image-container .hero-img {
+		height: 594px;
+		width: auto;
+	}
+
 	.brand {
 		font-size: 4rem;
 		font-weight: 700;
@@ -114,7 +130,7 @@
 
 	.program-title {
 		font-size: 3rem;
-		font-weight: 400;
+		font-weight: 700;
 	}
 
 	.activities-title {
