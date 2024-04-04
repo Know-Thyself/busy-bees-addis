@@ -30,6 +30,24 @@ async function getFeatures() {
 	return res.json()
 }
 
+async function getCompoundImages() {
+	const res = await fetch('http://localhost:8000/compound-images')
+	if (!res.ok) {
+		throw new Error('Failed to fetch data')
+	}
+
+	return res.json()
+}
+
+async function getOpenHouseImages() {
+	const res = await fetch('http://localhost:8000/open-house-images')
+	if (!res.ok) {
+		throw new Error('Failed to fetch data')
+	}
+
+	return res.json()
+}
+
 export default async function HomePage() {
 	const intro = await getIntro()
 	// const introObject = intro[0]
@@ -39,5 +57,17 @@ export default async function HomePage() {
 
 	const features = await getFeatures()
 
-	return <Home intro={intro} day={activities} features={features} />
+	const compoundImages = await getCompoundImages()
+
+	const openHouseImages = await getOpenHouseImages()
+
+	return (
+		<Home
+			intro={intro}
+			day={activities}
+			features={features}
+			compound_images={compoundImages}
+			open_house_images={openHouseImages}
+		/>
+	)
 }

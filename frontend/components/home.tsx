@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Navbar from '@/components/navbar'
 import Features from './features'
+import Compound from './compound'
+import OpenHouse from './opening'
 import {
 	montserrat,
 	raleway,
@@ -16,16 +18,6 @@ import styles from '@/styles/home.module.css'
 
 interface Intro {
 	intro: string[]
-}
-
-type IntroProps = {
-	id: number
-	logo: string
-	hero_image: string
-	brand: string
-	motto: string
-	program_title: string
-	program: string
 }
 
 type TypicalDayProps = {
@@ -41,14 +33,30 @@ type FeatureProps = {
 	icon_name: string
 }
 
+type ImagesProps = {
+	id: number
+	compound_image: string
+	caption: string
+}
+
+type OpenHouseImagesProps = {
+	id: number
+	open_house_image: string
+	caption: string
+}
+
 export default function Home({
 	intro,
 	day,
 	features,
+	compound_images,
+	open_house_images,
 }: {
 	intro: Intro
 	day: TypicalDayProps[]
 	features: FeatureProps[]
+	compound_images: ImagesProps[]
+	open_house_images: OpenHouseImagesProps[]
 }) {
 	const left: string[] = []
 	const right: string[] = []
@@ -60,18 +68,24 @@ export default function Home({
 			index <= 1 ? left.push(paragraph) : right.push(paragraph)
 		)
 
-	const [activeSection, setActiveSection] = useState<string>('home')
+	const [activeSection, setActiveSection] = useState<string>('')
 
-	const links: string[] = ['home', 'program', 'features', 'team', 'contact']
+	const links: string[] = [
+		'program',
+		'features',
+		'gallery',
+		'team',
+		'contact',
+	]
 
 	useEffect(() => {
-		const home = document.getElementById('hero')
 		const program = document.getElementById('program')
 		const features = document.getElementById('features')
+		const gallery = document.getElementById('gallery')
 		const team = document.getElementById('team')
 		const contact = document.getElementById('team')
 
-		const sections = [home, program, features, team, contact]
+		const sections = [program, features, gallery, team, contact]
 
 		const observerOptions = {
 			root: null,
@@ -90,6 +104,9 @@ export default function Home({
 					}
 					if (entry.target.id == 'features') {
 						setActiveSection('features')
+					}
+					if (entry.target.id == 'gallery') {
+						setActiveSection('gallery')
 					}
 					if (entry.target.id == 'team') {
 						setActiveSection('team')
@@ -181,8 +198,12 @@ export default function Home({
 					</div>
 				</div>
 			</section>
-			<section id='features'>
+			<section id='features' className={styles.features}>
 				<Features features={features} />
+			</section>
+			<section id='gallery' className={styles.compound}>
+				<Compound compound_images={compound_images} />
+				<OpenHouse open_house_images={open_house_images} />
 			</section>
 		</main>
 	)
