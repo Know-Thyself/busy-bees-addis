@@ -6,13 +6,15 @@
 		'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 	--primary-color: yellow;
 	--secondary-color: #4bac3f;
+	--tertiary-color: #825f1d;
 	--complementary-color: orange;
 	--light-green: #8ff397;
-	--light-green: #8FF3C9;
+	--light-green: #8ff3c9;
 	--accent-color: #0516ff;
 	--accent-color: red;
 	--accent-color: #4a2c40;
 	--accent-color: #df3062;
+	--accent-color: #78184A;
 
 	--accent-color-light: #e24572;
 	--accent-color-light: #f07e74;
@@ -27,49 +29,51 @@
 	--accent-color-light: #f4abaa;
 
 
+	--primary-color: #ffee05;
+	--primary-color: #f7cd46;
+	--primary-color: #abf62d;
+	--primary-color: #d6acfb;
 
-
-
-
-
-	--header-background: #ffee05;
-	--header-background: #f7cd46;
-	--header-background: #abf62d;
-	--header-background: #d6acfb;
-
-	--header-background: #fdee30;
-	--header-background: #fecd45;
-	--header-background: #fab162;
-	--header-background: #f5b935;
-	--header-background: #ffb600;
-	--header-background: #fdd935;
+	--primary-color: #fdee30;
+	--primary-color: #fecd45;
+	--primary-color: #fab162;
+	--primary-color: #f5b935;
+	--primary-color: #ffb600;
+	--primary-color: #fdd935;
 
 	--body-background: #ffffff;
 	--primary-text-color: black;
 	--nav-links-color: black;
-	--active-nav-links-boarder: #82e016;
-	--active-nav-links-boarder: #abf62d;
-	--active-nav-links-boarder: #45af2a;
-	--active-nav-links-boarder: #4bac3f;
+	--secondary-color: #82e016;
+	--secondary-color: #abf62d;
+	--secondary-color: #45af2a;
+	--secondary-color: #4bac3f;
 
-	--active-nav-links-boarder: #5daa68;
+	--secondary-color: #5daa68;
+	--secondary-color: #4bac3f;
+	--secondary-complementary: #A03FAC;
+	--secondary-complementary: #D8BFD8;
+	--secondary-complementary: #DE6FA1;
+
 
 
 
 	--nav-links-color: #825f1d;
+	--nav-links-color: #75561a;
+
 	--mobile-active-nav: #000ed1;
 	--overlay-text-color: #1a2238;
 	--overlay-text-color: #394f8a;
 	--overlay-text-color: #9cf6fb;
 	--overlay-text-color: #df3062;
 	--overlay-text-color: #bd1e51;
-	
+
 	--overlay-text-color: #fdd935;
 	--overlay-text-color: #fa2742;
 	--overlay-text-color: #ef0d50;
-	
+
 	--overlay-text-color: #373833;
-	
+
 	--overlay-text-color: #1d1d2c;
 	--overlay-text-color: #2a3166;
 	--overlay-text-color: #4a2c40;
@@ -80,23 +84,8 @@
 	--overlay-text-color: #61082b;
 	--overlay-text-color: #ffffff;
 	--overlay-text-color: #182978;
+	--overlay-text-color: #78184A;
 	--overlay-text-color: #0b4141;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -105,10 +94,11 @@
 	--overlay-text-bg: rgba(253, 217, 53, 0.4);
 	--overlay-text-bg: rgba(75, 172, 63, 0.4);
 	--overlay-text-bg: rgba(63, 132, 235, 0.5);
-	--overlay-text-bg: rgba(130, 224, 22, 0.5);
-	--overlay-text-bg: rgba(253, 217, 53, 0.6);
-	--overlay-text-bg: rgba(37, 104, 251, 0.6);
 	--overlay-text-bg: rgba(225, 225, 225, 0.6);
+	--overlay-text-bg: rgba(223, 48, 98, 0.5);
+	--overlay-text-bg: rgba(37, 104, 251, 0.6);
+	--overlay-text-bg: rgba(130, 224, 22, 0.5);
+	--overlay-text-bg: rgba(253, 217, 53, 0.5);
 
 	--overlay-text-shadow: #2568fb;
 	--overlay-text-shadow: #4a2c40;
@@ -140,6 +130,11 @@
 
 	--hero-background: #e0d916;
 	--hero-background: #4bac3f;
+	--headings-mobile-font-size: 1.5rem;
+	--headings-desktop-font-size: 3rem;
+	--headings-mobile-font-weight: 500;
+	--headings-desktop-font-weight: 900;
+
 }
 
 * {

@@ -21,7 +21,7 @@ export default function OpenHouse({
 	open_house_images: OpenHouseImagesProps[]
 }) {
 	return (
-		<div>
+		<div id='gallery'>
 			<h1 className={`${styles.heading} ${playfairDisplay.className}`}>
 				Open House Photos Gallery
 			</h1>

@@ -6,12 +6,12 @@
 	height: 84px;
 	min-height: 50px;
 	z-index: 3;
-	background-color: var(--header-background);
+	background-color: var(--primary-color);
 	align-items: center;
 }
 
 .brand {
-	margin-left: 20px;
+	margin-left: 8px;
 }
 
 .logo {
@@ -49,7 +49,7 @@
 	justify-content: center;
 	position: absolute;
 	top: 30px;
-	right: 30px;
+	right: 24px;
 	width: 26px;
 	height: 26px;
 	cursor: pointer;
@@ -66,7 +66,6 @@
 	background-color: var(--nav-links-color);
 	background-color: var(--accent-color);
 	background-color: var(--overlay-text-color);
-
 	transition-duration: 0.25s;
 }
 
@@ -103,17 +102,22 @@
 	transition-duration: 0.25s;
 }
 
+@media screen and (max-width: 767px) {
+	.custom-nav-item {
+		border-top: solid 1px var(--overlay-text-color);
+	}
+}
+
 @media screen and (max-width: 868px) {
 	.custom-nav-item {
 		width: 100%;
-		border-top: solid 1px var(--overlay-text-color);
 	}
 
 	.custom-nav-item .active,
 	.custom-nav-item .menu__item:hover {
 		background-color: var(--mobile-active-nav) !important;
 		font-weight: 600;
-		background-color: var(--header-background) !important;
+		background-color: var(--primary-color) !important;
 	}
 
 	.menu__btn {
@@ -122,8 +126,8 @@
 	}
 
 	.menu__box {
-		background-color: var(--header-background);
-		background-color: var(--active-nav-links-boarder);
+		background-color: var(--primary-color);
+		background-color: var(--secondary-color);
 
 		width: 100%;
 		z-index: 100 !important;
@@ -159,12 +163,13 @@
 
 	.custom-nav-item .active {
 		font-size: 12px;
-		border-bottom: 2px solid var(--active-nav-links-boarder);
+		border-bottom: 2px solid var(--secondary-color);
 		border-bottom: 2px solid var(--accent-color);
 		border-bottom: 2px solid var(--secondary-color) !important;
 		margin-top: 2px;
 		color: var(--accent-color);
 		color: var(--overlay-text-color);
+		color: var(--nav-links-color);
 
 		font-weight: 600;
 		cursor: default;
@@ -172,17 +177,16 @@
 
 	.custom-nav-item .menu__item {
 		font-size: 12px;
-		border-bottom: 2px solid var(--header-background);
+		border-bottom: 2px solid var(--primary-color);
 		margin-top: 2px;
 		font-weight: 600;
 		color: var(--accent-color);
-		color: var(--nav-links-color);
 		color: var(--overlay-text-color);
-
+		color: var(--nav-links-color);
 	}
 
 	.custom-nav-item .menu__item:hover {
-		border-bottom: 2px solid var(--active-nav-links-boarder) !important;
+		border-bottom: 2px solid var(--secondary-color) !important;
 		border-bottom: 2px solid var(--accent-color) !important;
 		border-bottom: 2px solid var(--secondary-color) !important;
 	}
