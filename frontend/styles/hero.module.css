@@ -1,0 +1,84 @@
+.hero {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--secondary-color);
+	background-color: var(--hero-background);
+	scroll-margin: 84px;
+	background-image: url('/images/colorful-pattern.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.hero-image-container {
+	position: relative;
+	width: fit-content;
+}
+
+.hero .hero-image-container .hero-img {
+	width: 100%;
+	height: auto;
+}
+
+.overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--overlay-text-bg);
+	color: var(--accent-color);
+	color: var(--overlay-text-color);
+    color: #61082b;
+
+	padding: 10px 20px;
+	text-align: center;
+	width: 100%;
+}
+
+.brand {
+	font-weight: 800;
+}
+
+.motto {
+	font-weight: 300;
+    color: #78184A;
+    color: #4a2c40;
+    color: #61082b;
+	color: var(--overlay-text-color);
+
+}
+
+@media only screen and (min-width: 768px) {
+	.hero .hero-image-container .hero-img {
+		height: 524px;
+		width: auto;
+	}
+
+	.brand {
+		font-size: 4rem;
+		font-weight: 700;
+	}
+
+	.motto {
+		font-size: 2rem;
+		font-weight: 500;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.brand {
+		font-size: 5rem;
+		font-weight: 900;
+	}
+
+	.motto {
+		font-size: 2.25rem;
+		font-weight: 600;
+	}
+}

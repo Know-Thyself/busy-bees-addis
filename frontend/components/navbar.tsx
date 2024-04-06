@@ -86,7 +86,7 @@ export default function Navbar({ links, activeSection }: Links) {
 								>
 									<Link
 										href={`#${link}`}
-										className={`nav-link px-3 border-start-0 border-end-0 ${
+										className={`nav-link border-start-0 border-end-0 ${
 											activeNav === link || activeSection === link
 												? styles.active
 												: styles['menu__item']

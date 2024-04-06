@@ -10,7 +10,6 @@ const playfairDisplay = Playfair_Display({
 	subsets: ['latin'],
 	weight: 'variable',
 	display: 'swap',
-	style: 'normal',
 	preload: true,
 })
 
@@ -40,4 +39,11 @@ const montserrat = Montserrat({
 
 const oswald = Oswald({ subsets: ['latin'], display: 'swap', preload: true })
 
-export { playfairDisplay, playfairDisplayItalic, raleway, montserrat, oswald, concertOne }
+export {
+	playfairDisplay,
+	playfairDisplayItalic,
+	raleway,
+	montserrat,
+	oswald,
+	concertOne,
+}
