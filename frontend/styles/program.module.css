@@ -89,8 +89,13 @@
 		justify-content: center;
 		align-items: center;
 		background-color: var(--light-green);
-	}
+		background-color: #50c878;
+		background-color: #5ac3b0;
+		background-color: #2568fb;
 
+		background-color: #cae7df;
+	}
+	
 	.activities-grid-container ul {
 		display: flex;
 		flex-direction: column;
@@ -99,6 +104,10 @@
 		padding: 2rem;
 		padding-left: 4rem;
 		background-color: var(--accent-color-light);
+		background-color: #f7cd46;
+		background-color: #fecd45;
+		
+		background-color: #f4abaa;
 		height: 100%;
 	}
 

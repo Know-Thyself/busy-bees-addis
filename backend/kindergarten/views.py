@@ -7,6 +7,7 @@ from kindergarten.models import (
     CompoundImage,
     OpenHouseImage,
     Team,
+    Address,
 )
 from kindergarten.serializers import (
     UserSerializer,
@@ -17,6 +18,7 @@ from kindergarten.serializers import (
     CompoundImageSerializer,
     OpenHouseImageSerializer,
     TeamSerializer,
+    AddressSerializer,
 )
 
 
@@ -66,4 +68,10 @@ class OpenHouseImageViewSet(viewsets.ModelViewSet):
 class TeamViewSet(viewsets.ModelViewSet):
     queryset = Team.objects.all()
     serializer_class = TeamSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+class AddressViewSet(viewsets.ModelViewSet):
+    queryset = Address.objects.all()
+    serializer_class = AddressSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]

@@ -55,7 +55,7 @@ export default function Navbar({ links, activeSection }: Links) {
 			className={`${styles['custom-header']} navbar navbar-expand-md border-0 fixed-top`}
 			data-bs-theme='dark'
 		>
-			<div className='container-fluid'>
+			<div className='container-fluid align-content-center'>
 				<Link className={`navbar-brand border-0 ${styles.brand}`} href='/'>
 					<Image
 						src={logo}
@@ -82,7 +82,9 @@ export default function Navbar({ links, activeSection }: Links) {
 								<li
 									key={index}
 									className={`nav-item me-1 ${styles['custom-nav-item']}`}
-									onClick={() => handleClick(link)}
+									onClick={() =>
+										handleClick(`${link === 'contact'} ? 'footer' : ${link}`)
+									}
 								>
 									<Link
 										href={`#${link}`}
@@ -93,7 +95,11 @@ export default function Navbar({ links, activeSection }: Links) {
 										}`}
 										onClick={screenTest}
 									>
-										{link === 'program' ? 'our program' : link}
+										{link === 'program'
+											? 'our program'
+											: link === 'footer'
+											? 'contact'
+											: link}
 									</Link>
 								</li>
 							))}

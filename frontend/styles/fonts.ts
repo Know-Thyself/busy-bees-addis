@@ -21,7 +21,7 @@ const playfairDisplayItalic = Playfair_Display({
 	preload: true,
 })
 
-const raleway = Raleway({ subsets: ['latin'], display: 'swap', preload: true })
+const raleway = Raleway({ subsets: ['cyrillic'], display: 'swap', preload: true })
 
 const concertOne = Concert_One({
 	subsets: ['latin'],

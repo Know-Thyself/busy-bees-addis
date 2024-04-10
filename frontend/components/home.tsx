@@ -8,9 +8,10 @@ import Features from './features'
 import Compound from './compound'
 import OpenHouse from './opening'
 import Team from './team'
-import {
-	raleway,
-} from '@/styles/fonts'
+import dynamic from 'next/dynamic'
+import Mapbox from './map'
+import { raleway } from '@/styles/fonts'
+import Footer from './footer'
 import styles from '@/styles/home.module.css'
 
 interface Intro {
@@ -50,6 +51,19 @@ type TeamProps = {
 	about: string
 }
 
+type AddressProps = {
+	id: number
+	street: string
+	city: string
+	country: string
+	phone_number_1: string
+	phone_number_2: string
+	phone_number_3: string
+	image: string
+	facebook: string
+	instagram: string
+}
+
 export default function Home({
 	intro,
 	day,
@@ -57,6 +71,7 @@ export default function Home({
 	compound_images,
 	open_house_images,
 	team,
+	address,
 }: {
 	intro: Intro
 	day: TypicalDayProps[]
@@ -64,21 +79,22 @@ export default function Home({
 	compound_images: ImagesProps[]
 	open_house_images: OpenHouseImagesProps[]
 	team: TeamProps[]
+	address: AddressProps
 }) {
-	const introOb: object | any = intro
-	const introObject = introOb[0]
+	const addressObj: object | any = address
+	const addressObject = addressObj[0]
 	const [activeSection, setActiveSection] = useState<string>('')
 
-	const links: string[] = ['program', 'features', 'gallery', 'team', 'contact']
+	const links: string[] = ['program', 'features', 'gallery', 'team', 'footer']
 
 	useEffect(() => {
 		const program = document.getElementById('program')
 		const features = document.getElementById('features')
 		const gallery = document.getElementById('gallery')
 		const team = document.getElementById('team')
-		const contact = document.getElementById('team')
+		const footer = document.getElementById('footer')
 
-		const sections = [program, features, gallery, team, contact]
+		const sections = [program, features, gallery, team, footer]
 
 		const observerOptions = {
 			root: null,
@@ -104,8 +120,8 @@ export default function Home({
 					if (entry.target.id == 'team') {
 						setActiveSection('team')
 					}
-					if (entry.target.id == 'contact') {
-						setActiveSection('contact')
+					if (entry.target.id == 'footer') {
+						setActiveSection('footer')
 					}
 				}
 			})
@@ -115,6 +131,10 @@ export default function Home({
 			section && observer.observe(section)
 		})
 	}, [])
+
+	// const MapWithNoSSR = dynamic(() => import('./map'), {
+	// 	ssr: false,
+	// })
 
 	return (
 		<main className={`${styles.main} ${raleway.className}`}>
@@ -127,6 +147,8 @@ export default function Home({
 				<OpenHouse open_house_images={open_house_images} />
 			</section>
 			<Team team={team} />
+			{/* <Mapbox /> */}
+			<Footer address={addressObject} links={links} activeSection={activeSection} />
 		</main>
 	)
 }

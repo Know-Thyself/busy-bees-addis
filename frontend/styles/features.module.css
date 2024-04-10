@@ -45,9 +45,6 @@
 }
 
 .comments {
-	background-color: lightcoral;
-	background-color: #e4c4ff;
-	background-color: #c4dfff;
 	background-color: #f38fb9;
 
 	background-color: #e5e5f8;
@@ -58,7 +55,13 @@
 	background-color: var(--accent-color-light);
 	background-color: var(--light-green);
 	background-color: #ea937e;
+    background-color: #f2c1d1;
 	background-color: var(--secondary-complementary);
+	background-color:  #8F9779;
+	background-color: #50C878;
+	background-color: #5ac3b0;
+
+
 }
 
 .bullhorn {
@@ -77,6 +80,12 @@
 	background-color: var(--accent-color);
 	background-color: #ea937e;
 	background-color: var(--secondary-complementary);
+	background-color:  #8F9779;
+	background-color: #50C878;
+	background-color: #7850C8;
+	background-color: #de5935;
+
+
 }
 
 .users {
@@ -92,6 +101,13 @@
 	background-color: var(--accent-color);
 	background-color: #ea937e;
 	background-color: var(--secondary-complementary);
+	background-color:  #8F9779;
+	background-color: #50C878;
+	background-color: #C87850;
+	background-color: #f7cd46;
+
+
+
 }
 
 .icon-container {
@@ -102,8 +118,8 @@
 	background-color: blue;
 	background-color: darkblue;
 	background-color: #3559fd;
-	background-color: #1d1d2c;
 	background-color: var(--primary-color);
+	background-color: #1d1d2c;
 
 	border-radius: 50%;
 	height: 160px;
@@ -118,9 +134,9 @@
 .icon {
 	font-size: 5rem;
 	/* color: red; */
-	color: var(--primary-color);
 	color: var(--secondary-color);
 	color: var(--accent-color);
+	color: var(--primary-color);
 }
 
 .title {
@@ -152,7 +168,7 @@
 		padding: 1rem;
 		padding: 1.5rem 0 2rem 0;
 	}
-    
+
     .heading-wrapper {
 		padding: 1rem 7.5% 1.5rem 7.5%;
 	}
@@ -163,9 +179,9 @@
 		/* margin: 2rem 0; */
 	}
 
-	/* .line {
-		margin-top: -20px;
-	} */
+	.line {
+		height: 4px;
+	}
 
 	.title {
 		font-size: 2rem;
