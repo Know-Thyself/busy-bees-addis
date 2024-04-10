@@ -7,7 +7,6 @@
 	min-height: 50px;
 	z-index: 3;
 	background-color: var(--primary-color);
-	align-items: center;
 }
 
 .brand {
@@ -138,7 +137,7 @@
 		color: var(--nav-links-color) !important;
 		color: var(--overlay-text-color) !important;
 		font-weight: 600 !important;
-		padding: 1rem 0;
+		padding: 16px 0;
 	}
 }
 
@@ -152,10 +151,15 @@
 		right: 0;
 		top: 0;
 		box-shadow: none;
-		height: 74px;
+		height: 84px;
 		transition-duration: 0ms;
 		margin-right: 4%;
 	}
+
+	/* .menu__item,
+	.active {
+		padding: 0;
+	} */
 
 	.brand {
 		margin-left: 4%;

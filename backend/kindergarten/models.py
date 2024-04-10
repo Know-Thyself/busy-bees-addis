@@ -45,3 +45,15 @@ class Team(models.Model):
     position = models.CharField(max_length=255)
     image = models.ImageField(upload_to='images/team/')
     about = models.TextField()
+
+
+class Address(models.Model):
+    street = models.CharField(max_length=55)
+    city = models.CharField(max_length=55)
+    country = models.CharField(max_length=55)
+    phone_number_1 = models.CharField(max_length=55)
+    phone_number_2 = models.CharField(max_length=55)
+    phone_number_3 = models.CharField(max_length=55)
+    image = models.ImageField(upload_to='images/footer/')
+    facebook = models.CharField(max_length=255, default='')
+    instagram = models.CharField(max_length=255, default='')

@@ -26,7 +26,9 @@
 	--accent-color-light: #f1e821;
 	--accent-color-light: #acbfe6;
 	--accent-color-light: #f8e5e5;
+	--accent-color-light: #f2c1d1;
 	--accent-color-light: #f4abaa;
+
 
 
 	--primary-color: #ffee05;
@@ -54,6 +56,8 @@
 	--secondary-complementary: #A03FAC;
 	--secondary-complementary: #D8BFD8;
 	--secondary-complementary: #DE6FA1;
+	--secondary-complementary: #f2c1d1;
+
 
 
 
@@ -162,4 +166,8 @@ body {
 
 a {
 	text-decoration: none;
+}
+
+.mapboxgl-popup-content {
+	padding: 0 !important;
 }

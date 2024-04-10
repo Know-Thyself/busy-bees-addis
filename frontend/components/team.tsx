@@ -44,9 +44,7 @@ export default function Team({ team }: { team: TeamProps[] }) {
 								styles.card
 							}`}
 						>
-							<div
-								className={`text-center py-2 bg-warning $styles['image-container']`}
-							>
+							<div className={`text-center py-2 ${styles['image-container']}`}>
 								<Image
 									src={member.image.split('/public')[1]}
 									alt={member.name}
@@ -55,19 +53,19 @@ export default function Team({ team }: { team: TeamProps[] }) {
 									style={{ borderRadius: '50%' }}
 								/>
 							</div>
-							<Card.Body className='bg-light'>
+							<Card.Body className={`${styles['card-body']}`}>
 								<Card.Title
-									className={`${styles.title} ${playfairDisplay.className} `}
+									className={`text-black ${styles.title} ${playfairDisplay.className} `}
 								>
 									{member.name}
 								</Card.Title>
 								<Card.Title
-									className={`text-muted ${styles.position} ${playfairDisplay.className} `}
+									className={`text-dark ${styles.position} ${playfairDisplay.className} `}
 								>
 									{member.position}
 								</Card.Title>
 								<Card.Text
-									className={`${styles.description} ${raleway.className}`}
+									className={`text-black ${styles.description} ${raleway.className}`}
 								>
 									{readMore && id === member.id
 										? member.about

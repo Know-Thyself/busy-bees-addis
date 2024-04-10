@@ -57,9 +57,17 @@ async function getTeam() {
 	return res.json()
 }
 
+async function getAddress() {
+	const res = await fetch('http://localhost:8000/address')
+	if (!res.ok) {
+		throw new Error('Failed to fetch data')
+	}
+
+	return res.json()
+}
+
 export default async function HomePage() {
 	const intro = await getIntro()
-	// const introObject = intro[0]
 
 	const activities = await getDayActivities()
 	activities.sort((a: object | any, b: object | any) => a.id - b.id)
@@ -72,6 +80,8 @@ export default async function HomePage() {
 
 	const team = await getTeam()
 
+	const address = await getAddress()
+
 	return (
 		<Home
 			intro={intro}
@@ -80,6 +90,7 @@ export default async function HomePage() {
 			compound_images={compoundImages}
 			open_house_images={openHouseImages}
 			team={team}
+			address={address}
 		/>
 	)
 }

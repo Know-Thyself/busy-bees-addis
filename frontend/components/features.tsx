@@ -5,6 +5,9 @@ import {
 	faUsers,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
@@ -28,7 +31,7 @@ export default function Features({ features }: { features: FeatureProps[] }) {
 				</h1>
 				<div className={styles.line}></div>
 			</div>
-			<Row xs={1} md={1} xl={3} fluid className={`g-xs-3 g-xl-1 border-0 ${styles.grid}`}>
+			<Row xs={1} md={1} xl={3} className={`g-xs-3 g-xl-1 border-0 ${styles.grid}`}>
 				{features.map((feature, index) => (
 					<Col key={feature.id} className=''>
 						<Card

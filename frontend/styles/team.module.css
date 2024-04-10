@@ -30,8 +30,84 @@
 }
 
 .image-container {
-	background-color: chocolate !important;
+	background-color: var(--secondary-color);
+	background-color: var(--accent-color);
+	background-color: var(--overlay-text-color);
+    background-color: var(--primary-color);
+	background-color:  #8F9779;
+	background-color: #50C878;
+	background-color: #C850A0;
+	background-color: #5ac3b0;
+	background-color: #2568fb;
+
+	background-color: #161f6d;
+
+	background-color: #00abe1;
+	background-color: #3fd2c7;
+
+	background-color: #1ba098;
+	background-color: #3cbcc3;
+	background-color: #438945;
+	background-color: #9e15bf;
+	background-color: #3f6844;
+	background-color: #cae7df;
+	background-color: #D7A7B4;
+	background-color: #f4abaa;
+
+
+
+
+
+
+
+
+
+
+	
 	width: 100%;
+}
+
+.card-body {
+	background-color: var(--overlay-text-bg);
+	background-color: var(--accent-color-light);
+	background-color: var(--secondary-complementary);
+	background-color:  #817997;
+	background-color: #50C878;
+	background-color: #de5935;
+	background-color: #f7cd46;
+	background-color: #fecd45;
+	background-color: #99ddff;
+
+	background-color: #d48166;
+	background-color: #deb992;
+
+
+	background-color: #eba63f;
+	background-color: #f2d349;
+
+	background-color: #fb9039;
+	background-color: #4ac6d2;
+	background-color: #faf1cf;
+	background-color: #f4abaa;
+	background-color: #cae7df;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 .read {
@@ -53,7 +129,7 @@
 	.team {
 		width: 85%;
 	}
-	
+
 	.heading-wrapper {
 		padding: 1rem 5% 1.5rem 5%;
 	}
@@ -61,6 +137,10 @@
 	.heading {
 		font-size: var(--headings-desktop-font-size);
 		font-weight: var(--headings-desktop-font-weight);
+	}
+
+	.line {
+		height: 4px;
 	}
 	/* .grid {
 		width: 85%;
