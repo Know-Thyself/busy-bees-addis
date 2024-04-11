@@ -19,10 +19,10 @@ from dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 load_dotenv(BASE_DIR / '.env')
-MEDIA_ROOT = os.path.join(BASE_DIR, '/frontend/public')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'frontend/public')
 MEDIA_URL = '/frontend/public/'
 # vercel
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", "static")
+# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", "static")
 
 # Parsing database url
 up.uses_netloc.append('postgres')
