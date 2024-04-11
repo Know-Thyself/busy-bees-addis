@@ -2,10 +2,12 @@
 	margin-top: 2rem;
 	scroll-margin: 83px;
 	color: black;
-	color: lightpink;
 	background-color: var(--tertiary-color);
+	background-color: var(--primary-color);
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
+	grid-auto-rows: 1fr;
+	height: 100%;
 	gap: 4px;
 }
 
@@ -15,7 +17,12 @@
 	grid-template-rows: repeat(9, 6vw);
 	gap: 2px;
 } */
-
+.footer-item {
+	height: 100%;
+	background-color: red;
+	background-color: #de5935;
+	background-color: #5ac3b0;
+}
 .brand {
 	display: flex;
 	justify-content: center;
@@ -34,9 +41,14 @@
 	align-items: center;
 }
 
-.hiBee {
+.hiBee,
+.iframe {
 	width: 100%;
-	height: auto;
+	height: 240px;
+}
+
+.iframe {
+	height: 100%;
 }
 
 .logo {
@@ -45,11 +57,6 @@
 	align-self: center;
 	background-color: var(--primary-color);
 	border-radius: 8px;
-}
-
-.iframe {
-    height: 300px;
-	width: 100%;
 }
 
 .addresses {
@@ -62,8 +69,15 @@
 }
 
 .address,
-.phone {
+.phone,
+.copyright,
+.menu__item,
+.active {
 	color: var(--primary-color);
+	color: var(--tertiary-color);
+	color: var(--overlay-text-color);
+	color: #61082b;
+
 }
 
 .facebook,
@@ -75,6 +89,7 @@
 .navigation {
 	display: flex;
 	justify-content: center;
+	padding: 0.5rem 0;
 	padding-left: 7.5%;
 }
 
@@ -87,32 +102,35 @@
 	padding: 1rem 7.5%;
 }
 
-.copyright {
-	/* display: flex;
-    justify-content: center;
-    align-self: center; */
-	color: var(--primary-color);
-}
-
 .icons {
 	display: flex;
 	gap: 1rem;
 }
 
+@media only screen and (min-width: 678px) {
+	.footer {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.footer-item:nth-child(5) {
+		grid-column: 1 / span 2;
+	}
+}
+
 @media only screen and (min-width: 1340px) {
 	.footer {
-		display: grid;
 		grid-template-columns: repeat(8, 1fr);
 		grid-template-rows: repeat(9, 6vw);
-		gap: 2px;
+		/* gap: 2px; */
 	}
 
 	.footer-item {
 		width: 100%;
 		height: 100%;
-		background-color: #e75480;
-		background-color: #5ac3b0;
-		background-color: var(--secondary-color);
+	}
+
+	.iframe {
+		height: 100%;
 	}
 
 	.footer-item:nth-child(1) {
@@ -153,5 +171,10 @@
 	.hiBee {
 		width: auto;
 		height: 100%;
+	}
+
+	.menu__item,
+	.copyright {
+		font-weight: 500;
 	}
 }

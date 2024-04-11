@@ -19,6 +19,14 @@ config.autoAddCss = false
 import Image from 'next/image'
 import logo from '@/public/images/logo/busy-bees-addis-logo.png'
 import hiBeeImage from '@/public/images/footer/hiBee.png'
+import {
+	montserrat,
+	raleway,
+	playfairDisplay,
+	playfairDisplayItalic,
+	oswald,
+	concertOne,
+} from '@/styles/fonts'
 import styles from '@/styles/footer.module.css'
 
 type AddressProps = {
@@ -48,7 +56,7 @@ export default function Footer({
 		setActiveNav(`#${href}`)
 	}
 	return (
-		<section id='footer' className={styles.footer}>
+		<section id='footer' className={`${styles.footer} ${raleway.className}`}>
 			{/* <Link
 				className={`navbar-brand border-0 ${styles.brand} ${styles['footer-item']}`}
 				href='/'
@@ -57,7 +65,9 @@ export default function Footer({
 			</Link> */}
 			<div className={`${styles.addresses} ${styles['footer-item']}`}>
 				<div>
-					<h4>Contact us</h4>
+					<h2 className={`fw-semibold ${playfairDisplay.className}`}>
+						Contact us
+					</h2>
 					<div>
 						<h5 className={styles.address}>
 							<FontAwesomeIcon icon={faMapLocationDot} /> &nbsp;Address:
@@ -91,7 +101,9 @@ export default function Footer({
 			<ul
 				className={`navbar-nav ${styles.navigation} ${styles['footer-item']}`}
 			>
-				<h4>Site Navigation</h4>
+				<h2 className={`fw-semibold ${playfairDisplay.className}`}>
+					Site Navigation
+				</h2>
 				{links.map((link, index) => (
 					<li
 						key={index}
