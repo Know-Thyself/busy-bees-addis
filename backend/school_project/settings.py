@@ -30,8 +30,15 @@ MEDIA_URL = '/frontend/public/'
 # STATIC_URL = "static/"
 # STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, "frontend/public")]
-STATIC_URL = "/public/"
+# STATIC_URL = "/public/"
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, "frontend/public")]
+
 # STATIC_ROOT = os.path.join(BASE_DIR, "frontend/public")
+# STATIC_ROOT = os.path.join(BASE_DIR, "frontend/public")
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "backend/kindergarten/static")]
+STATIC_URL = "static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "backend/kindergarten/staticfiles")
 
 
 # Parsing database url
@@ -48,10 +55,7 @@ SECRET_KEY = environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = environ.get("DEBUG") != "False"
 
-if DEBUG:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, "frontend/public")]
-else:
-    STATIC_ROOT = os.path.join(BASE_DIR, "frontend/public")
+
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'http://localhost:8000',
