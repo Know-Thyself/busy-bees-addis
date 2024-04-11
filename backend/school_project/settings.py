@@ -18,9 +18,9 @@ from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-PROJECT_DIR = Path(__file__).resolve().parent.parent.parent
-load_dotenv(PROJECT_DIR / '.env')
-MEDIA_ROOT = os.path.join(PROJECT_DIR, 'frontend/public')
+# PROJECT_DIR = Path(__file__).resolve().parent.parent.parent
+load_dotenv(BASE_DIR / '.env')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'frontend/public')
 MEDIA_URL = '/frontend/public/'
 # vercel
 # STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", "static")
@@ -179,9 +179,9 @@ STATIC_URL = 'static/'
 
 # STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 # STATIC_URL = "static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
