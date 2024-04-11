@@ -170,8 +170,8 @@ USE_TZ = True
 # STATIC_URL = "static/"
 # STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+# PROJECT_ROOT = Path(__file__).resolve().parent.parent
+# STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = 'static/'
 
 # Default primary key field type
