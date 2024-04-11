@@ -23,6 +23,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'frontend/public')
 MEDIA_URL = '/frontend/public/'
 # vercel
 # STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", "static")
+# STATIC_ROOT = os.path.join(BASE_DIR, "frontend/public")
+# STATIC_URL = "public/"
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, "frontend/public")]
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+# STATIC_URL = "static/"
+# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "frontend/public")]
+STATIC_URL = "public/"
+STATIC_ROOT = os.path.join(BASE_DIR, "frontend/staticfiles")
 
 # Parsing database url
 up.uses_netloc.append('postgres')
