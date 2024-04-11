@@ -37,7 +37,7 @@ MEDIA_URL = '/frontend/public/'
 # STATIC_ROOT = os.path.join(BASE_DIR, "frontend/public")
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "backend/kindergarten/static")]
-STATIC_URL = "static/"
+STATIC_URL = "/backend/kindergarten/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "backend/kindergarten/staticfiles")
 
 
