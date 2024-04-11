@@ -16,4 +16,6 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'school_project.settings')
 application = get_wsgi_application()
 
 # vercel_app/wsgi.py
-app = get_wsgi_application()
+# vercel config
+
+app = application 
