@@ -36,10 +36,6 @@ MEDIA_URL = '/frontend/public/'
 # STATIC_ROOT = os.path.join(BASE_DIR, "frontend/public")
 # STATIC_ROOT = os.path.join(BASE_DIR, "frontend/public")
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "kindergarten/static")]
-STATIC_URL = "static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "kindergarten/staticfiles")
-
 
 # Parsing database url
 up.uses_netloc.append('postgres')
@@ -167,6 +163,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "backend/kindergarten/static")]
+STATIC_URL = "static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "backend/kindergarten/staticfiles")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
