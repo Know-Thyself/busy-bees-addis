@@ -1,7 +1,7 @@
 import Home from '@/components/home'
 
 async function getIntro() {
-	const res = await fetch('https://busy-bees-addis-server.vercel.app/intro')
+	const res = await fetch('http://localhost:8000/intro')
 
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
@@ -11,7 +11,7 @@ async function getIntro() {
 }
 
 async function getDayActivities() {
-	const res = await fetch('https://busy-bees-addis-server.vercel.app/typical-day')
+	const res = await fetch('http://localhost:8000/typical-day')
 
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
@@ -21,7 +21,7 @@ async function getDayActivities() {
 }
 
 async function getFeatures() {
-	const res = await fetch('https://busy-bees-addis-server.vercel.app/features')
+	const res = await fetch('http://localhost:8000/features')
 
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
@@ -31,7 +31,7 @@ async function getFeatures() {
 }
 
 async function getCompoundImages() {
-	const res = await fetch('https://busy-bees-addis-server.vercel.app/compound-images')
+	const res = await fetch('http://localhost:8000/compound-images')
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
 	}
@@ -40,7 +40,7 @@ async function getCompoundImages() {
 }
 
 async function getOpenHouseImages() {
-	const res = await fetch('https://busy-bees-addis-server.vercel.app/open-house-images')
+	const res = await fetch('http://localhost:8000/open-house-images')
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
 	}
@@ -49,7 +49,7 @@ async function getOpenHouseImages() {
 }
 
 async function getTeam() {
-	const res = await fetch('https://busy-bees-addis-server.vercel.app/team')
+	const res = await fetch('http://localhost:8000/team')
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
 	}
@@ -58,7 +58,7 @@ async function getTeam() {
 }
 
 async function getAddress() {
-	const res = await fetch('https://busy-bees-addis-server.vercel.app/address')
+	const res = await fetch('http://localhost:8000/address')
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
 	}
