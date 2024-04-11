@@ -31,7 +31,7 @@ MEDIA_URL = '/frontend/public/'
 # STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "frontend/public")]
 STATIC_URL = "public/"
-STATIC_ROOT = os.path.join(BASE_DIR, "frontend/staticfiles")
+STATIC_ROOT = os.path.join(BASE_DIR, "frontend/public")
 
 # Parsing database url
 up.uses_netloc.append('postgres')
