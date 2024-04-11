@@ -172,7 +172,7 @@ USE_TZ = True
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
