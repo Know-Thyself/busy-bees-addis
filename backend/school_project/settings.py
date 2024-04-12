@@ -17,11 +17,11 @@ import urllib.parse as up
 from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # PROJECT_DIR = Path(__file__).resolve().parent.parent.parent
 load_dotenv(BASE_DIR / '.env')
-MEDIA_ROOT = os.path.join(BASE_DIR, '../../frontend/public')
-MEDIA_URL = '../../frontend/public/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'frontend/public')
+MEDIA_URL = '/frontend/public/'
 # vercel
 # STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", "static")
 # STATIC_ROOT = os.path.join(BASE_DIR, "frontend/public")
@@ -111,7 +111,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'school_project.wsgi.app'
+WSGI_APPLICATION = 'school_project.wsgi.application'
 
 
 # Database
