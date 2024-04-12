@@ -2,6 +2,11 @@
 	margin-top: 2rem;
 	scroll-margin: 83px;
 	color: black;
+	color: var(--tertiary-color);
+	color: var(--overlay-text-color);
+	color: #61082b;
+	color: white;
+
 	background-color: var(--tertiary-color);
 	background-color: var(--primary-color);
 	display: grid;
@@ -11,29 +16,23 @@
 	gap: 4px;
 }
 
-/* .footer {
-	display: grid;
-	grid-template-columns: repeat(8, 1fr);
-	grid-template-rows: repeat(9, 6vw);
-	gap: 2px;
-} */
 .footer-item {
 	height: 100%;
-	background-color: red;
-	background-color: #de5935;
 	background-color: #5ac3b0;
+	background-color: #01796F;
+	background-color: #de5935;
+	background-color: #ED2939;
+	background-color: #9E1B32;
+	background-color: #3559FD;
+
+
+
 }
 .brand {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
-/* .map-wrapper {
-    width: 85%;
-    margin: auto;
-    padding: 2rem 0;
-} */
 
 .image-wrapper {
 	display: flex;
@@ -73,10 +72,10 @@
 .copyright,
 .menu__item,
 .active {
-	color: var(--primary-color);
 	color: var(--tertiary-color);
 	color: var(--overlay-text-color);
 	color: #61082b;
+	color: var(--primary-color);
 
 }
 

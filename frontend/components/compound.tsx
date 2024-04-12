@@ -24,7 +24,7 @@ export default function Compound({
 	return (
 		<section id='gallery'>
 			<div className={styles['heading-wrapper']}>
-				<h1 className={`${styles.heading} ${playfairDisplay.className}`}>
+				<h1 className={`${styles.heading} ${playfairDisplayItalic.className}`}>
 					Compound Photos Gallery
 				</h1>
 				<div className={styles.line}></div>

@@ -21,6 +21,10 @@
 	width: 80px;
 	height: 3px;
 	background-color: var(--secondary-color);
+	background-color: #A9BA9D;
+	background-color: #A77C92;
+
+
 	margin: 0 auto;
 }
 
@@ -69,21 +73,20 @@
 
 	background-color: #609078;
 
+	background-color: #728bfe;
+
+	background-color: #A9BA9D;
+	background-color: #A3C1AD;
+	background-color: #F0AA89;
+	background-color: #89CFF0;
+	background-color: #A8C090;
+	background-color: #609078;
+
+	background-color: #7CA791;
+	background-color: #A77C92;
 
 
 
-
-
-
-	
-
-
-
-
-
-
-
-	
 	width: 100%;
 }
 
@@ -111,21 +114,15 @@
 	background-color: #f4abaa;
 	background-color: #cae7df;
 
+	background-color: #D0F0C0;
+	background-color: #F0F8FF;
 
+	background-color: #89CFF0;
+	background-color: #F0AA89;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+	background-color: #906078;
+	background-color: #A77C92;
+	background-color: #7CA791;
 
 
 }

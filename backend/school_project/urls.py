@@ -19,8 +19,6 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from kindergarten import views
-from django.conf.urls.static import static
-from django.conf import settings
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
@@ -32,6 +30,7 @@ router.register(r'compound-images', views.CompoundImageViewSet)
 router.register(r'open-house-images', views.OpenHouseImageViewSet)
 router.register(r'team', views.TeamViewSet)
 router.register(r'address', views.AddressViewSet)
+router.register(r'register', views.RegisterViewSet)
 
 
 urlpatterns = [
@@ -39,7 +38,3 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
-
-# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-# if settings.DEBUG:
-#     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -10,6 +10,7 @@ from kindergarten.models import (
     OpenHouseImage,
     Team,
     Address,
+    Register,
 )
 
 
@@ -120,5 +121,18 @@ class AddressSerializer(serializers.HyperlinkedModelSerializer):
             'image',
             'facebook',
             'instagram',
+        ]
+        read_only_fields = ['id']
+
+
+class RegisterSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Register
+        fields = [
+            'id',
+            'url',
+            'title',
+            'subtitle',
+            'requirements',
         ]
         read_only_fields = ['id']

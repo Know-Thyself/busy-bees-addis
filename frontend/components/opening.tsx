@@ -22,7 +22,7 @@ export default function OpenHouse({
 }) {
 	return (
 		<div id='gallery'>
-			<h1 className={`${styles.heading} ${playfairDisplay.className}`}>
+			<h1 className={`${styles.heading} ${playfairDisplayItalic.className}`}>
 				Open House Photos Gallery
 			</h1>
 			<div className={styles.line}></div>

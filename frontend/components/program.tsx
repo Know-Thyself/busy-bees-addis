@@ -4,8 +4,6 @@ import {
 	raleway,
 	playfairDisplay,
 	playfairDisplayItalic,
-	oswald,
-	concertOne,
 } from '@/styles/fonts'
 import styles from '@/styles/program.module.css'
 
@@ -39,7 +37,7 @@ export default function Program({
 		<section id='program' className={styles['program-section']}>
 			<div className={styles['heading-wrapper']}>
 				<h1
-					className={`${styles.heading} ${playfairDisplay.className}`}
+					className={`${styles.heading} ${playfairDisplayItalic.className}`}
 				>
 					{introObject.program_title}
 				</h1>
@@ -59,7 +57,7 @@ export default function Program({
 			</div>
 			<div className={styles['activities-section']}>
 				<h1
-					className={`${styles['activities-title']} ${playfairDisplay.className}`}
+					className={`${styles['activities-title']} ${playfairDisplayItalic.className}`}
 				>
 					{day[0].title.replace(/\b[a-z]/g, (x: string) => x.toUpperCase())}
 				</h1>

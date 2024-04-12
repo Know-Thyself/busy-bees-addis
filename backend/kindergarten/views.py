@@ -8,6 +8,7 @@ from kindergarten.models import (
     OpenHouseImage,
     Team,
     Address,
+    Register,
 )
 from kindergarten.serializers import (
     UserSerializer,
@@ -19,6 +20,7 @@ from kindergarten.serializers import (
     OpenHouseImageSerializer,
     TeamSerializer,
     AddressSerializer,
+    RegisterSerializer,
 )
 
 
@@ -74,4 +76,10 @@ class TeamViewSet(viewsets.ModelViewSet):
 class AddressViewSet(viewsets.ModelViewSet):
     queryset = Address.objects.all()
     serializer_class = AddressSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+class RegisterViewSet(viewsets.ModelViewSet):
+    queryset = Register.objects.all()
+    serializer_class = RegisterSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]

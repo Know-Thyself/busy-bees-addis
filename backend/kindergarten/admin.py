@@ -8,6 +8,7 @@ from .models import (
     OpenHouseImage,
     Team,
     Address,
+    Register,
 )
 
 # Registering models
@@ -19,6 +20,7 @@ admin.site.register(CompoundImage)
 admin.site.register(OpenHouseImage)
 admin.site.register(Team)
 admin.site.register(Address)
+admin.site.register(Register)
 
 
 # Renaming admin portal header and title

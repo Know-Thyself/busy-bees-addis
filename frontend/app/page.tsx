@@ -66,6 +66,15 @@ async function getAddress() {
 	return res.json()
 }
 
+async function getRegister() {
+	const res = await fetch('https://busy-bees-addis-server.vercel.app/register')
+	if (!res.ok) {
+		throw new Error('Failed to fetch data')
+	}
+
+	return res.json()
+}
+
 export default async function HomePage() {
 	const intro = await getIntro()
 
@@ -81,6 +90,8 @@ export default async function HomePage() {
 	const team = await getTeam()
 
 	const address = await getAddress()
+
+	const register = await getRegister()
 
 	return (
 		<Home

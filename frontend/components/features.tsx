@@ -26,7 +26,7 @@ export default function Features({ features }: { features: FeatureProps[] }) {
 	return (
 		<section id='features' className={styles.features}>
 			<div className={styles['heading-wrapper']}>
-				<h1 className={`${styles.heading} ${playfairDisplay.className}`}>
+				<h1 className={`${styles.heading} ${playfairDisplayItalic.className}`}>
 					Features
 				</h1>
 				<div className={styles.line}></div>

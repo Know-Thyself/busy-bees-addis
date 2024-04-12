@@ -86,8 +86,8 @@
 	--overlay-text-color: #0049ff;
 	--overlay-text-color: #4d724d;
 	--overlay-text-color: #61082b;
-	--overlay-text-color: #ffffff;
 	--overlay-text-color: #182978;
+	--overlay-text-color: #ffffff;
 	--overlay-text-color: #78184A;
 	--overlay-text-color: #0b4141;
 
@@ -102,7 +102,7 @@
 	--overlay-text-bg: rgba(223, 48, 98, 0.5);
 	--overlay-text-bg: rgba(37, 104, 251, 0.6);
 	--overlay-text-bg: rgba(130, 224, 22, 0.5);
-	--overlay-text-bg: rgba(253, 217, 53, 0.5);
+	--overlay-text-bg: rgba(253, 217, 53, 0.2);
 
 	--overlay-text-shadow: #2568fb;
 	--overlay-text-shadow: #4a2c40;

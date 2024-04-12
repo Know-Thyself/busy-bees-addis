@@ -27,6 +27,7 @@
 	width: 80px;
 	height: 3px;
 	background-color: var(--secondary-color);
+	background-color: #de5935;
 	margin: 0 auto;
 	/* 
 	margin-bottom: 3rem;
@@ -85,6 +86,7 @@
 	background-color: #50C878;
 	background-color: #7850C8;
 	background-color: #de5935;
+	background-color: #f7cd46;
 
 
 
@@ -106,7 +108,9 @@
 	background-color:  #8F9779;
 	background-color: #50C878;
 	background-color: #C87850;
-	background-color: #f7cd46;
+	
+	background-color: #de5935;
+
 
 
 

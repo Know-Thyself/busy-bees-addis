@@ -30,7 +30,7 @@ export default function Team({ team }: { team: TeamProps[] }) {
 	return (
 		<section id='team' className={`${styles.team}`}>
 			<div className={styles['heading-wrapper']}>
-				<h1 className={`${playfairDisplay.className} ${styles.heading}`}>
+				<h1 className={`${playfairDisplayItalic.className} ${styles.heading}`}>
 					Meet The Team
 				</h1>
 				<div className={styles.line}></div>

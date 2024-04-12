@@ -57,3 +57,13 @@ class Address(models.Model):
     image = models.ImageField(upload_to='images/footer/')
     facebook = models.CharField(max_length=255, default='')
     instagram = models.CharField(max_length=255, default='')
+
+
+class Register(models.Model):
+    title = models.CharField(max_length=55)
+    subtitle = models.CharField(max_length=55)
+    requirements = ArrayField(
+        models.CharField(max_length=500),
+        default=list,
+        size=20,
+    )
