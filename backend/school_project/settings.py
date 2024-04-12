@@ -61,10 +61,6 @@ ALLOWED_HOSTS = [
     '.now.sh',
 ]
 
-# vercel_app/settings.py
-WSGI_APPLICATION = 'vercel_app.wsgi.app'
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -112,6 +108,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'school_project.wsgi.application'
+# vercel_app/settings.py
+WSGI_APPLICATION = 'school_project.wsgi.app'
 
 
 # Database
