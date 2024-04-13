@@ -23,6 +23,7 @@ load_dotenv(BASE_DIR / '.env')
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'frontend/public')
 MEDIA_URL = '/frontend/public/'
 # vercel
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", "static")
 
 
