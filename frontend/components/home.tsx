@@ -64,6 +64,13 @@ type AddressProps = {
 	instagram: string
 }
 
+type RegisterProps = {
+	id: number
+	title: string
+	subtitle: string
+	requirements: string[]
+}
+
 export default function Home({
 	intro,
 	day,
@@ -72,6 +79,7 @@ export default function Home({
 	open_house_images,
 	team,
 	address,
+	register,
 }: {
 	intro: Intro
 	day: TypicalDayProps[]
@@ -80,6 +88,7 @@ export default function Home({
 	open_house_images: OpenHouseImagesProps[]
 	team: TeamProps[]
 	address: AddressProps
+	register: RegisterProps
 }) {
 	const addressObj: object | any = address
 	const addressObject = addressObj[0]
@@ -144,7 +153,7 @@ export default function Home({
 			<Features features={features} />
 			<section id='gallery' className={styles.compound}>
 				<Compound compound_images={compound_images} />
-				<OpenHouse open_house_images={open_house_images} />
+				<OpenHouse open_house_images={open_house_images} register={register} />
 			</section>
 			<Team team={team} />
 			{/* <Mapbox /> */}

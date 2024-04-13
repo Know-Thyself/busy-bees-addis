@@ -34,6 +34,9 @@
 
 .activities-grid-container ul li {
 	list-style-type: square;
+	color: black;
+	font-size: 1.15rem;
+	font-weight: 500;
 }
 
 .features,
@@ -94,8 +97,10 @@
 		background-color: #2568fb;
 
 		background-color: #cae7df;
+		background-color: #67f0ee;
+		background-color: #84EDF5;
 	}
-	
+
 	.activities-grid-container ul {
 		display: flex;
 		flex-direction: column;
@@ -103,11 +108,14 @@
 		align-items: last baseline;
 		padding: 2rem;
 		padding-left: 4rem;
-		background-color: var(--accent-color-light);
 		background-color: #f7cd46;
 		background-color: #fecd45;
 		
 		background-color: #f4abaa;
+		background-color: #f06767;
+		background-color: var(--accent-color);
+		background-color: var(--accent-color-light);
+
 		height: 100%;
 	}
 

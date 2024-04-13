@@ -110,6 +110,36 @@
 	grid-row-end: 25;
 }
 
+.registration {
+	width: 90%;
+	margin: auto;
+	padding: 1rem;
+	background-color: #f7cd46;
+	background-color: #de5935;
+	background-color: #5ac3b0;
+	background-color: #f4abaa;
+	background-color: #50C878;
+	background-color: #9DC183;
+	background-color: #C7EA46;
+	background-color: #98FB98;
+	background-color: #D0F0C0;
+	background-color: #50C878;
+	background-color: #cae7df;
+}
+
+.line {
+	width: 80px;
+	height: 3px;
+	background-color: var(--secondary-color);
+	margin: 0 auto;
+	margin-top: -0.5rem;
+}
+
+.registration ol li {
+	font-size: 1.15rem;
+	font-weight: 500;
+}
+
 @media only screen and (min-width: 768px) {
 	.title {
 		font-size: 2rem;
@@ -118,6 +148,10 @@
 	.gallery {
 		width: 85%;
 		margin: 0 auto;
+	}
+
+	.registration {
+		width: 85%;
 	}
 }
 

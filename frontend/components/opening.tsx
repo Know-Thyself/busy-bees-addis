@@ -15,11 +15,22 @@ type OpenHouseImagesProps = {
 	caption: string
 }
 
+type RegisterProps = {
+	id: number
+	title: string
+	subtitle: string
+	requirements: string[]
+}
+
 export default function OpenHouse({
 	open_house_images,
+	register,
 }: {
 	open_house_images: OpenHouseImagesProps[]
+	register: RegisterProps
 }) {
+	let registerObj: object | any = register
+	registerObj = registerObj[0]
 	return (
 		<div id='gallery'>
 			<h1 className={`${styles.heading} ${playfairDisplayItalic.className}`}>
@@ -39,6 +50,27 @@ export default function OpenHouse({
 					</figure>
 				))}
 			</div>
+			<section className={styles.registration}>
+				<div className={styles['heading-wrapper']}>
+					<h1
+						className={`${playfairDisplayItalic.className} ${styles.heading}`}
+					>
+						{registerObj.title}
+					</h1>
+					<div className={styles.line}></div>
+				</div>
+
+				<h3 className={`${playfairDisplay.className} ${styles.title}`}>
+					{registerObj.subtitle}
+				</h3>
+				<ol className={`${raleway.className}`}>
+					{registerObj.requirements.map(
+						(requirement: string, index: number) => (
+							<li key={index}>{requirement}</li>
+						)
+					)}
+				</ol>
+			</section>
 		</div>
 	)
 }

@@ -7,30 +7,35 @@
 	--primary-color: yellow;
 	--secondary-color: #4bac3f;
 	--tertiary-color: #825f1d;
+	--tertiary-color: rgba(101, 55, 20, 0.88);
 	--complementary-color: orange;
 	--light-green: #8ff397;
 	--light-green: #8ff3c9;
 	--accent-color: #0516ff;
-	--accent-color: red;
 	--accent-color: #4a2c40;
 	--accent-color: #df3062;
 	--accent-color: #78184A;
-
+	--accent-color: #f06769;
+	--accent-color: #f06767;
+	
+	
+	
 	--accent-color-light: #e24572;
 	--accent-color-light: #f07e74;
 	--accent-color-light: #f28b82;
 	--accent-color-light: #f3978f;
 	--accent-color-light: #f3978f;
-
+	
 	--accent-color-light: #fab162;
 	--accent-color-light: #f1e821;
 	--accent-color-light: #acbfe6;
 	--accent-color-light: #f8e5e5;
 	--accent-color-light: #f2c1d1;
 	--accent-color-light: #f4abaa;
-
-
-
+	--accent-color-light: #f58c84;
+	
+	
+	
 	--primary-color: #ffee05;
 	--primary-color: #f7cd46;
 	--primary-color: #abf62d;
@@ -45,25 +50,57 @@
 
 	--body-background: #ffffff;
 	--primary-text-color: black;
-	--nav-links-color: black;
 	--secondary-color: #82e016;
-	--secondary-color: #abf62d;
 	--secondary-color: #45af2a;
 	--secondary-color: #4bac3f;
-
+	
 	--secondary-color: #5daa68;
+	--secondary-color: #4A5D23;
 	--secondary-color: #4bac3f;
+	
+	--secondary-color: #007848;
+	--secondary-color: #00563B;
+	--secondary-color: #006A4E;
+	--secondary-color: #78184A;
+	--secondary-color: #006B3C;
+	
+	--secondary-color: #00AB66;
+	--secondary-color: #009A44;
+	
+	--secondary-color: #00873E;
+	--secondary-color:  #01735C;
+	--secondary-color:  #354230;
+	--secondary-color:  #177245;
+	
+	--secondary-color:  #1A2421;
+	--secondary-color:  #007848;
+	--secondary-color:  #0e9b4a;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	--secondary-complementary: #A03FAC;
 	--secondary-complementary: #D8BFD8;
 	--secondary-complementary: #DE6FA1;
 	--secondary-complementary: #f2c1d1;
-
-
-
-
-
+	
+	
+	
+	
+	
 	--nav-links-color: #825f1d;
 	--nav-links-color: #75561a;
+	--nav-links-color: rgba(101, 55, 20, 1);
 
 	--mobile-active-nav: #000ed1;
 	--overlay-text-color: #1a2238;

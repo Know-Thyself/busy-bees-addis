@@ -102,6 +102,7 @@ export default async function HomePage() {
 			open_house_images={openHouseImages}
 			team={team}
 			address={address}
+			register={register}
 		/>
 	)
 }
