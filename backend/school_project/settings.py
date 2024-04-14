@@ -27,7 +27,6 @@ MEDIA_URL = '/frontend/public/'
 # vercel
 # STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", "static")
-CLOUDINARY_URL = environ.get('CLOUDINARY_URL')
 
 
 # Parsing database url
