@@ -34,6 +34,9 @@ router.register(r'open-house-images', views.OpenHouseImageViewSet)
 router.register(r'team', views.TeamViewSet)
 router.register(r'address', views.AddressViewSet)
 router.register(r'register', views.RegisterViewSet)
+router.register(r'photos', views.PhotoViewSet)
+router.register(r'examples', views.ExampleViewSet)
+router.register(r'hero', views.HeroViewSet)
 
 
 urlpatterns = [

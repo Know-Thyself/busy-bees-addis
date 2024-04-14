@@ -15,6 +15,8 @@ import os
 from os import environ
 import urllib.parse as up
 from dotenv import load_dotenv
+import cloudinary
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +25,7 @@ load_dotenv(BASE_DIR / '.env')
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'frontend/public')
 MEDIA_URL = '/frontend/public/'
 # vercel
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", "static")
 
 
@@ -62,6 +64,9 @@ INSTALLED_APPS = [
     # third apps
     'rest_framework',
     'whitenoise.runserver_nostatic',
+    'cloudinary',
+    'cloudinary_storage',
+    # 'cloudinary_storage',
     # installed apps
     'kindergarten',
 ]
@@ -156,3 +161,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+cloudinary.config(
+    cloud_name=environ.get('CLOUD_NAME'),
+    api_key=environ.get('API_KEY'),
+    api_secret=environ.get('API_SECRET'),
+)
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

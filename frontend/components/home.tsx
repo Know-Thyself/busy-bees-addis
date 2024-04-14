@@ -71,6 +71,17 @@ type RegisterProps = {
 	requirements: string[]
 }
 
+type ClImagesProps = {
+	id: number
+	image: string
+}
+
+type ExamplesProps = {
+	id: number
+	title: string
+	image: string
+}
+
 export default function Home({
 	intro,
 	day,
@@ -156,8 +167,13 @@ export default function Home({
 				<OpenHouse open_house_images={open_house_images} register={register} />
 			</section>
 			<Team team={team} />
+			{/* <Images image={images} examples={examples} /> */}
 			{/* <Mapbox /> */}
-			<Footer address={addressObject} links={links} activeSection={activeSection} />
+			<Footer
+				address={addressObject}
+				links={links}
+				activeSection={activeSection}
+			/>
 		</main>
 	)
 }
