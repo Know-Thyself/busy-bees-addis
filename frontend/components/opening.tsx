@@ -1,3 +1,6 @@
+'use client'
+
+import { CldImage } from 'next-cloudinary'
 import Image from 'next/image'
 import {
 	montserrat,
@@ -38,13 +41,21 @@ export default function OpenHouse({
 			</h1>
 			<div className={styles.line}></div>
 			<div className={styles.gallery}>
-				{open_house_images.map((image, index) => (
+				{open_house_images.map(image => (
 					<figure key={image.id} className={styles['gallery-item']}>
-						<Image
+						{/* <Image
 							alt={image.caption !== null ? image.caption : 'Compound Image'}
 							src={image.open_house_image.split('/public')[1]}
 							width={300}
 							height={400}
+							className={styles['gallery-img']}
+						/> */}
+						<CldImage
+							alt={image.caption}
+							width='300'
+							height='400'
+							src={image.open_house_image.split('upload/')[1]}
+							crop={'fill'}
 							className={styles['gallery-img']}
 						/>
 					</figure>

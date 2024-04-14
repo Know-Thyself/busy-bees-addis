@@ -1,4 +1,6 @@
-import Image from 'next/image'
+'use client'
+
+import { CldImage } from 'next-cloudinary'
 import {
 	montserrat,
 	raleway,
@@ -8,7 +10,6 @@ import {
 	concertOne,
 } from '@/styles/fonts'
 import styles from '@/styles/compound.module.css'
-
 type CompoundImagesProps = {
 	id: number
 	compound_image: string
@@ -32,11 +33,12 @@ export default function Compound({
 			<div className={styles.gallery}>
 				{compound_images.map((image, index) => (
 					<figure key={image.id} className={styles['gallery-item']}>
-						<Image
-							alt={image.caption !== null ? image.caption : 'Compound Image'}
-							src={image.compound_image.split('/public')[1]}
-							width={300}
-							height={400}
+						<CldImage
+							alt={image.caption}
+							width='300'
+							height='400'
+							src={image.compound_image.split('upload/')[1]}
+							crop={'fill'}
 							className={styles['gallery-img']}
 						/>
 					</figure>
