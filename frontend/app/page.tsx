@@ -82,9 +82,7 @@ async function getRegister() {
 }
 
 async function getPhotos() {
-	const res = await fetch(
-		'https://busy-bees-addis-server-cokpib6ab-knowthyselfs-projects.vercel.app/photos/'
-	)
+	const res = await fetch('http://localhost:8000/photos')
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
 	}
@@ -93,9 +91,7 @@ async function getPhotos() {
 }
 
 async function getExamples() {
-	const res = await fetch(
-		'https://busy-bees-addis-server-cokpib6ab-knowthyselfs-projects.vercel.app/examples/'
-	)
+	const res = await fetch('http://localhost:8000/examples')
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
 	}
@@ -104,9 +100,7 @@ async function getExamples() {
 }
 
 async function getHero() {
-	const res = await fetch(
-		'https://busy-bees-addis-server-cokpib6ab-knowthyselfs-projects.vercel.app/hero/'
-	)
+	const res = await fetch('http://localhost:8000/hero')
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
 	}
@@ -137,8 +131,6 @@ export default async function HomePage() {
 	const examples = await getExamples()
 
 	const hero = await getHero()
-
-	console.log(hero)
 
 	return (
 		<Home
