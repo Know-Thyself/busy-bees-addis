@@ -105,5 +105,5 @@ class ExampleViewSet(viewsets.ModelViewSet):
 
 class HeroViewSet(viewsets.ModelViewSet):
     queryset = Hero.objects.all()
-    serializer_class = Hero
+    serializer_class = HeroSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
