@@ -126,13 +126,13 @@ export default async function HomePage() {
 
 	const register = await getRegister()
 
-	// const photos = await getPhotos()
+	const photos = await getPhotos()
 
-	// const examples = await getExamples()
+	const examples = await getExamples()
 
-	// console.log(examples);
+	console.log(examples, '<---------examples');
 
-	// const hero = await getHero()
+	const hero = await getHero()
 
 	return (
 		<Home
@@ -144,9 +144,9 @@ export default async function HomePage() {
 			team={team}
 			address={address}
 			register={register}
-			// images={photos}
-			// examples={examples}
-			// hero={hero}
+			images={photos}
+			examples={examples}
+			hero={hero}
 		/>
 	)
 }
