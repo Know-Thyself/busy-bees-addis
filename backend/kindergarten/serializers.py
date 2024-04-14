@@ -167,5 +167,12 @@ class ExampleSerializer(serializers.HyperlinkedModelSerializer):
 class HeroSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Hero
-        fields = ['id', 'url', 'logo', 'hero_image', 'brand', 'motto']
+        fields = [
+            'id',
+            'url',
+            'logo',
+            'hero_image',
+            'brand',
+            'motto',
+        ]
         read_only_fields = ['id']

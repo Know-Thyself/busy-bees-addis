@@ -1,5 +1,5 @@
 import Home from '@/components/home'
-import Image from 'next/image'
+
 async function getIntro() {
 	const res = await fetch('https://busy-bees-addis-server.vercel.app/intro')
 
@@ -100,7 +100,9 @@ async function getExamples() {
 }
 
 async function getHero() {
-	const res = await fetch('https://busy-bees-addis-server.vercel.app/hero')
+	const res = await fetch(
+		'https://busy-bees-addis-server-kfr1gpq66-knowthyselfs-projects.vercel.app/admin/kindergarten/hero'
+	)
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
 	}
