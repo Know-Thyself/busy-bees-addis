@@ -12,6 +12,7 @@ import dynamic from 'next/dynamic'
 import Mapbox from './map'
 import { raleway } from '@/styles/fonts'
 import Footer from './footer'
+import Images from './image'
 import styles from '@/styles/home.module.css'
 
 interface Intro {
@@ -71,6 +72,25 @@ type RegisterProps = {
 	requirements: string[]
 }
 
+type ClImagesProps = {
+	id: number
+	image: string
+}
+
+type ExamplesProps = {
+	id: number
+	title: string
+	image: string
+}
+
+type HeroProps = {
+	id: number
+	logo: string
+	hero_image: string
+	brand: string
+	motto: string
+}
+
 export default function Home({
 	intro,
 	day,
@@ -80,6 +100,9 @@ export default function Home({
 	team,
 	address,
 	register,
+	images,
+	examples,
+	hero,
 }: {
 	intro: Intro
 	day: TypicalDayProps[]
@@ -89,9 +112,16 @@ export default function Home({
 	team: TeamProps[]
 	address: AddressProps
 	register: RegisterProps
+	images: ClImagesProps[]
+	examples: ExamplesProps[]
+	hero: HeroProps[]
 }) {
 	const addressObj: object | any = address
 	const addressObject = addressObj[0]
+	let heroObject: object | any = hero
+	heroObject = hero[0]
+	let logo: string = heroObject.logo
+	console.log(logo, '<----------logo')
 	const [activeSection, setActiveSection] = useState<string>('')
 
 	const links: string[] = ['program', 'features', 'gallery', 'team', 'footer']
@@ -147,7 +177,7 @@ export default function Home({
 
 	return (
 		<main className={`${styles.main} ${raleway.className}`}>
-			<Navbar links={links} activeSection={activeSection} />
+			<Navbar logo={logo} links={links} activeSection={activeSection} />
 			<Hero intro={intro} />
 			<Program intro={intro} day={day} />
 			<Features features={features} />
@@ -156,8 +186,13 @@ export default function Home({
 				<OpenHouse open_house_images={open_house_images} register={register} />
 			</section>
 			<Team team={team} />
+			<Images image={images} examples={examples} />
 			{/* <Mapbox /> */}
-			<Footer address={addressObject} links={links} activeSection={activeSection} />
+			<Footer
+				address={addressObject}
+				links={links}
+				activeSection={activeSection}
+			/>
 		</main>
 	)
 }

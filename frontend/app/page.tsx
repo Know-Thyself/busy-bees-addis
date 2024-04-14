@@ -11,7 +11,9 @@ async function getIntro() {
 }
 
 async function getDayActivities() {
-	const res = await fetch('https://busy-bees-addis-server.vercel.app/typical-day')
+	const res = await fetch(
+		'https://busy-bees-addis-server.vercel.app/typical-day'
+	)
 
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
@@ -31,7 +33,9 @@ async function getFeatures() {
 }
 
 async function getCompoundImages() {
-	const res = await fetch('https://busy-bees-addis-server.vercel.app/compound-images')
+	const res = await fetch(
+		'https://busy-bees-addis-server.vercel.app/compound-images'
+	)
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
 	}
@@ -40,7 +44,9 @@ async function getCompoundImages() {
 }
 
 async function getOpenHouseImages() {
-	const res = await fetch('https://busy-bees-addis-server.vercel.app/open-house-images')
+	const res = await fetch(
+		'https://busy-bees-addis-server.vercel.app/open-house-images'
+	)
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
 	}
@@ -75,6 +81,33 @@ async function getRegister() {
 	return res.json()
 }
 
+async function getPhotos() {
+	const res = await fetch('https://busy-bees-addis-server.vercel.app/photos')
+	if (!res.ok) {
+		throw new Error('Failed to fetch data')
+	}
+
+	return res.json()
+}
+
+async function getExamples() {
+	const res = await fetch('https://busy-bees-addis-server.vercel.app/examples')
+	if (!res.ok) {
+		throw new Error('Failed to fetch data')
+	}
+
+	return res.json()
+}
+
+async function getHero() {
+	const res = await fetch('https://busy-bees-addis-server.vercel.app/hero')
+	if (!res.ok) {
+		throw new Error('Failed to fetch data')
+	}
+
+	return res.json()
+}
+
 export default async function HomePage() {
 	const intro = await getIntro()
 
@@ -93,6 +126,14 @@ export default async function HomePage() {
 
 	const register = await getRegister()
 
+	const photos = await getPhotos()
+
+	const examples = await getExamples()
+
+	console.log(examples);
+
+	const hero = await getHero()
+
 	return (
 		<Home
 			intro={intro}
@@ -103,6 +144,9 @@ export default async function HomePage() {
 			team={team}
 			address={address}
 			register={register}
+			images={photos}
+			examples={examples}
+			hero={hero}
 		/>
 	)
 }

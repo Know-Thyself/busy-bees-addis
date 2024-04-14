@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 import logo from '@/public/images/logo/busy-bees-addis-logo.png'
 import {
 	playfairDisplay,
@@ -14,12 +15,28 @@ import {
 import 'bootswatch/dist/sandstone/bootstrap.min.css'
 import styles from '@/styles/navbar.module.css'
 
-interface Links {
+interface Linkss {
 	links: string[]
 	activeSection: string
 }
 
-export default function Navbar({ links, activeSection }: Links) {
+type LinksProps = {
+	links: string[0]
+}
+
+type LogoProp = {
+	logo: string
+}
+
+export default function Navbar({
+	links,
+	activeSection,
+	logo,
+}: {
+	links: string[]
+	activeSection: string
+	logo: string
+}) {
 	const [toggleMenu, setToggleMenu] = useState(false)
 	const [isChecked, setIsChecked] = useState(false)
 	const [screenWidth, setScreenWidth] = useState(1348)
@@ -57,9 +74,17 @@ export default function Navbar({ links, activeSection }: Links) {
 		>
 			<div className='container-fluid align-content-center'>
 				<Link className={`navbar-brand border-0 ${styles.brand}`} href='/'>
-					<Image
+					{/* <Image
 						src={logo}
 						alt='Busy Bees Addis Logo'
+						className={styles.logo}
+					/> */}
+					<CldImage
+						alt='logo'
+						width='280'
+						height='50'
+						src={logo.split('upload/')[1]}
+						crop={'fill'}
 						className={styles.logo}
 					/>
 				</Link>
