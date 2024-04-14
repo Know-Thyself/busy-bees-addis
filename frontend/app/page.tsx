@@ -1,8 +1,16 @@
 import Home from '@/components/home'
 
-async function getIntro() {
-	const res = await fetch('https://busy-bees-addis-server.vercel.app/intro')
+async function getHero() {
+	const res = await fetch('https://busy-bees-addis-server.vercel.app/hero')
+	if (!res.ok) {
+		throw new Error('Failed to fetch data')
+	}
 
+	return res.json()
+}
+
+async function getProgram() {
+	const res = await fetch('https://busy-bees-addis-server.vercel.app/program')
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
 	}
@@ -81,44 +89,10 @@ async function getRegister() {
 	return res.json()
 }
 
-async function getPhotos() {
-	const res = await fetch('https://busy-bees-addis-server.vercel.app/photos')
-	if (!res.ok) {
-		throw new Error('Failed to fetch data')
-	}
-
-	return res.json()
-}
-
-async function getExamples() {
-	const res = await fetch('https://busy-bees-addis-server.vercel.app/examples')
-	if (!res.ok) {
-		throw new Error('Failed to fetch data')
-	}
-
-	return res.json()
-}
-
-async function getHero() {
-	const res = await fetch('https://busy-bees-addis-server.vercel.app/hero')
-	if (!res.ok) {
-		throw new Error('Failed to fetch data')
-	}
-
-	return res.json()
-}
-
-async function getProgram() {
-	const res = await fetch('https://busy-bees-addis-server.vercel.app/program')
-	if (!res.ok) {
-		throw new Error('Failed to fetch data')
-	}
-
-	return res.json()
-}
-
 export default async function HomePage() {
-	const intro = await getIntro()
+	const hero = await getHero()
+
+	const program = await getProgram()
 
 	const activities = await getDayActivities()
 	activities.sort((a: object | any, b: object | any) => a.id - b.id)
@@ -135,17 +109,11 @@ export default async function HomePage() {
 
 	const register = await getRegister()
 
-	const photos = await getPhotos()
-
-	const examples = await getExamples()
-
-	const hero = await getHero()
-
-	const program = await getProgram()
 
 	return (
 		<Home
-			intro={intro}
+			hero={hero}
+			program={program}
 			day={activities}
 			features={features}
 			compound_images={compoundImages}
@@ -153,9 +121,6 @@ export default async function HomePage() {
 			team={team}
 			address={address}
 			register={register}
-			images={photos}
-			examples={examples}
-			hero={hero}
 		/>
 	)
 }

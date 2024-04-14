@@ -7,8 +7,11 @@ import {
 } from '@/styles/fonts'
 import styles from '@/styles/program.module.css'
 
-interface Intro {
-	intro: string[]
+
+type ProgramProps = {
+	id: number
+	title: string
+	content: string
 }
 
 type TypicalDayProps = {
@@ -18,17 +21,17 @@ type TypicalDayProps = {
 }
 
 export default function Program({
-	intro,
+	programResponse,
 	day,
 }: {
-	intro: Intro
+	programResponse: ProgramProps[]
 	day: TypicalDayProps[]
 }) {
 	const left: string[] = []
 	const right: string[] = []
-	const introOb: object | any = intro
-	const introObject = introOb[0]
-	introObject.program
+	let program: object | any = programResponse
+	program = program[0]
+	program.content
 		.split('\r\n')
 		.forEach((paragraph: string, index: number) =>
 			index <= 1 ? left.push(paragraph) : right.push(paragraph)
@@ -36,10 +39,8 @@ export default function Program({
 	return (
 		<section id='program' className={styles['program-section']}>
 			<div className={styles['heading-wrapper']}>
-				<h1
-					className={`${styles.heading} ${playfairDisplayItalic.className}`}
-				>
-					{introObject.program_title}
+				<h1 className={`${styles.heading} ${playfairDisplayItalic.className}`}>
+					{program.title}
 				</h1>
 				<div className={styles.line}></div>
 			</div>

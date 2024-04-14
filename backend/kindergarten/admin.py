@@ -1,7 +1,8 @@
 from django.contrib import admin
 
 from .models import (
-    Intro,
+    Hero,
+    Program,
     TypicalDay,
     Feature,
     CompoundImage,
@@ -9,15 +10,11 @@ from .models import (
     Team,
     Address,
     Register,
-    Photo,
-    Example,
-    Hero,
-    Program,
 )
 
 # Registering models
-
-admin.site.register(Intro)
+admin.site.register(Hero)
+admin.site.register(Program)
 admin.site.register(TypicalDay)
 admin.site.register(Feature)
 admin.site.register(CompoundImage)
@@ -25,10 +22,6 @@ admin.site.register(OpenHouseImage)
 admin.site.register(Team)
 admin.site.register(Address)
 admin.site.register(Register)
-admin.site.register(Photo)
-admin.site.register(Example)
-admin.site.register(Hero)
-admin.site.register(Program)
 
 
 # Renaming admin portal header and title

@@ -12,12 +12,7 @@ import dynamic from 'next/dynamic'
 import Mapbox from './map'
 import { raleway } from '@/styles/fonts'
 import Footer from './footer'
-import Images from './image'
 import styles from '@/styles/home.module.css'
-
-interface Intro {
-	intro: string[]
-}
 
 type TypicalDayProps = {
 	title: string
@@ -72,17 +67,6 @@ type RegisterProps = {
 	requirements: string[]
 }
 
-type ClImagesProps = {
-	id: number
-	image: string
-}
-
-type ExamplesProps = {
-	id: number
-	title: string
-	image: string
-}
-
 type HeroProps = {
 	id: number
 	logo: string
@@ -91,8 +75,15 @@ type HeroProps = {
 	motto: string
 }
 
+type ProgramProps = {
+	id: number
+	title: string
+	content: string
+}
+
 export default function Home({
-	intro,
+	hero,
+	program,
 	day,
 	features,
 	compound_images,
@@ -100,11 +91,9 @@ export default function Home({
 	team,
 	address,
 	register,
-	images,
-	examples,
-	hero,
 }: {
-	intro: Intro
+	hero: HeroProps[]
+	program: ProgramProps[]
 	day: TypicalDayProps[]
 	features: FeatureProps[]
 	compound_images: ImagesProps[]
@@ -112,16 +101,13 @@ export default function Home({
 	team: TeamProps[]
 	address: AddressProps
 	register: RegisterProps
-	images: ClImagesProps[]
-	examples: ExamplesProps[]
-	hero: HeroProps[]
 }) {
 	const addressObj: object | any = address
 	const addressObject = addressObj[0]
 	let heroObject: object | any = hero
 	heroObject = hero[0]
 	let logo: string = heroObject.logo
-	console.log(logo, '<----------logo')
+
 	const [activeSection, setActiveSection] = useState<string>('')
 
 	const links: string[] = ['program', 'features', 'gallery', 'team', 'footer']
@@ -178,15 +164,14 @@ export default function Home({
 	return (
 		<main className={`${styles.main} ${raleway.className}`}>
 			<Navbar logo={logo} links={links} activeSection={activeSection} />
-			<Hero intro={intro} hero={heroObject} />
-			<Program intro={intro} day={day} />
+			<Hero hero={heroObject} />
+			<Program programResponse={program} day={day} />
 			<Features features={features} />
 			<section id='gallery' className={styles.compound}>
 				<Compound compound_images={compound_images} />
 				<OpenHouse open_house_images={open_house_images} register={register} />
 			</section>
 			<Team team={team} />
-			<Images image={images} examples={examples} />
 			{/* <Mapbox /> */}
 			<Footer
 				address={addressObject}

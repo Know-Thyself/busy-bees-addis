@@ -1,7 +1,8 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets, permissions
 from kindergarten.models import (
-    Intro,
+    Hero,
+    Program,
     TypicalDay,
     Feature,
     CompoundImage,
@@ -9,15 +10,13 @@ from kindergarten.models import (
     Team,
     Address,
     Register,
-    Photo,
-    Example,
-    Hero,
-    Program,
 )
+
 from kindergarten.serializers import (
     UserSerializer,
     GroupSerializer,
-    IntroSerializer,
+    HeroSerializer,
+    ProgramSerializer,
     TypicalDaySerializer,
     FeatureSerializer,
     CompoundImageSerializer,
@@ -25,10 +24,6 @@ from kindergarten.serializers import (
     TeamSerializer,
     AddressSerializer,
     RegisterSerializer,
-    PhotoSerializer,
-    ExampleSerializer,
-    HeroSerializer,
-    ProgramSerializer,
 )
 
 
@@ -45,9 +40,15 @@ class GroupViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
 
 
-class IntroViewSet(viewsets.ModelViewSet):
-    queryset = Intro.objects.all()
-    serializer_class = IntroSerializer
+class HeroViewSet(viewsets.ModelViewSet):
+    queryset = Hero.objects.all()
+    serializer_class = HeroSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+class ProgramViewSet(viewsets.ModelViewSet):
+    queryset = Program.objects.all()
+    serializer_class = ProgramSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
@@ -90,28 +91,4 @@ class AddressViewSet(viewsets.ModelViewSet):
 class RegisterViewSet(viewsets.ModelViewSet):
     queryset = Register.objects.all()
     serializer_class = RegisterSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-
-
-class PhotoViewSet(viewsets.ModelViewSet):
-    queryset = Photo.objects.all()
-    serializer_class = PhotoSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-
-
-class ExampleViewSet(viewsets.ModelViewSet):
-    queryset = Example.objects.all()
-    serializer_class = ExampleSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-
-
-class HeroViewSet(viewsets.ModelViewSet):
-    queryset = Hero.objects.all()
-    serializer_class = HeroSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-
-
-class ProgramViewSet(viewsets.ModelViewSet):
-    queryset = Program.objects.all()
-    serializer_class = ProgramSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]

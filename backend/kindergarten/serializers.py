@@ -3,7 +3,8 @@ from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 
 from kindergarten.models import (
-    Intro,
+    Hero,
+    Program,
     TypicalDay,
     Feature,
     CompoundImage,
@@ -11,10 +12,6 @@ from kindergarten.models import (
     Team,
     Address,
     Register,
-    Photo,
-    Example,
-    Hero,
-    Program,
 )
 
 
@@ -30,9 +27,9 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['url', 'name']
 
 
-class IntroSerializer(serializers.HyperlinkedModelSerializer):
+class HeroSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Intro
+        model = Hero
         fields = [
             'id',
             'url',
@@ -40,8 +37,18 @@ class IntroSerializer(serializers.HyperlinkedModelSerializer):
             'hero_image',
             'brand',
             'motto',
-            'program_title',
-            'program',
+        ]
+        read_only_fields = ['id']
+
+
+class ProgramSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Program
+        fields = [
+            'id',
+            'url',
+            'title',
+            'content',
         ]
         read_only_fields = ['id']
 
@@ -138,54 +145,5 @@ class RegisterSerializer(serializers.HyperlinkedModelSerializer):
             'title',
             'subtitle',
             'requirements',
-        ]
-        read_only_fields = ['id']
-
-
-class PhotoSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Photo
-        fields = [
-            'id',
-            'url',
-            'image',
-        ]
-        read_only_fields = ['id']
-
-
-class ExampleSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Example
-        fields = [
-            'id',
-            'url',
-            'title',
-            'image',
-        ]
-        read_only_fields = ['id']
-
-
-class HeroSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Hero
-        fields = [
-            'id',
-            'url',
-            'logo',
-            'hero_image',
-            'brand',
-            'motto',
-        ]
-        read_only_fields = ['id']
-
-
-class ProgramSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Program
-        fields = [
-            'id',
-            'url',
-            'title',
-            'content',
         ]
         read_only_fields = ['id']

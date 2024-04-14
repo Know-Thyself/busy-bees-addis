@@ -26,7 +26,8 @@ from kindergarten import views
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
-router.register(r'intro', views.IntroViewSet)
+router.register(r'hero', views.HeroViewSet)
+router.register(r'program', views.ProgramViewSet)
 router.register(r'typical-day', views.TypicalDayViewSet)
 router.register(r'features', views.FeatureViewSet)
 router.register(r'compound-images', views.CompoundImageViewSet)
@@ -34,10 +35,6 @@ router.register(r'open-house-images', views.OpenHouseImageViewSet)
 router.register(r'team', views.TeamViewSet)
 router.register(r'address', views.AddressViewSet)
 router.register(r'register', views.RegisterViewSet)
-router.register(r'photos', views.PhotoViewSet)
-router.register(r'examples', views.ExampleViewSet)
-router.register(r'hero', views.HeroViewSet)
-router.register(r'program', views.ProgramViewSet)
 
 
 urlpatterns = [
