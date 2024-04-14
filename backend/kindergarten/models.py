@@ -17,15 +17,8 @@ class Program(models.Model):
 
 class TypicalDay(models.Model):
     title = models.CharField(max_length=255)
-    reading_bee_image = models.ImageField(
-        upload_to='images/typical-day/', blank=True, null=True
-    )
-    activities = ArrayField(
-        models.CharField(max_length=500),
-        default=list,
-        blank=True,
-        size=20,
-    )
+    reading_bee_image = CloudinaryField('reading_bee')
+    activities = models.TextField()
 
 
 class Feature(models.Model):
