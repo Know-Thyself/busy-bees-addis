@@ -13,8 +13,8 @@ class Intro(models.Model):
 
 
 class Hero(models.Model):
-    logo = CloudinaryField('image')
-    hero_image = CloudinaryField('image')
+    logo = CloudinaryField('logo')
+    hero_image = CloudinaryField('hero_image')
     brand = models.CharField(max_length=255)
     motto = models.CharField(max_length=255)
 
