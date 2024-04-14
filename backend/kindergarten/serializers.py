@@ -14,6 +14,7 @@ from kindergarten.models import (
     Photo,
     Example,
     Hero,
+    Program,
 )
 
 
@@ -174,5 +175,17 @@ class HeroSerializer(serializers.HyperlinkedModelSerializer):
             'hero_image',
             'brand',
             'motto',
+        ]
+        read_only_fields = ['id']
+
+
+class ProgramSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Program
+        fields = [
+            'id',
+            'url',
+            'title',
+            'content',
         ]
         read_only_fields = ['id']

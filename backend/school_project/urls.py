@@ -37,6 +37,7 @@ router.register(r'register', views.RegisterViewSet)
 router.register(r'photos', views.PhotoViewSet)
 router.register(r'examples', views.ExampleViewSet)
 router.register(r'hero', views.HeroViewSet)
+router.register(r'program', views.ProgramViewSet)
 
 
 urlpatterns = [

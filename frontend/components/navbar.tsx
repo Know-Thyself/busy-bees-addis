@@ -81,7 +81,7 @@ export default function Navbar({
 					/> */}
 					<CldImage
 						alt='logo'
-						width='280'
+						width='240'
 						height='50'
 						src={logo.split('upload/')[1]}
 						crop={'fill'}

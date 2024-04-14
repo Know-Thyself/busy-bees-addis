@@ -19,6 +19,11 @@ class Hero(models.Model):
     motto = models.CharField(max_length=255)
 
 
+class Program(models.Model):
+    title = models.CharField(max_length=255)
+    content = models.TextField()
+
+
 class TypicalDay(models.Model):
     title = models.CharField(max_length=255)
     reading_bee_image = models.ImageField(

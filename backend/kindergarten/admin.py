@@ -12,6 +12,7 @@ from .models import (
     Photo,
     Example,
     Hero,
+    Program,
 )
 
 # Registering models
@@ -27,6 +28,7 @@ admin.site.register(Register)
 admin.site.register(Photo)
 admin.site.register(Example)
 admin.site.register(Hero)
+admin.site.register(Program)
 
 
 # Renaming admin portal header and title

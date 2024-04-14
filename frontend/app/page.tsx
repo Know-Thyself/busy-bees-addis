@@ -108,6 +108,15 @@ async function getHero() {
 	return res.json()
 }
 
+async function getProgram() {
+	const res = await fetch('https://busy-bees-addis-server.vercel.app/program')
+	if (!res.ok) {
+		throw new Error('Failed to fetch data')
+	}
+
+	return res.json()
+}
+
 export default async function HomePage() {
 	const intro = await getIntro()
 
@@ -130,9 +139,9 @@ export default async function HomePage() {
 
 	const examples = await getExamples()
 
-	console.log(examples, '<---------examples');
-
 	const hero = await getHero()
+
+	const program = await getProgram()
 
 	return (
 		<Home

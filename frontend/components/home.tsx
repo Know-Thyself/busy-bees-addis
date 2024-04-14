@@ -178,7 +178,7 @@ export default function Home({
 	return (
 		<main className={`${styles.main} ${raleway.className}`}>
 			<Navbar logo={logo} links={links} activeSection={activeSection} />
-			<Hero intro={intro} />
+			<Hero intro={intro} hero={heroObject} />
 			<Program intro={intro} day={day} />
 			<Features features={features} />
 			<section id='gallery' className={styles.compound}>

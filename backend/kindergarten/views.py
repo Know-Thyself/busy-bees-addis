@@ -12,6 +12,7 @@ from kindergarten.models import (
     Photo,
     Example,
     Hero,
+    Program,
 )
 from kindergarten.serializers import (
     UserSerializer,
@@ -27,6 +28,7 @@ from kindergarten.serializers import (
     PhotoSerializer,
     ExampleSerializer,
     HeroSerializer,
+    ProgramSerializer,
 )
 
 
@@ -106,4 +108,10 @@ class ExampleViewSet(viewsets.ModelViewSet):
 class HeroViewSet(viewsets.ModelViewSet):
     queryset = Hero.objects.all()
     serializer_class = HeroSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+class ProgramViewSet(viewsets.ModelViewSet):
+    queryset = Program.objects.all()
+    serializer_class = ProgramSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
