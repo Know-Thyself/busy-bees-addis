@@ -33,8 +33,14 @@ class CompoundImage(models.Model):
 
 
 class OpenHouseImage(models.Model):
-    open_house_image = models.ImageField(upload_to='images/open-house/')
+    open_house_image = CloudinaryField('open_house_image')
     caption = models.CharField(max_length=255, default='')
+
+
+# Image upload to local directory
+# class OpenHouseImage(models.Model):
+#     open_house_image = models.ImageField(upload_to='images/open-house/')
+#     caption = models.CharField(max_length=255, default='')
 
 
 class Team(models.Model):
