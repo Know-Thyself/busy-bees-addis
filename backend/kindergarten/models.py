@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
+from cloudinary.models import CloudinaryField
 
 
 class Intro(models.Model):
@@ -9,6 +10,13 @@ class Intro(models.Model):
     motto = models.CharField(max_length=255)
     program_title = models.CharField(max_length=255)
     program = models.TextField()
+
+
+class Hero(models.Model):
+    logo = CloudinaryField('image')
+    hero_image = CloudinaryField('image')
+    brand = models.CharField(max_length=255)
+    motto = models.CharField(max_length=255)
 
 
 class TypicalDay(models.Model):
@@ -67,3 +75,12 @@ class Register(models.Model):
         default=list,
         size=20,
     )
+
+
+class Photo(models.Model):
+    image = CloudinaryField('image')
+
+
+class Example(models.Model):
+    title = models.CharField(max_length=55)
+    image = CloudinaryField('image')

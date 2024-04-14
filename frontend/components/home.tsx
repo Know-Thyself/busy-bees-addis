@@ -12,6 +12,7 @@ import dynamic from 'next/dynamic'
 import Mapbox from './map'
 import { raleway } from '@/styles/fonts'
 import Footer from './footer'
+import Images from './image'
 import styles from '@/styles/home.module.css'
 
 interface Intro {
@@ -71,6 +72,15 @@ type RegisterProps = {
 	requirements: string[]
 }
 
+type ClImagesProps = {
+	image: string
+}
+
+type ExamplesProps = {
+	title: string
+	image: string
+}
+
 export default function Home({
 	intro,
 	day,
@@ -80,6 +90,8 @@ export default function Home({
 	team,
 	address,
 	register,
+	images,
+	examples,
 }: {
 	intro: Intro
 	day: TypicalDayProps[]
@@ -89,6 +101,8 @@ export default function Home({
 	team: TeamProps[]
 	address: AddressProps
 	register: RegisterProps
+	images: ClImagesProps[]
+	examples : ExamplesProps[]
 }) {
 	const addressObj: object | any = address
 	const addressObject = addressObj[0]
@@ -156,6 +170,7 @@ export default function Home({
 				<OpenHouse open_house_images={open_house_images} register={register} />
 			</section>
 			<Team team={team} />
+			<Images image={images} examples={examples}/>
 			{/* <Mapbox /> */}
 			<Footer address={addressObject} links={links} activeSection={activeSection} />
 		</main>

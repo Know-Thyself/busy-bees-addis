@@ -9,6 +9,9 @@ from kindergarten.models import (
     Team,
     Address,
     Register,
+    Photo,
+    Example,
+    Hero,
 )
 from kindergarten.serializers import (
     UserSerializer,
@@ -21,6 +24,9 @@ from kindergarten.serializers import (
     TeamSerializer,
     AddressSerializer,
     RegisterSerializer,
+    PhotoSerializer,
+    ExampleSerializer,
+    HeroSerializer,
 )
 
 
@@ -82,4 +88,22 @@ class AddressViewSet(viewsets.ModelViewSet):
 class RegisterViewSet(viewsets.ModelViewSet):
     queryset = Register.objects.all()
     serializer_class = RegisterSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+class PhotoViewSet(viewsets.ModelViewSet):
+    queryset = Photo.objects.all()
+    serializer_class = PhotoSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+class ExampleViewSet(viewsets.ModelViewSet):
+    queryset = Example.objects.all()
+    serializer_class = ExampleSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+class HeroViewSet(viewsets.ModelViewSet):
+    queryset = Hero.objects.all()
+    serializer_class = Hero
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]

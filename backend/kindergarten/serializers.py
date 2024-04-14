@@ -11,6 +11,9 @@ from kindergarten.models import (
     Team,
     Address,
     Register,
+    Photo,
+    Example,
+    Hero,
 )
 
 
@@ -135,4 +138,34 @@ class RegisterSerializer(serializers.HyperlinkedModelSerializer):
             'subtitle',
             'requirements',
         ]
+        read_only_fields = ['id']
+
+
+class PhotoSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Photo
+        fields = [
+            'id',
+            'url',
+            'image',
+        ]
+        read_only_fields = ['id']
+
+
+class ExampleSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Example
+        fields = [
+            'id',
+            'url',
+            'title',
+            'image',
+        ]
+        read_only_fields = ['id']
+
+
+class HeroSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Hero
+        fields = ['id', 'url', 'logo', 'hero_image', 'brand', 'motto']
         read_only_fields = ['id']
