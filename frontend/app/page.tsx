@@ -82,7 +82,9 @@ async function getRegister() {
 }
 
 async function getPhotos() {
-	const res = await fetch('http://localhost:8000/photos')
+	const res = await fetch(
+		'https://busy-bees-addis-server.vercel.app/photos'
+	)
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
 	}
@@ -91,7 +93,9 @@ async function getPhotos() {
 }
 
 async function getExamples() {
-	const res = await fetch('http://localhost:8000/examples')
+	const res = await fetch(
+		'https://busy-bees-addis-server.vercel.app/examples'
+	)
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
 	}
@@ -100,7 +104,9 @@ async function getExamples() {
 }
 
 async function getHero() {
-	const res = await fetch('http://localhost:8000/hero')
+	const res = await fetch(
+		'https://busy-bees-addis-server.vercel.app/hero'
+	)
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')
 	}
@@ -126,11 +132,11 @@ export default async function HomePage() {
 
 	const register = await getRegister()
 
-	const photos = await getPhotos()
+	// const photos = await getPhotos()
 
-	const examples = await getExamples()
+	// const examples = await getExamples()
 
-	const hero = await getHero()
+	// const hero = await getHero()
 
 	return (
 		<Home
@@ -142,8 +148,6 @@ export default async function HomePage() {
 			team={team}
 			address={address}
 			register={register}
-			images={photos}
-			examples={examples}
 		/>
 	)
 }
