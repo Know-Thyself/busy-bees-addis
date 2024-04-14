@@ -28,7 +28,7 @@ class Feature(models.Model):
 
 
 class CompoundImage(models.Model):
-    compound_image = models.ImageField(upload_to='images/compound/')
+    compound_image = CloudinaryField('compound_image')
     caption = models.CharField(max_length=255, default='')
 
 

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 import {
 	montserrat,
 	raleway,
@@ -6,7 +7,6 @@ import {
 	playfairDisplayItalic,
 } from '@/styles/fonts'
 import styles from '@/styles/program.module.css'
-
 
 type ProgramProps = {
 	id: number
@@ -17,7 +17,7 @@ type ProgramProps = {
 type TypicalDayProps = {
 	title: string
 	reading_bee_image: string
-	activities: string[]
+	activities: string
 }
 
 export default function Program({
@@ -63,28 +63,23 @@ export default function Program({
 					{day[0].title.replace(/\b[a-z]/g, (x: string) => x.toUpperCase())}
 				</h1>
 				<div className={styles['activities-grid-container']}>
-					{day.map((activity: object | any, index: number) =>
-						activity.id === 1 ? (
-							<div
-								key={index}
-								className={styles['reading-bee-image-container']}
-							>
-								<Image
-									src={activity.reading_bee_image.split('/public')[1]}
-									width={300}
-									height={200}
-									alt='Reading bee'
-									className={styles['reading-bee-image']}
-								/>
-							</div>
-						) : (
-							<ul key={activity.id}>
-								{activity.activities.map((act: string, index: number) => (
-									<li key={index}>{act}</li>
-								))}
-							</ul>
-						)
-					)}
+					<div className={styles['reading-bee-image-container']}>
+						<CldImage
+							width='300'
+							height='200'
+							src={day[0].reading_bee_image.split('upload/')[1]}
+							crop={'fill'}
+							alt='Reading bee'
+							className={styles['reading-bee-image']}
+						/>
+					</div>
+					<ul>
+						{day[0].activities
+							.split('\r\n')
+							.map((activity: string, index: number) => (
+								<li key={index}>{activity}</li>
+							))}
+					</ul>
 				</div>
 			</div>
 		</section>

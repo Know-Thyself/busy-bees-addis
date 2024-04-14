@@ -17,7 +17,7 @@ import styles from '@/styles/home.module.css'
 type TypicalDayProps = {
 	title: string
 	reading_bee_image: string
-	activities: string[]
+	activities: string
 }
 
 type FeatureProps = {

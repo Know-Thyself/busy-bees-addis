@@ -1,6 +1,7 @@
 'use client'
 
 import { CldImage } from 'next-cloudinary'
+
 import {
 	montserrat,
 	raleway,
