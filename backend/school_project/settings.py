@@ -65,6 +65,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'whitenoise.runserver_nostatic',
     'cloudinary',
+    'cloudinary_storage',
     # 'cloudinary_storage',
     # installed apps
     'kindergarten',
