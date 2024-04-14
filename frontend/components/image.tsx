@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 
 type ImagesProps = {
 	id: number
@@ -29,6 +30,7 @@ export default function Images({
 	image: ImagesProps[]
 	examples: ExamplesProps[]
 }) {
+	console.log(examples);
 	return (
 		<div>
 			{image.map((photo: object | any, idx: number) => (
@@ -44,11 +46,18 @@ export default function Images({
 				{examples.map((example: object | any, index: number) => (
 					<div key={example.id}>
 						<h1>{example.title}</h1>
-						<Image
+						{/* <Image
 							src={`https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/${example.image}`}
 							alt='hi bee'
 							width={300}
 							height={200}
+						/> */}
+						<CldImage
+							alt={example.title}
+							width='300'
+							height='300'
+							src={example.image.split('upload/')[1]}
+							crop={'fill'}
 						/>
 					</div>
 				))}
