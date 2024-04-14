@@ -52,7 +52,7 @@ export default function OpenHouse({
 						/> */}
 						<CldImage
 							alt={image.caption}
-							width='300'
+							width='600'
 							height='400'
 							src={image.open_house_image.split('upload/')[1]}
 							crop={'fill'}

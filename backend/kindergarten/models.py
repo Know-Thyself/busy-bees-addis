@@ -46,7 +46,7 @@ class OpenHouseImage(models.Model):
 class Team(models.Model):
     name = models.CharField(max_length=255)
     position = models.CharField(max_length=255)
-    image = models.ImageField(upload_to='images/team/')
+    image = CloudinaryField('image')
     about = models.TextField()
 
 
