@@ -101,7 +101,7 @@ async function getExamples() {
 
 async function getHero() {
 	const res = await fetch(
-		'https://busy-bees-addis-server-kfr1gpq66-knowthyselfs-projects.vercel.app/hero'
+		'https://busy-bees-addis-server-cokpib6ab-knowthyselfs-projects.vercel.app/hero/'
 	)
 	if (!res.ok) {
 		throw new Error('Failed to fetch data')

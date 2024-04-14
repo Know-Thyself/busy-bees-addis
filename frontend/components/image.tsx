@@ -3,10 +3,12 @@
 import Image from 'next/image'
 
 type ImagesProps = {
+	id: number
 	image: string
 }
 
 type ExamplesProps = {
+	id: number
 	title: string
 	image: string
 }
@@ -31,6 +33,7 @@ export default function Images({
 		<div>
 			{image.map((photo: object | any, idx: number) => (
 				<Image
+					key={photo.id}
 					src={`https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/${photo.image}`}
 					alt='hi bee'
 					width={300}
@@ -39,7 +42,7 @@ export default function Images({
 			))}
 			<div>
 				{examples.map((example: object | any, index: number) => (
-					<div>
+					<div key={example.id}>
 						<h1>{example.title}</h1>
 						<Image
 							src={`https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/${example.image}`}
