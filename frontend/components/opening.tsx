@@ -22,7 +22,7 @@ type RegisterProps = {
 	id: number
 	title: string
 	subtitle: string
-	requirements: string[]
+	requirements: string
 }
 
 export default function OpenHouse({
@@ -75,7 +75,7 @@ export default function OpenHouse({
 					{registerObj.subtitle}
 				</h3>
 				<ol className={`${raleway.className}`}>
-					{registerObj.requirements.map(
+					{registerObj.requirements.split('\r\n').map(
 						(requirement: string, index: number) => (
 							<li key={index}>{requirement}</li>
 						)

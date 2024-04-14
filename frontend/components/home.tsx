@@ -64,7 +64,7 @@ type RegisterProps = {
 	id: number
 	title: string
 	subtitle: string
-	requirements: string[]
+	requirements: string
 }
 
 type HeroProps = {
@@ -89,7 +89,7 @@ export default function Home({
 	compound_images,
 	open_house_images,
 	team,
-	address,
+	contactInfo,
 	register,
 }: {
 	hero: HeroProps[]
@@ -99,11 +99,11 @@ export default function Home({
 	compound_images: ImagesProps[]
 	open_house_images: OpenHouseImagesProps[]
 	team: TeamProps[]
-	address: AddressProps
+	contactInfo: AddressProps
 	register: RegisterProps
 }) {
-	const addressObj: object | any = address
-	const addressObject = addressObj[0]
+	const addressObj: object | any = contactInfo
+	const contactObject = addressObj[0]
 	let heroObject: object | any = hero
 	heroObject = hero[0]
 	let logo: string = heroObject.logo
@@ -174,7 +174,7 @@ export default function Home({
 			<Team team={team} />
 			{/* <Mapbox /> */}
 			<Footer
-				address={addressObject}
+				contactInfo={contactObject}
 				links={links}
 				activeSection={activeSection}
 			/>

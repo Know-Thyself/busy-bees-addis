@@ -17,6 +17,7 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 import logo from '@/public/images/logo/busy-bees-addis-logo.png'
 import hiBeeImage from '@/public/images/footer/hiBee.png'
 import {
@@ -43,11 +44,11 @@ type AddressProps = {
 }
 
 export default function Footer({
-	address,
+	contactInfo,
 	links,
 	activeSection,
 }: {
-	address: AddressProps
+	contactInfo: AddressProps
 	links: string[]
 	activeSection: string
 }) {
@@ -73,8 +74,8 @@ export default function Footer({
 							<FontAwesomeIcon icon={faMapLocationDot} /> &nbsp;Address:
 						</h5>
 						<p>
-							{address.street}, <span>{address.city}</span>,{' '}
-							<span>{address.country}</span>
+							{contactInfo.street}, <span>{contactInfo.city}</span>,{' '}
+							<span>{contactInfo.country}</span>
 						</p>
 					</div>
 					<div>
@@ -82,8 +83,9 @@ export default function Footer({
 							<FontAwesomeIcon icon={faPhone} /> &nbsp;Phone Numbers:
 						</h5>
 						<p>
-							{address.phone_number_1}, <span>{address.phone_number_2}</span>,{' '}
-							<span>{address.phone_number_3}</span>
+							{contactInfo.phone_number_1},{' '}
+							<span>{contactInfo.phone_number_2}</span>,{' '}
+							<span>{contactInfo.phone_number_3}</span>
 						</p>
 					</div>
 				</div>
@@ -131,7 +133,15 @@ export default function Footer({
 				))}
 			</ul>
 			<div className={`${styles['image-wrapper']} ${styles['footer-item']}`}>
-				<Image src={hiBeeImage} alt='Bee waving hi' className={styles.hiBee} />
+				{/* <Image src={hiBeeImage} alt='Bee waving hi' className={styles.hiBee} /> */}
+				<CldImage
+					alt='Bee waving hi'
+					width='200'
+					height='200'
+					src={contactInfo.image.split('upload/')[1]}
+					crop={'fill'}
+					className={styles.hiBee}
+				/>
 			</div>
 			<div
 				className={`${styles['icons-and-copyright']} ${styles['footer-item']}`}
@@ -144,13 +154,13 @@ export default function Footer({
 					/>
 				</Link>
 				<div className={styles.icons}>
-					<a href={address.facebook}>
+					<a href={contactInfo.facebook}>
 						<FontAwesomeIcon
 							icon={faFacebookSquare}
 							className={styles.facebook}
 						/>
 					</a>
-					<a href={address.instagram}>
+					<a href={contactInfo.instagram}>
 						<FontAwesomeIcon icon={faInstagram} className={styles.instagram} />
 					</a>
 				</div>

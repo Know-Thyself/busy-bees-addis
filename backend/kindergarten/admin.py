@@ -8,7 +8,7 @@ from .models import (
     CompoundImage,
     OpenHouseImage,
     Team,
-    Address,
+    Contact,
     Register,
 )
 
@@ -20,7 +20,7 @@ admin.site.register(Feature)
 admin.site.register(CompoundImage)
 admin.site.register(OpenHouseImage)
 admin.site.register(Team)
-admin.site.register(Address)
+admin.site.register(Contact)
 admin.site.register(Register)
 
 

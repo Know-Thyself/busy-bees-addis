@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -45,11 +46,12 @@ export default function Team({ team }: { team: TeamProps[] }) {
 							}`}
 						>
 							<div className={`text-center py-2 ${styles['image-container']}`}>
-								<Image
-									src={member.image.split('/public')[1]}
+								<CldImage
 									alt={member.name}
-									width={200}
-									height={200}
+									width='210'
+									height='210'
+									src={member.image.split('upload/')[1]}
+									crop={'fill'}
 									style={{ borderRadius: '50%' }}
 								/>
 							</div>
