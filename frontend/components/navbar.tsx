@@ -31,11 +31,11 @@ type LogoProp = {
 export default function Navbar({
 	links,
 	activeSection,
-	logo,
+	// logo,
 }: {
 	links: string[]
 	activeSection: string
-	logo: string
+	// logo: string
 }) {
 	const [toggleMenu, setToggleMenu] = useState(false)
 	const [isChecked, setIsChecked] = useState(false)
@@ -74,19 +74,19 @@ export default function Navbar({
 		>
 			<div className='container-fluid align-content-center'>
 				<Link className={`navbar-brand border-0 ${styles.brand}`} href='/'>
-					{/* <Image
+					<Image
 						src={logo}
 						alt='Busy Bees Addis Logo'
 						className={styles.logo}
-					/> */}
-					<CldImage
+					/>
+					{/* <CldImage
 						alt='logo'
 						width='280'
 						height='50'
 						src={logo.split('upload/')[1]}
 						crop={'fill'}
 						className={styles.logo}
-					/>
+					/> */}
 				</Link>
 				<input
 					id='menu__toggle'
