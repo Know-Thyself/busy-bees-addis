@@ -33,7 +33,9 @@ export default function Hero({ hero }: { hero: HeroProps }) {
 					sizes='100vw'
 				/>
 				<div className={styles.overlay}>
-					<h1 className={`${styles.brand} ${playfairDisplay.className}`}>
+					<h1
+						className={`m-0 p-0 ${styles.brand} ${playfairDisplayItalic.className}`}
+					>
 						{hero.brand}
 					</h1>
 					<h2 className={`${styles.motto} ${raleway.className}`}>

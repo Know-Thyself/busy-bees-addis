@@ -7,14 +7,14 @@ import {
 } from 'next/font/google'
 
 const playfairDisplay = Playfair_Display({
-	subsets: ['latin'],
+	subsets: ['cyrillic'],
 	weight: 'variable',
 	display: 'swap',
 	preload: true,
 })
 
 const playfairDisplayItalic = Playfair_Display({
-	subsets: ['latin'],
+	subsets: ['cyrillic'],
 	weight: 'variable',
 	display: 'swap',
 	style: 'italic',

@@ -27,7 +27,6 @@
 .hero-image-container {
 	position: relative;
 	width: 100%;
-	/* width: fit-content; */
 }
 
 .hero-img {
@@ -41,11 +40,6 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	/* background-color: var(--overlay-text-bg); */
-	color: var(--accent-color);
-    color: #61082b;
-	color: yellow;
-	color: var(--overlay-text-color);
 	color: var(--primary-color);
 
 	
@@ -53,32 +47,42 @@
 	/* padding: 16px 20px; */
 	text-align: center;
 	width: 90%;
+	margin: auto;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	height: min-content;
+	/* background-color: aqua; */
 	/* border-radius: 100px; */
 	/* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+	
 }
 
+
+
 .brand {
+	font-size: 2rem;
 	font-weight: 900;
 }
 
 .motto {
 	font-weight: 400;
-    color: #78184A;
-    color: #4a2c40;
-    color: #61082b;
-	color: var(--primary-color);
 	color: var(--overlay-text-color);
-
 }
 
 @media only screen and (min-width: 768px) {
+	.overlay {
+		margin-top: -1rem;
+	}
+
 	.hero-img {
-		height: 450px;
+		height: 50vh;
 	}
 
 	.brand {
-		font-size: 4rem;
-		font-weight: 700;
+		font-size: 5rem;
 	}
 
 	.motto {
@@ -88,9 +92,16 @@
 }
 
 @media only screen and (min-width: 1200px) {
+	.overlay {
+		margin-top: -2rem;
+	}
+	
+	.hero-img {
+		height: 65vh;
+	}
+
 	.brand {
-		font-size: 5rem;
-		font-weight: 900;
+		font-size: 8rem;
 	}
 
 	.motto {
