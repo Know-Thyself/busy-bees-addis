@@ -61,9 +61,7 @@ export default function Team({ team }: { team: TeamProps[] }) {
 								)}
 							</div>
 							<Card.Body className={`${styles['card-body']}`}>
-								<Card.Title
-									className={`${styles.title} ${raleway.className} `}
-								>
+								<Card.Title className={`${styles.title} ${raleway.className} `}>
 									{member.name}
 								</Card.Title>
 								<Card.Title
@@ -77,16 +75,18 @@ export default function Team({ team }: { team: TeamProps[] }) {
 									{readMore && id === member.id
 										? member.about
 										: member.about.substring(0, 160) + '...'}
-									<span
-										onClick={() => {
-											setReadMore(!readMore)
-											setId(member.id)
-										}}
-										className={styles.read}
-									>
-										{readMore && id === member.id
-											? 'read less ▲'
-											: 'read more ▼'}
+									<span>
+										<button
+											onClick={() => {
+												setReadMore(!readMore)
+												setId(member.id)
+											}}
+											className={styles.read}
+										>
+											{readMore && id === member.id
+												? 'read less ▲'
+												: 'read more ▼'}
+										</button>
 									</span>
 								</Card.Text>
 							</Card.Body>

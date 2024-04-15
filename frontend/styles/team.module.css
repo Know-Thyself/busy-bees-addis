@@ -42,7 +42,7 @@
 }
 
 .read {
-	margin-left: 0.5rem;
+	margin-left: 0.25rem;
 	cursor: pointer;
 	color: var(--secondary-color);
 	color: var(--nav-links-color);
@@ -55,6 +55,7 @@
 	align-self: center;
 	/* border-radius: 100px; */
 	font-size: 1rem;
+	border: none;
 }
 
 .title {
