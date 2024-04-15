@@ -34,12 +34,19 @@
 }
 
 .activities-grid-container ul li {
-	list-style-type: square;
+	list-style-type: none;
+	display: flex;
+	gap: 1rem;
 }
 
 .features,
 .features {
 	scroll-margin: 108px;
+}
+
+.fa-square-check {
+	font-size: 1.5rem;
+	color: var(--primary-color)
 }
 
 @media only screen and (min-width: 768px) {
@@ -96,7 +103,7 @@
 
 		background-color: #cae7df;
 		background-color: #67f0ee;
-		background-color: #84EDF5;
+		background-color: #84edf5;
 	}
 
 	.activities-grid-container ul {
@@ -105,10 +112,10 @@
 		justify-content: center;
 		align-items: last baseline;
 		padding: 2rem;
-		padding-left: 4rem;
+		/* padding-left: 4rem; */
 		background-color: #f7cd46;
 		background-color: #fecd45;
-		
+
 		background-color: #f4abaa;
 		background-color: #f06767;
 		background-color: var(--accent-color);

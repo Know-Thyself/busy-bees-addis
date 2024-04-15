@@ -19,7 +19,11 @@
 
 .footer-item {
 	height: 100%;
+	background-color: var(--tertiary-color);
+	background-color: var(--accent-color);
 	background-color: var(--secondary-color);
+
+
 }
 .brand {
 	display: flex;

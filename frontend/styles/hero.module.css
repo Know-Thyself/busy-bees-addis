@@ -93,15 +93,15 @@
 
 @media only screen and (min-width: 1200px) {
 	.overlay {
-		margin-top: -2rem;
+		margin-top: -1.75rem;
 	}
-	
+
 	.hero-img {
 		height: 65vh;
 	}
 
 	.brand {
-		font-size: 8rem;
+		font-size: 7rem;
 	}
 
 	.motto {

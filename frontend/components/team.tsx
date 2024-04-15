@@ -74,7 +74,7 @@ export default function Team({ team }: { team: TeamProps[] }) {
 								>
 									{readMore && id === member.id
 										? member.about
-										: member.about.substring(0, 167) + '...'}
+										: member.about.substring(0, 175) + '...'}
 									<span>
 										<button
 											onClick={() => {

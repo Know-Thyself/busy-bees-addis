@@ -6,6 +6,16 @@ import {
 	playfairDisplay,
 	playfairDisplayItalic,
 } from '@/styles/fonts'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+	faPhone,
+	faMapLocationDot,
+	faCopyright,
+	faSquareCheck,
+} from '@fortawesome/free-solid-svg-icons'
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
 import styles from '@/styles/program.module.css'
 
 type ProgramProps = {
@@ -77,7 +87,10 @@ export default function Program({
 						{day[0].activities
 							.split('\r\n')
 							.map((activity: string, index: number) => (
-								<li key={index}>{activity}</li>
+								<li key={index}>
+									<FontAwesomeIcon icon={faSquareCheck} className={styles['fa-square-check']} />
+									{activity}
+								</li>
 							))}
 					</ul>
 				</div>

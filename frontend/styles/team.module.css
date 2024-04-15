@@ -33,7 +33,16 @@
 }
 
 .image-container {
+	background-color: var(--secondary-color);
+	background-color: var(--accent-color);
+	background-color: var(--dark-accent-color);
+	background-color: #644E34;
+	background-color: #4A6434;
+	background-color: var(--tertiary-color);
+	background-color: #346264;
 	background-color: #7ca791;
+
+
 	width: 100%;
 }
 
@@ -50,6 +59,7 @@
 	color: var(--tertiary-color);
 	color: var(--overlay-text-color);
 	font-weight: 500;
+	background-color: var(--secondary-color);;
 	background-color: var(--accent-color);
 	padding: 0.35rem 0.75rem;
 	align-self: center;
