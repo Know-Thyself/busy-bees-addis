@@ -83,16 +83,19 @@ export default function Program({
 							className={styles['reading-bee-image']}
 						/>
 					</div>
-					<ul>
+					<div className={styles.activities}>
 						{day[0].activities
 							.split('\r\n')
 							.map((activity: string, index: number) => (
-								<li key={index}>
-									<FontAwesomeIcon icon={faSquareCheck} className={styles['fa-square-check']} />
+								<p key={index} className={styles.activity}>
+									<FontAwesomeIcon
+										icon={faSquareCheck}
+										className={styles['fa-square-check']}
+									/>
 									{activity}
-								</li>
+								</p>
 							))}
-					</ul>
+					</div>
 				</div>
 			</div>
 		</section>

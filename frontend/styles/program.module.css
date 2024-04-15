@@ -33,10 +33,26 @@
 	background-color: var(--secondary-color);
 }
 
-.activities-grid-container ul li {
-	list-style-type: none;
+.reading-bee-image-container {
 	display: flex;
-	gap: 1rem;
+	justify-content: center;
+	align-items: center;
+	background-color: #84edf5;
+}
+
+.reading-bee-image {
+	margin-left: 1rem;
+}
+
+.activities {
+	background-color: var(--accent-color-light);
+	padding: 1rem;
+}
+
+.activity {
+	display: flex;
+	gap: 0.75rem;
+	margin: 0;
 }
 
 .features,
@@ -46,7 +62,7 @@
 
 .fa-square-check {
 	font-size: 1.5rem;
-	color: var(--primary-color)
+	color: var(--primary-color);
 }
 
 @media only screen and (min-width: 768px) {
@@ -92,35 +108,12 @@
 		gap: 0;
 	}
 
-	.reading-bee-image-container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color: var(--light-green);
-		background-color: #50c878;
-		background-color: #5ac3b0;
-		background-color: #2568fb;
-
-		background-color: #cae7df;
-		background-color: #67f0ee;
-		background-color: #84edf5;
-	}
-
-	.activities-grid-container ul {
+	.activities {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: last baseline;
-		padding: 2rem;
-		/* padding-left: 4rem; */
-		background-color: #f7cd46;
-		background-color: #fecd45;
-
-		background-color: #f4abaa;
-		background-color: #f06767;
-		background-color: var(--accent-color);
-		background-color: var(--accent-color-light);
-
+		padding: 2rem 1rem;
 		height: 100%;
 	}
 
