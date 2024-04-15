@@ -6,8 +6,12 @@
 		'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 	--primary-color: yellow;
 	--secondary-color: #4bac3f;
+	--tertiary-color: rgba(101, 55, 20, 1);
 	--tertiary-color: #825f1d;
-	--tertiary-color: rgba(101, 55, 20, 0.88);
+	--tertiary-color: #653615;
+	--tertiary-color: #643634;
+
+
 	--complementary-color: orange;
 	--light-green: #8ff397;
 	--light-green: #8ff3c9;
@@ -33,6 +37,9 @@
 	--accent-color-light: #f2c1d1;
 	--accent-color-light: #f4abaa;
 	--accent-color-light: #f58c84;
+	--accent-color-light: #f06668;
+
+	--dark-accent-color: #1d1d2c;
 	
 	
 	
@@ -124,22 +131,24 @@
 	--overlay-text-color: #4d724d;
 	--overlay-text-color: #61082b;
 	--overlay-text-color: #182978;
-	--overlay-text-color: #ffffff;
 	--overlay-text-color: #78184A;
 	--overlay-text-color: #0b4141;
+	--overlay-text-color: yellow;
+	--overlay-text-color: #ffffff;
+
 
 
 
 	--overlay-text-bg: rgba(255, 238, 5, 0.3);
 	--overlay-text-bg: rgba(151, 143, 243, 0.5);
-	--overlay-text-bg: rgba(253, 217, 53, 0.4);
-	--overlay-text-bg: rgba(75, 172, 63, 0.4);
 	--overlay-text-bg: rgba(63, 132, 235, 0.5);
 	--overlay-text-bg: rgba(225, 225, 225, 0.6);
 	--overlay-text-bg: rgba(223, 48, 98, 0.5);
 	--overlay-text-bg: rgba(37, 104, 251, 0.6);
 	--overlay-text-bg: rgba(130, 224, 22, 0.5);
 	--overlay-text-bg: rgba(253, 217, 53, 0.2);
+	--overlay-text-bg: rgba(75, 172, 63, 0.6);
+	--overlay-text-bg: rgba(67, 31, 31, 0.5);
 
 	--overlay-text-shadow: #2568fb;
 	--overlay-text-shadow: #4a2c40;

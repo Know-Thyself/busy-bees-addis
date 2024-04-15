@@ -15,19 +15,6 @@ import {
 import 'bootswatch/dist/sandstone/bootstrap.min.css'
 import styles from '@/styles/navbar.module.css'
 
-interface Linkss {
-	links: string[]
-	activeSection: string
-}
-
-type LinksProps = {
-	links: string[0]
-}
-
-type LogoProp = {
-	logo: string
-}
-
 export default function Navbar({
 	links,
 	activeSection,
@@ -51,10 +38,11 @@ export default function Navbar({
 		setIsChecked(!isChecked)
 	}
 
-	function screenTest() {
+	function screenTest(href: string) {
 		if (window.innerWidth <= 868) {
 			toggleNav()
 		}
+		setActiveNav(`#${href}`)
 	}
 
 	useEffect(() => {
@@ -74,17 +62,19 @@ export default function Navbar({
 		>
 			<div className='container-fluid align-content-center'>
 				<Link className={`navbar-brand border-0 ${styles.brand}`} href='/'>
-					{/* <Image
-						src={logo}
-						alt='Busy Bees Addis Logo'
-						className={styles.logo}
-					/> */}
-					<CldImage
+					{/* <CldImage
 						alt='logo'
 						width='240'
 						height='50'
 						src={logo.split('upload/')[1]}
 						crop={'fill'}
+						className={styles.logo}
+					/> */}
+					<Image
+						alt='logo'
+						src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/${logo}`}
+						width={200}
+						height={50}
 						className={styles.logo}
 					/>
 				</Link>
@@ -107,9 +97,9 @@ export default function Navbar({
 								<li
 									key={index}
 									className={`nav-item me-1 ${styles['custom-nav-item']}`}
-									onClick={() =>
-										handleClick(`${link === 'contact'} ? 'footer' : ${link}`)
-									}
+									// onClick={() =>
+									// 	handleClick(`${link === 'contact'} ? 'footer' : ${link}`)
+									// }
 								>
 									<Link
 										href={`#${link}`}
@@ -118,7 +108,9 @@ export default function Navbar({
 												? styles.active
 												: styles['menu__item']
 										}`}
-										onClick={screenTest}
+										onClick={() =>
+											screenTest(`${link === 'contact'} ? 'footer' : ${link}`)
+										}
 									>
 										{link === 'program'
 											? 'our program'

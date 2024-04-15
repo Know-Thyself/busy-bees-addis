@@ -66,9 +66,7 @@ export default function Footer({
 			</Link> */}
 			<div className={`${styles.addresses} ${styles['footer-item']}`}>
 				<div>
-					<h2 className={`fw-semibold ${playfairDisplay.className}`}>
-						Contact us
-					</h2>
+					<h3 className={`${playfairDisplay.className}`}>Contact us</h3>
 					<div>
 						<h5 className={styles.address}>
 							<FontAwesomeIcon icon={faMapLocationDot} /> &nbsp;Address:
@@ -103,9 +101,7 @@ export default function Footer({
 			<ul
 				className={`navbar-nav ${styles.navigation} ${styles['footer-item']}`}
 			>
-				<h2 className={`fw-semibold ${playfairDisplay.className}`}>
-					Site Navigation
-				</h2>
+				<h3 className={`${playfairDisplay.className}`}>Site Navigation</h3>
 				{links.map((link, index) => (
 					<li
 						key={index}
@@ -133,13 +129,11 @@ export default function Footer({
 				))}
 			</ul>
 			<div className={`${styles['image-wrapper']} ${styles['footer-item']}`}>
-				{/* <Image src={hiBeeImage} alt='Bee waving hi' className={styles.hiBee} /> */}
-				<CldImage
-					alt='Bee waving hi'
-					width='200'
-					height='200'
-					src={contactInfo.image.split('upload/')[1]}
-					crop={'fill'}
+				<Image
+					alt='Hand waving bee illustration'
+					src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/${contactInfo.image}`}
+					width={300}
+					height={200}
 					className={styles.hiBee}
 				/>
 			</div>

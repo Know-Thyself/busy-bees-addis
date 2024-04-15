@@ -3,17 +3,13 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { CldImage } from 'next-cloudinary'
-import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import {
-	montserrat,
 	raleway,
 	playfairDisplay,
 	playfairDisplayItalic,
-	oswald,
-	concertOne,
 } from '@/styles/fonts'
 import styles from '@/styles/team.module.css'
 
@@ -36,9 +32,8 @@ export default function Team({ team }: { team: TeamProps[] }) {
 				</h1>
 				<div className={styles.line}></div>
 			</div>
-			{/* <Container fluid className='m-0 p-0'> */}
 			<Row xs={1} md={2} xl={3} className={`g-3 ${styles.grid}`}>
-				{team.map((member, index) => (
+				{team.map(member => (
 					<Col key={member.id} className=''>
 						<Card
 							className={`border-0 ${readMore ? 'h-auto' : 'h-100'} ${
@@ -46,23 +41,33 @@ export default function Team({ team }: { team: TeamProps[] }) {
 							}`}
 						>
 							<div className={`text-center py-2 ${styles['image-container']}`}>
-								<CldImage
-									alt={member.name}
-									width='210'
-									height='210'
-									src={member.image.split('upload/')[1]}
-									crop={'fill'}
-									style={{ borderRadius: '50%' }}
-								/>
+								{member.name.includes('Worknesh') ? (
+									<Image
+										alt={member.name}
+										src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/${member.image}`}
+										width={210}
+										height={210}
+										style={{ borderRadius: '50%' }}
+									/>
+								) : (
+									<CldImage
+										alt={member.name}
+										width='210'
+										height='210'
+										src={member.image.split('upload/')[1]}
+										crop={'fill'}
+										style={{ borderRadius: '50%' }}
+									/>
+								)}
 							</div>
 							<Card.Body className={`${styles['card-body']}`}>
 								<Card.Title
-									className={`text-black ${styles.title} ${playfairDisplay.className} `}
+									className={`${styles.title} ${raleway.className} `}
 								>
 									{member.name}
 								</Card.Title>
 								<Card.Title
-									className={`text-dark ${styles.position} ${playfairDisplay.className} `}
+									className={`text-muted ${styles.position} ${playfairDisplayItalic.className} `}
 								>
 									{member.position}
 								</Card.Title>
@@ -71,14 +76,7 @@ export default function Team({ team }: { team: TeamProps[] }) {
 								>
 									{readMore && id === member.id
 										? member.about
-										: member.about.substring(0, 180) + '...'}
-									{/* <ReactReadMoreReadLess
-											charLimit={180}
-											readMoreText={'Read more ▼'}
-											readLessText={'Read less ▲'}
-										>
-											{member.about}
-										</ReactReadMoreReadLess> */}
+										: member.about.substring(0, 160) + '...'}
 									<span
 										onClick={() => {
 											setReadMore(!readMore)
@@ -96,7 +94,6 @@ export default function Team({ team }: { team: TeamProps[] }) {
 					</Col>
 				))}
 			</Row>
-			{/* </Container> */}
 		</section>
 	)
 }

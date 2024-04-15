@@ -1,5 +1,5 @@
 .team {
-	width: 90%;
+	width: 100%;
 	margin: auto;
 	scroll-margin: 83px;
 }
@@ -33,120 +33,36 @@
 }
 
 .image-container {
-	background-color: var(--accent-color);
-	background-color: var(--overlay-text-color);
-	background-color: var(--primary-color);
-	background-color: #8f9779;
-	background-color: #50c878;
-	background-color: #c850a0;
-	background-color: #5ac3b0;
-	background-color: #2568fb;
-
-	background-color: #161f6d;
-
-	background-color: #3cbcc3;
-	background-color: #438945;
-	background-color: #cae7df;
-	background-color: #f7cd46;
-	background-color: #de5935;
-	background-color: #5ac3b0;
-	
-	background-color: #3fd2c7;
-	background-color: #3f6844;
-	background-color: #1ba098;
-	background-color: #00abe1;
-	
-	background-color: #3f704d;
-	background-color: #8f9779;
-	
-	background-color: #29ab87;
-	background-color: #50c878;
-	/* tea green */
-	background-color: #d0f0c0;
-
-	background-color: #ace1af;
-	background-color: #a8c090;
-
-	background-color: #609078;
-
-	background-color: #728bfe;
-
-	background-color: #a9ba9d;
-	background-color: #a3c1ad;
-	background-color: #f0aa89;
-	background-color: #89cff0;
-	background-color: #a8c090;
-	background-color: var(--secondary-color);
-	background-color: #609078;
-
 	background-color: #7ca791;
-	background-color: #a77c92;
-	
-	background-color: #4a5d23;
-	background-color: #50C878;
-	background-color: #cae7df;
-	background-color: #9DC183;
-	
-	background-color: #906078;
-	background-color: #a77c92;
-	background-color: #7ca791;
-	
 	width: 100%;
 }
 
 .card-body {
-	background-color: var(--overlay-text-bg);
-	background-color: var(--accent-color-light);
-	background-color: var(--secondary-complementary);
-	background-color: #817997;
-	background-color: #50c878;
-	background-color: #de5935;
-	background-color: #f7cd46;
-	background-color: #fecd45;
-	background-color: #99ddff;
-
-	background-color: #d48166;
-	background-color: #deb992;
-
-	background-color: #eba63f;
-	background-color: #f2d349;
-
-	background-color: #fb9039;
-	background-color: #4ac6d2;
-	background-color: #faf1cf;
-	background-color: #f4abaa;
 	background-color: #cae7df;
-
-	background-color: #d0f0c0;
-	background-color: #f0f8ff;
-
-	background-color: #89cff0;
-	background-color: #f0aa89;
-
-	background-color: #906078;
-	background-color: #a77c92;
-	background-color: #7ca791;
-	
-	background-color: #d0f0c0;
-	background-color: #cae7df;
-
 }
 
 .read {
 	margin-left: 0.5rem;
 	cursor: pointer;
-	color: var(--tertiary-color);
 	color: var(--secondary-color);
-	color: var(--accent-color);
 	color: var(--nav-links-color);
-	font-weight: 600;
+	color: var(--accent-color);
+	color: var(--tertiary-color);
+	color: var(--overlay-text-color);
+	font-weight: 500;
+	background-color: var(--accent-color);
+	padding: 0.35rem 0.75rem;
+	align-self: center;
+	/* border-radius: 100px; */
+	font-size: 1rem;
 }
 
 .title {
-	font-weight: 700;
+	font-weight: 600;
 }
 
-.position {
+.position,
+.description  {
 	font-weight: 500;
 }
 

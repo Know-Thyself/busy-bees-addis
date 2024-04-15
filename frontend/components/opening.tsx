@@ -36,10 +36,12 @@ export default function OpenHouse({
 	registerObj = registerObj[0]
 	return (
 		<div id='gallery'>
-			<h1 className={`${styles.heading} ${playfairDisplayItalic.className}`}>
-				Open House Photos Gallery
-			</h1>
-			<div className={styles.line}></div>
+			<div className={styles['heading-wrapper']}>
+				<h1 className={`${styles.heading} ${playfairDisplayItalic.className}`}>
+					Open House Photos Gallery
+				</h1>
+				<div className={styles.line}></div>
+			</div>
 			<div className={styles.gallery}>
 				{open_house_images.map(image => (
 					<figure key={image.id} className={styles['gallery-item']}>
@@ -50,14 +52,32 @@ export default function OpenHouse({
 							height={400}
 							className={styles['gallery-img']}
 						/> */}
-						<CldImage
+						<Image
 							alt={image.caption}
-							width='600'
-							height='400'
-							src={image.open_house_image.split('upload/')[1]}
-							crop={'fill'}
+							src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/${image.open_house_image}`}
+							width={360}
+							height={300}
 							className={styles['gallery-img']}
 						/>
+						{/* {image.caption.includes('Welcoming') ||
+						image.caption.includes('Kid playing') ? (
+							<Image
+								alt={image.caption}
+								src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/${image.open_house_image}`}
+								width={300}
+								height={200}
+								className={styles['gallery-img']}
+							/>
+						) : (
+							<CldImage
+								alt={image.caption}
+								width='380'
+								height='300'
+								src={image.open_house_image.split('upload/')[1]}
+								crop={'fill'}
+								className={styles['gallery-img']}
+							/>
+						)} */}
 					</figure>
 				))}
 			</div>
@@ -75,11 +95,11 @@ export default function OpenHouse({
 					{registerObj.subtitle}
 				</h3>
 				<ol className={`${raleway.className}`}>
-					{registerObj.requirements.split('\r\n').map(
-						(requirement: string, index: number) => (
-							<li key={index}>{requirement}</li>
-						)
-					)}
+					{registerObj.requirements
+						.split('\r\n')
+						.map((requirement: string, index: number) => (
+							<li key={index}>{requirement.replace('/', ' / ')}</li>
+						))}
 				</ol>
 			</section>
 		</div>

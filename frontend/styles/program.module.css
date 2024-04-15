@@ -2,6 +2,7 @@
 	width: 90%;
 	margin: auto;
 	scroll-margin: 83px;
+	font-weight: 500;
 }
 
 /* .program-section,
@@ -34,9 +35,6 @@
 
 .activities-grid-container ul li {
 	list-style-type: square;
-	color: black;
-	font-size: 1.15rem;
-	font-weight: 500;
 }
 
 .features,

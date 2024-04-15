@@ -1,11 +1,12 @@
 .footer {
 	margin-top: 2rem;
 	scroll-margin: 83px;
-	color: black;
 	color: var(--tertiary-color);
+	color: var(--dark-accent-color);
+	color: var(--accent-color);
 	color: var(--overlay-text-color);
-	color: #61082b;
-	color: white;
+
+
 
 	background-color: var(--tertiary-color);
 	background-color: var(--primary-color);
@@ -18,24 +19,7 @@
 
 .footer-item {
 	height: 100%;
-	background-color: #5ac3b0;
-	background-color: #01796F;
-	background-color: #de5935;
-	background-color: #ED2939;
-	background-color: #9E1B32;
-	background-color: #3559FD;
-
-	background-color: #50C878;
-	background-color: #004953;
-	background-color: #004830;
-	background-color: var(--tertiary-color);
-	background-color: #4A5D23;
 	background-color: var(--secondary-color);
-
-
-
-
-
 }
 .brand {
 	display: flex;
@@ -81,9 +65,6 @@
 .copyright,
 .menu__item,
 .active {
-	color: var(--tertiary-color);
-	color: var(--overlay-text-color);
-	color: #61082b;
 	color: var(--primary-color);
 
 }
@@ -97,8 +78,7 @@
 .navigation {
 	display: flex;
 	justify-content: center;
-	padding: 0.5rem 0;
-	padding-left: 7.5%;
+	padding: 0.5rem 0 0.54em 7.5%;
 }
 
 .icons-and-copyright {

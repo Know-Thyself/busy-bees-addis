@@ -1,6 +1,7 @@
 'use client'
 
 import { CldImage } from 'next-cloudinary'
+import Image from 'next/image'
 import {
 	montserrat,
 	raleway,
@@ -33,12 +34,19 @@ export default function Compound({
 			<div className={styles.gallery}>
 				{compound_images.map((image, index) => (
 					<figure key={image.id} className={styles['gallery-item']}>
-						<CldImage
+						{/* <CldImage
 							alt={image.caption}
-							width='300'
-							height='400'
+							width='360'
+							height='300'
 							src={image.compound_image.split('upload/')[1]}
 							crop={'fill'}
+							className={styles['gallery-img']}
+						/> */}
+						<Image
+							alt={image.caption}
+							src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/${image.compound_image}`}
+							width={360}
+							height={300}
 							className={styles['gallery-img']}
 						/>
 					</figure>

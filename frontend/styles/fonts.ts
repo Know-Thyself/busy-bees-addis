@@ -22,7 +22,7 @@ const playfairDisplayItalic = Playfair_Display({
 })
 
 const raleway = Raleway({
-	subsets: ['latin'],
+	subsets: ['cyrillic'],
 	display: 'swap',
 	preload: true,
 	weight: 'variable',

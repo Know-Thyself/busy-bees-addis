@@ -62,9 +62,7 @@
 	position: absolute;
 	width: 100%;
 	height: 3px;
-	background-color: var(--nav-links-color);
-	background-color: var(--accent-color);
-	background-color: var(--overlay-text-color);
+	background-color: var(--tertiary-color);
 	transition-duration: 0.25s;
 }
 
@@ -104,6 +102,8 @@
 @media screen and (max-width: 767px) {
 	.custom-nav-item {
 		border-top: solid 1px var(--overlay-text-color);
+		border-top: solid 1px var(--primary-color);
+
 	}
 }
 
@@ -116,7 +116,7 @@
 	.custom-nav-item .menu__item:hover {
 		background-color: var(--mobile-active-nav) !important;
 		font-weight: 600;
-		background-color: var(--primary-color) !important;
+		background-color: var(--secondary-color) !important;
 	}
 
 	.menu__btn {
@@ -127,16 +127,19 @@
 	.menu__box {
 		background-color: var(--primary-color);
 		background-color: var(--secondary-color);
+		background-color: var(--tertiary-color) !important;
+
 
 		width: 100%;
-		z-index: 100 !important;
+		/* z-index: 100 !important; */
 	}
 
 	.menu__item,
 	.active {
-		color: var(--nav-links-color) !important;
 		color: var(--overlay-text-color) !important;
-		font-weight: 600 !important;
+		color: var(--nav-links-color) !important;
+		color: var(--primary-color) !important;
+		font-weight: 400 !important;
 		padding: 16px 0;
 	}
 }

@@ -1,6 +1,6 @@
 'use client'
 
-import { CldImage } from 'next-cloudinary'
+import Image from 'next/image'
 
 import {
 	montserrat,
@@ -20,21 +20,17 @@ type HeroProps = {
 	motto: string
 }
 
-export default function Hero({
-	hero,
-}: {
-	hero: HeroProps
-}) {
+export default function Hero({ hero }: { hero: HeroProps }) {
 	return (
 		<section id='hero' className={styles.hero}>
 			<div className={styles['hero-image-container']}>
-				<CldImage
-					alt='logo'
-					width='800'
-					height='500'
-					src={hero.hero_image.split('upload/')[1]}
-					crop={'fill'}
+				<Image
+					alt='hero background'
+					src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/${hero.hero_image}`}
+					width={300}
+					height={300}
 					className={styles['hero-img']}
+					sizes='100vw'
 				/>
 				<div className={styles.overlay}>
 					<h1 className={`${styles.brand} ${playfairDisplay.className}`}>
