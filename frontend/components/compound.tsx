@@ -44,7 +44,7 @@ export default function Compound({
 						/> */}
 						<Image
 							alt={image.caption}
-							src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/${image.compound_image}`}
+							src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/${image.compound_image}`}
 							width={360}
 							height={300}
 							className={styles['gallery-img']}

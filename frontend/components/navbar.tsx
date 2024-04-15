@@ -72,7 +72,7 @@ export default function Navbar({
 					/> */}
 					<Image
 						alt='logo'
-						src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/${logo}`}
+						src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/${logo}`}
 						width={200}
 						height={50}
 						className={styles.logo}

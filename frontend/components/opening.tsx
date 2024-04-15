@@ -54,7 +54,7 @@ export default function OpenHouse({
 						/> */}
 						<Image
 							alt={image.caption}
-							src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/${image.open_house_image}`}
+							src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/${image.open_house_image}`}
 							width={360}
 							height={300}
 							className={styles['gallery-img']}

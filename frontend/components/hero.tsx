@@ -26,7 +26,7 @@ export default function Hero({ hero }: { hero: HeroProps }) {
 			<div className={styles['hero-image-container']}>
 				<Image
 					alt='hero background'
-					src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/${hero.hero_image}`}
+					src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/${hero.hero_image}`}
 					width={300}
 					height={300}
 					className={styles['hero-img']}

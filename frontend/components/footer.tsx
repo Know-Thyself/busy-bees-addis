@@ -131,7 +131,7 @@ export default function Footer({
 			<div className={`${styles['image-wrapper']} ${styles['footer-item']}`}>
 				<Image
 					alt='Hand waving bee illustration'
-					src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/${contactInfo.image}`}
+					src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/${contactInfo.image}`}
 					width={300}
 					height={200}
 					className={styles.hiBee}
