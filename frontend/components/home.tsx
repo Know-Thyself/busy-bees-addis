@@ -6,8 +6,8 @@ import Hero from './hero'
 import Program from './program'
 import TypicalDay from './typical-day'
 import Features from './features'
-import Compound from './compound'
-import OpenHouse from './opening'
+import PhotoGallery from './gallery'
+import OpenHouse from './open-house'
 import Team from './team'
 import Footer from './footer'
 import dynamic from 'next/dynamic'
@@ -123,8 +123,9 @@ export default function Home({
 		const gallery = document.getElementById('gallery')
 		const team = document.getElementById('team')
 		const footer = document.getElementById('footer')
+		const open_house = document.getElementById('open-house')
 
-		const sections = [program, features, gallery, team, footer]
+		const sections = [program, features, gallery, open_house, team, footer]
 
 		const observerOptions = {
 			root: null,
@@ -144,7 +145,10 @@ export default function Home({
 					if (entry.target.id == 'features') {
 						setActiveSection('features')
 					}
-					if (entry.target.id == 'gallery') {
+					if (
+						entry.target.id == 'gallery' ||
+						entry.target.id === 'open-house'
+					) {
 						setActiveSection('gallery')
 					}
 					if (entry.target.id == 'team') {
@@ -182,8 +186,9 @@ export default function Home({
 			<Program programResponse={program} />
 			<TypicalDay day={day} />
 			<Features features={features} active={activeSection} />
-			<Compound compound_images={compound_images} />
+			<PhotoGallery compound_images={compound_images} />
 			<OpenHouse open_house_images={open_house_images} register={register} />
+
 			<Team team={team} />
 			{/* <Mapbox /> */}
 

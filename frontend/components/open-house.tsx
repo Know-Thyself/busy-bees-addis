@@ -36,7 +36,7 @@ export default function OpenHouse({
 	let registerObj: object | any = register
 	registerObj = registerObj[0]
 	return (
-		<div>
+		<div id='open-house'>
 			<div className={styles['heading-wrapper']}>
 				{/* <h1 className={`${styles.heading} ${playfairDisplayItalic.className}`}>
 					Open House Photos Gallery
@@ -92,7 +92,7 @@ export default function OpenHouse({
 					</figure>
 				))}
 			</div>
-			<section className={styles.registration}>
+			<div className={styles.registration}>
 				<div className={styles['heading-wrapper']}>
 					<h1
 						className={`${playfairDisplayItalic.className} ${styles.heading}`}
@@ -112,7 +112,7 @@ export default function OpenHouse({
 							<li key={index}>{requirement.replace('/', ' / ')}</li>
 						))}
 				</ol>
-			</section>
+			</div>
 		</div>
 	)
 }

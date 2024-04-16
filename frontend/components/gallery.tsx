@@ -2,30 +2,29 @@
 
 import { CldImage } from 'next-cloudinary'
 import Image from 'next/image'
+
 import {
 	montserrat,
 	raleway,
 	playfairDisplay,
 	playfairDisplayItalic,
-	oswald,
-	concertOne,
 } from '@/styles/fonts'
 import AnimateContainer from '@/animations/container-animation'
-import styles from '@/styles/compound.module.css'
+import styles from '@/styles/gallery.module.css'
 type CompoundImagesProps = {
 	id: number
 	compound_image: string
 	caption: string
 }
 
-export default function Compound({
+export default function PhotoGallery({
 	compound_images,
 }: {
 	compound_images: CompoundImagesProps[]
 }) {
 	compound_images.sort((a, b) => b.id - a.id)
 	return (
-		<section id='gallery' className={styles.compound}>
+		<section id='gallery' className={styles['photo-galleries']}>
 			<AnimateContainer
 				y={40}
 				delay={0.5}
@@ -42,13 +41,7 @@ export default function Compound({
 					<div className={styles.line}></div>
 				</div>
 			</AnimateContainer>
-			<AnimateContainer
-				y={40}
-				delay={1.5}
-				duration={2}
-				amount={0.3}
-				once
-			>
+			<AnimateContainer y={40} delay={1.5} duration={2} amount={0.3} once>
 				<div className={styles.gallery}>
 					{compound_images.map((image, index) => (
 						<figure key={image.id} className={styles['gallery-item']}>
@@ -71,6 +64,7 @@ export default function Compound({
 					))}
 				</div>
 			</AnimateContainer>
+			{/* <OpenHouse open_house_images={open_house_images} register={register} /> */}
 		</section>
 	)
 }

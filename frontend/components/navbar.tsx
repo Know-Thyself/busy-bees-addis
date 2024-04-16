@@ -44,8 +44,6 @@ export default function Navbar({
 		// setActiveSection(href)
 	}
 
-	
-
 	useEffect(() => {
 		const changeWidth = () => {
 			setScreenWidth(window.innerWidth)
