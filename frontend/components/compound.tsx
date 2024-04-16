@@ -41,6 +41,14 @@ export default function Compound({
 					</h1>
 					<div className={styles.line}></div>
 				</div>
+			</AnimateContainer>
+			<AnimateContainer
+				y={40}
+				delay={1.5}
+				duration={2}
+				amount={0.3}
+				once
+			>
 				<div className={styles.gallery}>
 					{compound_images.map((image, index) => (
 						<figure key={image.id} className={styles['gallery-item']}>

@@ -42,7 +42,7 @@ export default function Program({
 					<div className={styles.line}></div>
 				</div>
 			</AnimateContainer>
-			<AnimateContainer delay={1.5} duration={4} amount={0.2}>
+			<AnimateContainer delay={1.5} duration={2} amount={0.2}>
 				<div className={styles.program}>
 					<div className={styles.left}>
 						{left.map((paragraph: string, index: number) => (

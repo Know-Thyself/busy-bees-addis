@@ -20,6 +20,8 @@
 	width: 80px;
 	height: 3px;
 	background-color: var(--secondary-color);
+	background-color: var(--accent-color-brighter);
+
 }
 
 @media only screen and (min-width: 768px) {

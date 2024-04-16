@@ -23,6 +23,7 @@
 	background-color: #a9ba9d;
 	background-color: #a77c92;
 	background-color: var(--secondary-color);
+	background-color: var(--accent-color-brighter);;
 
 	margin: 0 auto;
 }
@@ -55,17 +56,27 @@
 	cursor: pointer;
 	color: var(--secondary-color);
 	color: var(--nav-links-color);
-	color: var(--accent-color);
 	color: var(--tertiary-color);
 	color: var(--overlay-text-color);
+	color: var(--dark-accent-color);
+	color: var(--accent-color-brighter);;
+	color: var(--accent-color);
+	color: var(--overlay-text-color);
 	font-weight: 500;
-	background-color: var(--secondary-color);;
+	/* background-color: var(--secondary-color);;
 	background-color: var(--accent-color);
+	background-color: var(--accent-color-brighter); */
+	background-color: var(--dark-accent-color);
+	background-color: var(--secondary-color);
+
+	border: none;
+	border: 1px solid var(--accent-color-brighter);
+	border: 1px solid var(--overlay-text-color);
+
 	padding: 0.35rem 0.75rem;
 	align-self: center;
-	/* border-radius: 100px; */
+	border-radius: 50px;
 	font-size: 1rem;
-	border: none;
 }
 
 .title {

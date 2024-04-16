@@ -99,6 +99,10 @@
 	gap: 1rem;
 }
 
+.admin {
+	color: var(--primary-color);
+}
+
 @media only screen and (min-width: 678px) {
 	.footer {
 		grid-template-columns: repeat(2, 1fr);

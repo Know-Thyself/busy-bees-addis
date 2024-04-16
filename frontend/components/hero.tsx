@@ -24,7 +24,7 @@ type HeroProps = {
 
 export default function Hero({ hero }: { hero: HeroProps }) {
 	return (
-		<AnimateContainer y={-100} duration={1}>
+		// <AnimateContainer y={-100} duration={1}>
 			<section id='hero' className={styles.hero}>
 				<div className={styles['hero-image-container']}>
 					<Image
@@ -67,6 +67,6 @@ export default function Hero({ hero }: { hero: HeroProps }) {
 					{/* </AnimateContainer> */}
 				</div>
 			</section>
-		</AnimateContainer>
+		// </AnimateContainer>
 	)
 }

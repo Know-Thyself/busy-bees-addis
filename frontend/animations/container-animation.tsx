@@ -1,13 +1,13 @@
 'use client'
 
-import { motion, useAnimation, useInView } from 'framer-motion'
+import { motion, useAnimation, useInView, AnimatePresence } from 'framer-motion'
 import { exit } from 'process'
 import { useState, useEffect, useRef } from 'react'
 
 interface ContainerAnimationProps {
 	children: JSX.Element | JSX.Element[]
 	el?: keyof JSX.IntrinsicElements
-    id?: string
+	id?: string
 	className?: string
 	opacity?: number
 	x?: number
@@ -32,11 +32,11 @@ interface ContainerAnimationProps {
 export default function AnimateContainer({
 	children,
 	className,
-    id,
+	id,
 	el: Wrapper = 'div',
 	opacity = 0,
-	x,
-	y,
+	x = 0,
+	y = 0,
 	scale,
 	once,
 	delay,
@@ -117,29 +117,46 @@ export default function AnimateContainer({
 
 	return (
 		<Wrapper className={className} id={id}>
-			<motion.div
-				variants={{
-					hidden: { opacity, x, y, scale, rotateX, rotateY },
-					visible: { opacity: 1, x: 0, y: 0, scale: 1, rotateX: 0, rotateY: 0 },
-				}}
-				ref={ref}
-				initial='hidden'
-				animate={controls}
-				viewport={{ amount, once }}
-				exit={{ opacity: 0, x: 0, y: 0, transition: {stiffness: 0, duration: 0, delay: 0} }}
-				transition={{
-					duration,
-					type,
-					stiffness,
-					delay,
-					delayChildren: delay,
-				}}
-				onClick={onClick}
-				onMouseEnter={onMouseEnter}
-				onMouseLeave={onMouseLeave}
-			>
-				{children}
-			</motion.div>
+			<AnimatePresence>
+				<motion.div
+					variants={{
+						hidden: { opacity, x, y, scale, rotateX, rotateY },
+						visible: {
+							opacity: 1,
+							x: 0,
+							y: 0,
+							scale: 1,
+							rotateX: 0,
+							rotateY: 0,
+						},
+					}}
+					ref={ref}
+					initial='hidden'
+					animate={controls}
+					viewport={{ amount, once }}
+					exit={{
+						opacity: 1,
+						x: 0,
+						y: 0,
+						scale: 1,
+						rotateX: 0,
+						rotateY: 0,
+						transition: { stiffness: 0, duration: 0, delay: 0 },
+					}}
+					transition={{
+						duration,
+						type,
+						stiffness,
+						delay,
+						delayChildren: delay,
+					}}
+					onClick={onClick}
+					onMouseEnter={onMouseEnter}
+					onMouseLeave={onMouseLeave}
+				>
+					{children}
+				</motion.div>
+			</AnimatePresence>
 		</Wrapper>
 	)
 }

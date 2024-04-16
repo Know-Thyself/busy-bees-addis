@@ -10,6 +10,7 @@ import {
 	oswald,
 	concertOne,
 } from '@/styles/fonts'
+import AnimateCharacters from '@/animations/character-animation'
 import styles from '@/styles/open.module.css'
 
 type OpenHouseImagesProps = {
@@ -37,9 +38,19 @@ export default function OpenHouse({
 	return (
 		<div>
 			<div className={styles['heading-wrapper']}>
-				<h1 className={`${styles.heading} ${playfairDisplayItalic.className}`}>
+				{/* <h1 className={`${styles.heading} ${playfairDisplayItalic.className}`}>
 					Open House Photos Gallery
-				</h1>
+				</h1> */}
+				<AnimateCharacters
+					text='Open House Photos Gallery'
+					x={100}
+					el='h1'
+					rotateX={180}
+					// rotateY={180}
+					delay={0.5}
+					duration={1}
+					className={`${styles.heading} ${playfairDisplayItalic.className}`}
+				/>
 				<div className={styles.line}></div>
 			</div>
 			<div className={styles.gallery}>

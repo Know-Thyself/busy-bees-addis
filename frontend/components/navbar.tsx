@@ -33,8 +33,18 @@ export default function Navbar({
 			toggleNav()
 		}
 		setActiveNav(`#${href}`)
+		// const scrollToTop = () => {
+		// 	window.scrollTo({
+		// 		top: 0,
+		// 		behavior: 'smooth',
+		// 	})
+		// }
+
+		// scrollToTop()
 		// setActiveSection(href)
 	}
+
+	
 
 	useEffect(() => {
 		const changeWidth = () => {
@@ -82,7 +92,7 @@ export default function Navbar({
 									key={index}
 									className={`nav-item me-1 ${styles['custom-nav-item']}`}
 								>
-									<Link
+									<a
 										href={`#${link}`}
 										className={`nav-link border-start-0 border-end-0 ${
 											activeNav === link || activeSection === link
@@ -98,7 +108,7 @@ export default function Navbar({
 											: link === 'footer'
 											? 'contact'
 											: link}
-									</Link>
+									</a>
 								</li>
 							))}
 						</ul>

@@ -172,7 +172,7 @@
 		font-size: 12px;
 		border-bottom: 2px solid var(--secondary-color);
 		border-bottom: 2px solid var(--accent-color);
-		border-bottom: 2px solid var(--secondary-color) !important;
+		border-bottom: 2px solid var(--accent-color-brighter) !important;
 		margin-top: 2px;
 		color: var(--accent-color);
 		color: var(--overlay-text-color);
@@ -196,6 +196,8 @@
 		border-bottom: 2px solid var(--secondary-color) !important;
 		border-bottom: 2px solid var(--accent-color) !important;
 		border-bottom: 2px solid var(--secondary-color) !important;
+		border-bottom: 2px solid var(--accent-color-brighter) !important;
+
 	}
 	.menu__btn {
 		display: none;

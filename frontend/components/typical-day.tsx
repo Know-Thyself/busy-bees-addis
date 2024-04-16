@@ -32,30 +32,23 @@ type TypicalDayProps = {
 export default function TypicalDay({ day }: { day: TypicalDayProps[] }) {
 	return (
 		<section className={styles.main}>
-			<h1
+			{/* <h1
 				className={`${styles['activities-title']} ${playfairDisplayItalic.className}`}
 			>
 				{day[0].title.replace(/\b[a-z]/g, (x: string) => x.toUpperCase())}
-			</h1>
+			</h1> */}
+			<AnimateCharacters
+				text={day[0].title.replace(/\b[a-z]/g, (x: string) => x.toUpperCase())}
+				x={100}
+				el='h1'
+				rotateX={180}
+				// rotateY={180}
+				delay={0.5}
+				duration={1}
+				className={`${styles['activities-title']} ${playfairDisplayItalic.className}`}
+			/>
 			<div className={styles['activities-grid-container']}>
-				<AnimateContainer
-					x={-100}
-					delay={1}
-					duration={2}
-                    className={styles.animate}
-				>
-					<div className={styles['reading-bee-image-container']}>
-						<CldImage
-							width='300'
-							height='200'
-							src={day[0].reading_bee_image.split('upload/')[1]}
-							crop={'fill'}
-							alt='Reading bee'
-							className={styles['reading-bee-image']}
-						/>
-					</div>
-				</AnimateContainer>
-				<AnimateContainer x={100} delay={1} duration={2}>
+				<AnimateContainer x={-100} delay={1} duration={1} once>
 					<div className={styles.activities}>
 						{day[0].activities
 							.split('\r\n')
@@ -68,6 +61,24 @@ export default function TypicalDay({ day }: { day: TypicalDayProps[] }) {
 									{activity}
 								</p>
 							))}
+					</div>
+				</AnimateContainer>
+				<AnimateContainer
+					x={100}
+					delay={1}
+					duration={1}
+					once
+					className={styles.animate}
+				>
+					<div className={styles['reading-bee-image-container']}>
+						<CldImage
+							width='300'
+							height='200'
+							src={day[0].reading_bee_image.split('upload/')[1]}
+							crop={'fill'}
+							alt='Reading bee'
+							className={styles['reading-bee-image']}
+						/>
 					</div>
 				</AnimateContainer>
 			</div>

@@ -148,14 +148,31 @@ export default function Footer({
 					/>
 				</Link>
 				<div className={styles.icons}>
-					<a href={contactInfo.facebook}>
+					<a
+						href={contactInfo.facebook}
+						target='_blank'
+						rel='noopener noreferrer'
+					>
 						<FontAwesomeIcon
 							icon={faFacebookSquare}
 							className={styles.facebook}
 						/>
 					</a>
-					<a href={contactInfo.instagram}>
+					<a
+						href={contactInfo.instagram}
+						target='_blank'
+						rel='noopener noreferrer'
+					>
 						<FontAwesomeIcon icon={faInstagram} className={styles.instagram} />
+					</a>
+					<a
+						href='https://busy-bees-addis-server.vercel.app/admin/'
+						target='_blank'
+						rel='noopener noreferrer'
+						className={styles.admin}
+					>
+						{' '}
+						Admin Login
 					</a>
 				</div>
 				<div className={styles.copyright}>

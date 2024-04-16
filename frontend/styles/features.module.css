@@ -28,6 +28,7 @@
 	height: 3px;
 	background-color: #de5935;
 	background-color: var(--secondary-color);
+	background-color: var(--accent-color-brighter);
 	margin: 0 auto;
 	/* 
 	margin-bottom: 3rem;
@@ -40,8 +41,8 @@
 } */
 
 .card {
-	padding-top: 2rem;
-	padding-bottom: 1rem;
+	/* padding-top: 2rem;
+	padding-bottom: 1rem; */
 	height: 100%;
 }
 
@@ -176,7 +177,7 @@
 
 @media only screen and (min-width: 768px) {
 	.features {
-		width: 85%;
+		/* width: 85%; */
 		margin: 0 auto;
 	}
 }

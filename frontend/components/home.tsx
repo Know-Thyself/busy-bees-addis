@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Navbar from '@/components/navbar'
 import Hero from './hero'
 import Program from './program'
@@ -9,10 +9,11 @@ import Features from './features'
 import Compound from './compound'
 import OpenHouse from './opening'
 import Team from './team'
+import Footer from './footer'
 import dynamic from 'next/dynamic'
 import Mapbox from './map'
 import { raleway } from '@/styles/fonts'
-import Footer from './footer'
+import { motion, useScroll } from 'framer-motion'
 import styles from '@/styles/home.module.css'
 
 type TypicalDayProps = {
@@ -113,6 +114,9 @@ export default function Home({
 
 	const links: string[] = ['program', 'features', 'gallery', 'team', 'footer']
 
+	const { scrollYProgress } = useScroll()
+	const scrollRef = useRef(null)
+
 	useEffect(() => {
 		const program = document.getElementById('program')
 		const features = document.getElementById('features')
@@ -164,6 +168,10 @@ export default function Home({
 
 	return (
 		<main className={`${styles.main} ${raleway.className}`}>
+			<motion.div
+				style={{ scaleX: scrollYProgress }}
+				className={styles['progress-bar']}
+			/>
 			<Navbar
 				logo={logo}
 				links={links}
@@ -178,6 +186,7 @@ export default function Home({
 			<OpenHouse open_house_images={open_house_images} register={register} />
 			<Team team={team} />
 			{/* <Mapbox /> */}
+
 			<Footer
 				contactInfo={contactObject}
 				links={links}
