@@ -94,8 +94,16 @@
 	.line {
 		height: 4px;
 	}
-	/* .grid {
-		width: 85%;
-		margin: auto;
-	} */
+	.grid {
+		grid-auto-rows: 1fr;
+	}
+
+	.animate-card {
+		height: 100%;
+		display: flex;
+	}
+	
+	.card {
+		height: 100%;
+	}
 }

@@ -10,6 +10,7 @@ import {
 	oswald,
 	concertOne,
 } from '@/styles/fonts'
+import AnimateContainer from '@/animations/container-animation'
 import styles from '@/styles/compound.module.css'
 type CompoundImagesProps = {
 	id: number
@@ -24,17 +25,26 @@ export default function Compound({
 }) {
 	compound_images.sort((a, b) => b.id - a.id)
 	return (
-		<section id='gallery'>
-			<div className={styles['heading-wrapper']}>
-				<h1 className={`${styles.heading} ${playfairDisplayItalic.className}`}>
-					Compound Photos Gallery
-				</h1>
-				<div className={styles.line}></div>
-			</div>
-			<div className={styles.gallery}>
-				{compound_images.map((image, index) => (
-					<figure key={image.id} className={styles['gallery-item']}>
-						{/* <CldImage
+		<section id='gallery' className={styles.compound}>
+			<AnimateContainer
+				y={40}
+				delay={0.5}
+				duration={1}
+				amount={0.2}
+				opacity={0}
+			>
+				<div className={styles['heading-wrapper']}>
+					<h1
+						className={`${styles.heading} ${playfairDisplayItalic.className}`}
+					>
+						Compound Photos Gallery
+					</h1>
+					<div className={styles.line}></div>
+				</div>
+				<div className={styles.gallery}>
+					{compound_images.map((image, index) => (
+						<figure key={image.id} className={styles['gallery-item']}>
+							{/* <CldImage
 							alt={image.caption}
 							width='360'
 							height='300'
@@ -42,16 +52,17 @@ export default function Compound({
 							crop={'fill'}
 							className={styles['gallery-img']}
 						/> */}
-						<Image
-							alt={image.caption}
-							src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/${image.compound_image}`}
-							width={360}
-							height={300}
-							className={styles['gallery-img']}
-						/>
-					</figure>
-				))}
-			</div>
+							<Image
+								alt={image.caption}
+								src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/${image.compound_image}`}
+								width={360}
+								height={300}
+								className={styles['gallery-img']}
+							/>
+						</figure>
+					))}
+				</div>
+			</AnimateContainer>
 		</section>
 	)
 }

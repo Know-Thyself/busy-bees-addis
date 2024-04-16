@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Navbar from '@/components/navbar'
 import Hero from './hero'
 import Program from './program'
+import TypicalDay from './typical-day'
 import Features from './features'
 import Compound from './compound'
 import OpenHouse from './opening'
@@ -124,7 +125,7 @@ export default function Home({
 		const observerOptions = {
 			root: null,
 			rootMargin: '0px',
-			threshold: 0.1,
+			threshold: 0.3,
 		}
 
 		const observer = new IntersectionObserver(entries => {
@@ -163,14 +164,18 @@ export default function Home({
 
 	return (
 		<main className={`${styles.main} ${raleway.className}`}>
-			<Navbar logo={logo} links={links} activeSection={activeSection} />
+			<Navbar
+				logo={logo}
+				links={links}
+				activeSection={activeSection}
+				setActiveSection={setActiveSection}
+			/>
 			<Hero hero={heroObject} />
-			<Program programResponse={program} day={day} />
-			<Features features={features} />
-			<section id='gallery' className={styles.compound}>
-				<Compound compound_images={compound_images} />
-				<OpenHouse open_house_images={open_house_images} register={register} />
-			</section>
+			<Program programResponse={program} />
+			<TypicalDay day={day} />
+			<Features features={features} active={activeSection} />
+			<Compound compound_images={compound_images} />
+			<OpenHouse open_house_images={open_house_images} register={register} />
 			<Team team={team} />
 			{/* <Mapbox /> */}
 			<Footer

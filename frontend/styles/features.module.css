@@ -208,4 +208,17 @@
 	.title {
 		font-size: 2rem;
 	}
+
+	.grid {
+		grid-auto-rows: 1fr;
+	}
+
+	.animate {
+		height: 100%;
+		display: flex;
+	}
+
+	.card {
+		height: 100%;
+	}
 }

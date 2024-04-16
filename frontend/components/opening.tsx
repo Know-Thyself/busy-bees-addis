@@ -35,7 +35,7 @@ export default function OpenHouse({
 	let registerObj: object | any = register
 	registerObj = registerObj[0]
 	return (
-		<div id='gallery'>
+		<div>
 			<div className={styles['heading-wrapper']}>
 				<h1 className={`${styles.heading} ${playfairDisplayItalic.className}`}>
 					Open House Photos Gallery

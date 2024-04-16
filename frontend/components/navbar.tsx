@@ -1,37 +1,27 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, SetStateAction, Dispatch } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { CldImage } from 'next-cloudinary'
-import logo from '@/public/images/logo/busy-bees-addis-logo.png'
-import {
-	playfairDisplay,
-	playfairDisplayItalic,
-	montserrat,
-	oswald,
-	raleway,
-} from '@/styles/fonts'
+import { montserrat, raleway } from '@/styles/fonts'
 import 'bootswatch/dist/sandstone/bootstrap.min.css'
 import styles from '@/styles/navbar.module.css'
 
 export default function Navbar({
 	links,
 	activeSection,
+	setActiveSection,
 	logo,
 }: {
 	links: string[]
 	activeSection: string
+	setActiveSection: Dispatch<SetStateAction<string>>
 	logo: string
 }) {
 	const [toggleMenu, setToggleMenu] = useState(false)
 	const [isChecked, setIsChecked] = useState(false)
 	const [screenWidth, setScreenWidth] = useState(1348)
 	const [activeNav, setActiveNav] = useState(`#${activeSection}`)
-
-	const handleClick = (href: string) => {
-		setActiveNav(`#${href}`)
-	}
 
 	const toggleNav = () => {
 		setToggleMenu(!toggleMenu)
@@ -43,6 +33,7 @@ export default function Navbar({
 			toggleNav()
 		}
 		setActiveNav(`#${href}`)
+		// setActiveSection(href)
 	}
 
 	useEffect(() => {
@@ -62,20 +53,13 @@ export default function Navbar({
 		>
 			<div className='container-fluid align-content-center'>
 				<Link className={`navbar-brand border-0 ${styles.brand}`} href='/'>
-					{/* <CldImage
-						alt='logo'
-						width='240'
-						height='50'
-						src={logo.split('upload/')[1]}
-						crop={'fill'}
-						className={styles.logo}
-					/> */}
 					<Image
 						alt='logo'
 						src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/${logo}`}
 						width={200}
 						height={50}
 						className={styles.logo}
+						onClick={() => screenTest('')}
 					/>
 				</Link>
 				<input
@@ -97,9 +81,6 @@ export default function Navbar({
 								<li
 									key={index}
 									className={`nav-item me-1 ${styles['custom-nav-item']}`}
-									// onClick={() =>
-									// 	handleClick(`${link === 'contact'} ? 'footer' : ${link}`)
-									// }
 								>
 									<Link
 										href={`#${link}`}
