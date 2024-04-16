@@ -12,7 +12,7 @@
   top: 84;
   left: 0;
   right: 0;
-  height: 6px;
+  height: 3px;
   background: var(--accent-color);
   background: var(--tertiary-color);
   background: #64344A;
@@ -23,5 +23,11 @@
 
 
   transform-origin: 0%;
-  z-index: 1000000;
+  z-index: 1000;
+}
+
+@media only screen and (min-width: 1200px) {
+  .progress-bar {
+    height: 6px;
+  }
 }

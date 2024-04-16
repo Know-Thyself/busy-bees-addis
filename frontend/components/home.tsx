@@ -10,8 +10,6 @@ import PhotoGallery from './gallery'
 import OpenHouse from './open-house'
 import Team from './team'
 import Footer from './footer'
-import dynamic from 'next/dynamic'
-import Mapbox from './map'
 import { raleway } from '@/styles/fonts'
 import { motion, useScroll } from 'framer-motion'
 import styles from '@/styles/home.module.css'
@@ -130,7 +128,7 @@ export default function Home({
 		const observerOptions = {
 			root: null,
 			rootMargin: '0px',
-			threshold: 0.3,
+			threshold: 0.1,
 		}
 
 		const observer = new IntersectionObserver(entries => {
