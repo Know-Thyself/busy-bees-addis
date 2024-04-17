@@ -21,27 +21,16 @@ export default function Navbar({
 	const [toggleMenu, setToggleMenu] = useState(false)
 	const [isChecked, setIsChecked] = useState(false)
 	const [screenWidth, setScreenWidth] = useState(1348)
-	const [activeNav, setActiveNav] = useState(`#${activeSection}`)
 
 	const toggleNav = () => {
 		setToggleMenu(!toggleMenu)
 		setIsChecked(!isChecked)
 	}
 
-	function screenTest(href: string) {
+	function screenTest() {
 		if (window.innerWidth <= 868) {
 			toggleNav()
 		}
-		setActiveNav(`#${href}`)
-		// const scrollToTop = () => {
-		// 	window.scrollTo({
-		// 		top: 0,
-		// 		behavior: 'smooth',
-		// 	})
-		// }
-
-		// scrollToTop()
-		// setActiveSection(href)
 	}
 
 	useEffect(() => {
@@ -49,10 +38,27 @@ export default function Navbar({
 			setScreenWidth(window.innerWidth)
 		}
 		window.addEventListener('resize', changeWidth)
+
 		return () => {
 			window.removeEventListener('resize', changeWidth)
 		}
 	}, [])
+
+	const handleClick = (id: string) => {
+		const element = document.getElementById(id) as HTMLElement
+		// const elRect = element.getBoundingClientRect()
+
+		// const scrollDistance = elRect.top + window.scrollY
+
+		// const offset =
+		// 	Number(element.getAttribute('data-scroll-to-view-offset')) || -84
+
+		// window.scrollTo({
+		// 	top: scrollDistance + offset,
+		// 	behavior: 'smooth',
+		// })
+		element.scrollIntoView({ behavior: 'smooth' })
+	}
 
 	return (
 		<nav
@@ -67,7 +73,6 @@ export default function Navbar({
 						width={200}
 						height={50}
 						className={styles.logo}
-						onClick={() => screenTest('')}
 					/>
 				</Link>
 				<input
@@ -88,25 +93,27 @@ export default function Navbar({
 							{links.map((link, index) => (
 								<li
 									key={index}
-									className={`nav-item me-1 ${styles['custom-nav-item']}`}
+									className={`nav-item me-1 ${styles['custom-nav-item']} ${
+										link === 'hero' ? 'd-none' : ''
+									}`}
 								>
-									<a
-										href={`#${link}`}
+									<Link
+										href={`#${link === 'contact' ? 'footer' : link}`}
 										className={`nav-link border-start-0 border-end-0 ${
-											activeNav === link || activeSection === link
+											activeSection === link
 												? styles.active
 												: styles['menu__item']
 										}`}
-										onClick={() =>
-											screenTest(`${link === 'contact'} ? 'footer' : ${link}`)
-										}
+										scroll={false}
+										style={{ scrollBehavior: 'smooth' }}
+										onClick={e => {
+											e.preventDefault()
+											screenTest()
+											handleClick(`${link === 'contact' ? 'footer' : link}`)
+										}}
 									>
-										{link === 'program'
-											? 'our program'
-											: link === 'footer'
-											? 'contact'
-											: link}
-									</a>
+										{link}
+									</Link>
 								</li>
 							))}
 						</ul>

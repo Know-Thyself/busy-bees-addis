@@ -22,89 +22,76 @@ export default function Team({ team }: { team: TeamProps[] }) {
 	const [readMore, setReadMore] = useState(false)
 	const [id, setId] = useState(0)
 	return (
-		<section id='team' className={`${styles.team}`}>
-			<AnimateContainer y={100} delay={0.5} duration={1} amount={0.2}>
-				<div className={styles['heading-wrapper']}>
-					<h1
-						className={`${playfairDisplayItalic.className} ${styles.heading}`}
-					>
-						Meet The Team
-					</h1>
-					<div className={styles.line}></div>
-				</div>
-			</AnimateContainer>
+		<section
+			id='team'
+			className={styles.team}
+			// className={styles['team-section']}
+		>
+			<div className={styles['heading-wrapper']}>
+				<h1 className={`${playfairDisplayItalic.className} ${styles.heading}`}>
+					Meet The Team
+				</h1>
+				<div className={styles.line}></div>
+			</div>
 			<Row xs={1} md={2} xl={3} className={`g-3 ${styles.grid}`}>
 				{team.map((member, index) => (
 					<Col key={member.id} className=''>
-						<AnimateContainer
-							scale={0.5}
-							delay={index === 0 ? 1 : 1 + index / 4}
-							duration={1.5}
-							amount={0.2}
-							className={styles['animate-card']}
-							once
+						<Card
+							className={`border-0 ${readMore ? 'h-auto' : 'h-100'} ${
+								styles.card
+							}`}
 						>
-							<Card
-								className={`border-0 ${readMore ? 'h-auto' : 'h-100'} ${
-									styles.card
-								}`}
-							>
-								<div
-									className={`text-center py-2 ${styles['image-container']}`}
+							<div className={`text-center py-2 ${styles['image-container']}`}>
+								{member.name.includes('Worknesh') ? (
+									<Image
+										alt={member.name}
+										src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/${member.image}`}
+										width={180}
+										height={180}
+										style={{ borderRadius: '50%' }}
+									/>
+								) : (
+									<CldImage
+										alt={member.name}
+										width='210'
+										height='210'
+										src={member.image.split('upload/')[1]}
+										crop={'fill'}
+										style={{ borderRadius: '50%' }}
+									/>
+								)}
+							</div>
+							<Card.Body className={`${styles['card-body']}`}>
+								<Card.Title className={`${styles.title} ${raleway.className} `}>
+									{member.name}
+								</Card.Title>
+								<Card.Title
+									className={`text-muted ${styles.position} ${playfairDisplayItalic.className} `}
 								>
-									{member.name.includes('Worknesh') ? (
-										<Image
-											alt={member.name}
-											src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/${member.image}`}
-											width={180}
-											height={180}
-											style={{ borderRadius: '50%' }}
-										/>
-									) : (
-										<CldImage
-											alt={member.name}
-											width='210'
-											height='210'
-											src={member.image.split('upload/')[1]}
-											crop={'fill'}
-											style={{ borderRadius: '50%' }}
-										/>
-									)}
-								</div>
-								<Card.Body className={`${styles['card-body']}`}>
-									<Card.Title
-										className={`${styles.title} ${raleway.className} `}
-									>
-										{member.name}
-									</Card.Title>
-									<Card.Title
-										className={`text-muted ${styles.position} ${playfairDisplayItalic.className} `}
-									>
-										{member.position}
-									</Card.Title>
-									<Card.Text
-										className={`text-black ${styles.description} ${raleway.className}`}
-									>
-										{readMore && id === member.id
-											? member.about
-											: member.about.substring(0, 175) + '...'}
-										<span>
-											<button
-												onClick={() => {
-													setReadMore(!readMore)
-													setId(member.id)
-												}}
-												className={styles.read}
-											>
-												{readMore && id === member.id
-													? 'read less ▲'
-													: 'read more ▼'}
-											</button>
-										</span>
-									</Card.Text>
-								</Card.Body>
-							</Card>
-						</AnimateContainer>
+									{member.position}
+								</Card.Title>
+								<Card.Text
+									className={`text-black ${styles.description} ${raleway.className}`}
+								>
+									{readMore && id === member.id
+										? member.about
+										: member.about.substring(0, 175) + '...'}
+									<span>
+										<button
+											onClick={() => {
+												setReadMore(!readMore)
+												setId(member.id)
+											}}
+											className={styles.read}
+										>
+											{readMore && id === member.id
+												? 'read less ▲'
+												: 'read more ▼'}
+										</button>
+									</span>
+								</Card.Text>
+							</Card.Body>
+						</Card>
 					</Col>
 				))}
 			</Row>

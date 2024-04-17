@@ -26,6 +26,7 @@ type RegisterProps = {
 	requirements: string
 }
 
+
 export default function OpenHouse({
 	open_house_images,
 	register,
@@ -35,15 +36,13 @@ export default function OpenHouse({
 }) {
 	let registerObj: object | any = register
 	registerObj = registerObj[0]
+	
 	return (
-		<div id='open-house'>
+		<div>
 			<div className={styles['heading-wrapper']}>
-				{/* <h1 className={`${styles.heading} ${playfairDisplayItalic.className}`}>
-					Open House Photos Gallery
-				</h1> */}
 				<AnimateCharacters
 					text='Open House Photos Gallery'
-					x={100}
+					x={40}
 					el='h1'
 					rotateX={180}
 					// rotateY={180}
@@ -53,16 +52,9 @@ export default function OpenHouse({
 				/>
 				<div className={styles.line}></div>
 			</div>
-			<div className={styles.gallery}>
+			<div id='open-house' className={styles.gallery}>
 				{open_house_images.map(image => (
 					<figure key={image.id} className={styles['gallery-item']}>
-						{/* <Image
-							alt={image.caption !== null ? image.caption : 'Compound Image'}
-							src={image.open_house_image.split('/public')[1]}
-							width={300}
-							height={400}
-							className={styles['gallery-img']}
-						/> */}
 						<Image
 							alt={image.caption}
 							src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/${image.open_house_image}`}
@@ -70,25 +62,6 @@ export default function OpenHouse({
 							height={300}
 							className={styles['gallery-img']}
 						/>
-						{/* {image.caption.includes('Welcoming') ||
-						image.caption.includes('Kid playing') ? (
-							<Image
-								alt={image.caption}
-								src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/${image.open_house_image}`}
-								width={300}
-								height={200}
-								className={styles['gallery-img']}
-							/>
-						) : (
-							<CldImage
-								alt={image.caption}
-								width='380'
-								height='300'
-								src={image.open_house_image.split('upload/')[1]}
-								crop={'fill'}
-								className={styles['gallery-img']}
-							/>
-						)} */}
 					</figure>
 				))}
 			</div>

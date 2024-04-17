@@ -4,6 +4,10 @@
 	scroll-margin: 83px;
 }
 
+/* .team-section {
+	width: 100%;
+} */
+
 .heading-wrapper {
 	padding: 1rem 5%;
 	text-align: center;
@@ -92,6 +96,10 @@
 	.team {
 		width: 85%;
 	}
+	/* .team-section {
+		width: 85%;
+		margin: auto;
+	} */
 
 	.heading-wrapper {
 		padding: 1rem 5% 1.5rem 5%;

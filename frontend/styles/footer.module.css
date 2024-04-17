@@ -1,13 +1,13 @@
+.footer-section {
+	scroll-margin: 83px;
+}
+
 .footer {
 	margin-top: 2rem;
-	scroll-margin: 83px;
 	color: var(--tertiary-color);
 	color: var(--dark-accent-color);
 	color: var(--accent-color);
 	color: var(--overlay-text-color);
-
-
-
 	background-color: var(--tertiary-color);
 	background-color: var(--primary-color);
 	display: grid;
@@ -22,8 +22,6 @@
 	background-color: var(--tertiary-color);
 	background-color: var(--accent-color);
 	background-color: var(--secondary-color);
-
-
 }
 .brand {
 	display: flex;
@@ -70,7 +68,6 @@
 .menu__item,
 .active {
 	color: var(--primary-color);
-
 }
 
 .facebook,

@@ -7,7 +7,6 @@ import Program from './program'
 import TypicalDay from './typical-day'
 import Features from './features'
 import PhotoGallery from './gallery'
-import OpenHouse from './open-house'
 import Team from './team'
 import Footer from './footer'
 import { raleway } from '@/styles/fonts'
@@ -110,32 +109,40 @@ export default function Home({
 
 	const [activeSection, setActiveSection] = useState<string>('')
 
-	const links: string[] = ['program', 'features', 'gallery', 'team', 'footer']
+	const links: string[] = ['hero', 'program', 'features', 'gallery', 'team', 'contact']
 
 	const { scrollYProgress } = useScroll()
 	const scrollRef = useRef(null)
 
 	useEffect(() => {
+		const hero = document.getElementById('hero')
 		const program = document.getElementById('program')
 		const features = document.getElementById('features')
 		const gallery = document.getElementById('gallery')
 		const team = document.getElementById('team')
-		const footer = document.getElementById('footer')
-		const open_house = document.getElementById('open-house')
+		const contact = document.getElementById('footer')
 
-		const sections = [program, features, gallery, open_house, team, footer]
+		const sections = [hero, program, features, gallery, team, contact]
+
+		function screenTest() {
+			if (window.innerWidth <= 868) {
+				return 0.01
+			} else {
+				return 0.2
+			}
+		}
 
 		const observerOptions = {
 			root: null,
 			rootMargin: '0px',
-			threshold: 0.1,
+			threshold: screenTest(),
 		}
 
 		const observer = new IntersectionObserver(entries => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
 					if (entry.target.id == 'hero') {
-						setActiveSection('home')
+						setActiveSection('hero')
 					}
 					if (entry.target.id == 'program') {
 						setActiveSection('program')
@@ -143,30 +150,24 @@ export default function Home({
 					if (entry.target.id == 'features') {
 						setActiveSection('features')
 					}
-					if (
-						entry.target.id == 'gallery' ||
-						entry.target.id === 'open-house'
-					) {
+					if (entry.target.id == 'gallery') {
 						setActiveSection('gallery')
 					}
 					if (entry.target.id == 'team') {
 						setActiveSection('team')
 					}
 					if (entry.target.id == 'footer') {
-						setActiveSection('footer')
+						setActiveSection('contact')
 					}
 				}
 			})
 		}, observerOptions)
 
-		sections?.forEach(section => {
+		sections.forEach(section => {
 			section && observer.observe(section)
 		})
-	}, [])
-
-	// const MapWithNoSSR = dynamic(() => import('./map'), {
-	// 	ssr: false,
-	// })
+		
+	}, [activeSection])
 
 	return (
 		<main className={`${styles.main} ${raleway.className}`}>
@@ -181,15 +182,14 @@ export default function Home({
 				setActiveSection={setActiveSection}
 			/>
 			<Hero hero={heroObject} />
-			<Program programResponse={program} />
-			<TypicalDay day={day} />
+			<Program programResponse={program} day={day} />
 			<Features features={features} active={activeSection} />
-			<PhotoGallery compound_images={compound_images} />
-			<OpenHouse open_house_images={open_house_images} register={register} />
-
+			<PhotoGallery
+				compound_images={compound_images}
+				open_house_images={open_house_images}
+				register={register}
+			/>
 			<Team team={team} />
-			{/* <Mapbox /> */}
-
 			<Footer
 				contactInfo={contactObject}
 				links={links}
