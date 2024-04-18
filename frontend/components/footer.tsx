@@ -65,7 +65,7 @@ export default function Footer({
 			<div className={`${styles.footer} ${raleway.className}`}>
 				<div className={`${styles.addresses} ${styles['footer-item']}`}>
 					<div>
-						<h3 className={``}>Contact us</h3>
+						<h4 className={`fw-semibold`}>Contact us</h4>
 						<div>
 							<h5 className={styles.address}>
 								<FontAwesomeIcon icon={faMapLocationDot} /> &nbsp;Address:
@@ -100,11 +100,11 @@ export default function Footer({
 				<ul
 					className={`navbar-nav ${styles.navigation} ${styles['footer-item']}`}
 				>
-					<h3 className={``}>Site Navigation</h3>
+					<h4 className={`fw-semibold`}>Site Navigation</h4>
 					{links.map((link, index) => (
 						<li
 							key={index}
-							className={`nav-item me-1 ${styles['custom-nav-item']} ${
+							className={`nav-item me-1 ${styles['nav-item']} ${
 								link === 'hero' ? 'd-none' : ''
 							}`}
 							onClick={() =>

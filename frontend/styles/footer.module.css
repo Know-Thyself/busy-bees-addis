@@ -78,8 +78,15 @@
 
 .navigation {
 	padding: 0.5rem 0;
-	padding-left: 7.5%;
 	background-color: var(--accent-color-brighter);
+}
+
+.navigation h4 {
+	margin-left: 7.5%;
+}
+
+.navigation .nav-item {
+	margin-left: 7.5%;
 }
 
 .icons-and-copyright {
