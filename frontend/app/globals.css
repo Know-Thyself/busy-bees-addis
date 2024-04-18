@@ -183,7 +183,7 @@ html {
 	--scroll-behavior: smooth !important;
 	scroll-behavior: smooth !important;
 	font-family: var(--font-playfair-display-italic);
-	font-size: 18px;
+	font-size: 16px;
 }
 
 body {
