@@ -77,10 +77,9 @@
 }
 
 .navigation {
-	display: flex;
-	justify-content: center;
 	padding: 0.5rem 0;
 	padding-left: 7.5%;
+	background-color: var(--accent-color-brighter);
 }
 
 .icons-and-copyright {
@@ -90,6 +89,7 @@
 	justify-content: space-around;
 	gap: 1rem;
 	padding: 1rem 7.5%;
+	background-color: var(--accent-color-brighter);
 }
 
 .icons {
