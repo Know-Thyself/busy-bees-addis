@@ -61,7 +61,7 @@ export default function Features({
 							className={styles.animate}
 						>
 							<Card
-								className={`border-0 rounded-0 ${styles.card} ${
+								className={`border-0 rounded-0 h-xl-100 ${styles.card} ${
 									feature.icon_name.includes('comments')
 										? styles.comments
 										: feature.icon_name.includes('bullhorn')
@@ -88,7 +88,7 @@ export default function Features({
 								</div>
 								<Card.Body className='mt-0 pt-0'>
 									<Card.Title
-										className={`m-1 p-1 ${styles.title}`}
+										className={`m-1 p-1 fs-2 fw-semibold ${styles.title}`}
 									>
 										{feature.title}
 									</Card.Title>
