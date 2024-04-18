@@ -11,7 +11,6 @@ export const playfairDisplayItalic = Playfair_Display({
 export const raleway = Raleway({
 	subsets: ['cyrillic'],
 	display: 'swap',
-	preload: true,
 	weight: 'variable',
 })
 

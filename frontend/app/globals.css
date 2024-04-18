@@ -183,19 +183,14 @@ html {
 	--scroll-behavior: smooth !important;
 	scroll-behavior: smooth !important;
 	font-family: var(--font-playfair-display-italic);
+	font-size: 18px;
 }
 
 body {
 	background: var(--body-background);
 	color: var(--primary-text-color);
-	font-size: 20px;
 	font-weight: 500;
 	/* overflow-y:hidden; */
-}
-
-h1 {
-	font-family: var(--font-playfair-display-italic);
-	font-weight: 900;
 }
 
 a {

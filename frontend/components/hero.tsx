@@ -49,6 +49,7 @@ export default function Hero({ hero }: { hero: HeroProps }) {
 						y={-20}
 						rotateX={380}
 						className={`${styles.motto} ${raleway.className}`}
+						isRaleway
 					/>
 				</div>
 			</div>

@@ -29,11 +29,7 @@ export default function Team({ team }: { team: TeamProps[] }) {
 		>
 			<AnimateContainer y={20} delay={0.4} duration={1}>
 				<div className={styles['heading-wrapper']}>
-					<h1
-						className={`${styles.heading}`}
-					>
-						Meet The Team
-					</h1>
+					<h1 className={`${styles.heading}`}>Meet The Team</h1>
 					<div className={styles.line}></div>
 				</div>
 			</AnimateContainer>
@@ -81,7 +77,7 @@ export default function Team({ team }: { team: TeamProps[] }) {
 										{member.name}
 									</Card.Title>
 									<Card.Title
-										className={`text-muted ${styles.position} `}
+										className={`text-muted ${styles.position} ${raleway.className} `}
 									>
 										{member.position}
 									</Card.Title>
