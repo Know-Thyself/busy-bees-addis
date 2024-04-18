@@ -47,20 +47,6 @@
 }
 
 .comments {
-	background-color: #f38fb9;
-
-	
-	background-color: #acbfe6;
-	background-color: var(--accent-color);
-	background-color: var(--accent-color-light);
-	background-color: var(--light-green);
-	background-color: #ea937e;
-    background-color: #f2c1d1;
-	background-color: var(--secondary-complementary);
-	background-color:  #8F9779;
-	background-color: #50C878;
-	background-color: #5ac3b0;
-	
 	background-color: #98FB98;
 	
 	background-color: #e5e5f8;
@@ -69,87 +55,34 @@
 	background-color: #69F067;
 	background-color: #6769F0;
 	background-color: #67F0EE;
-
-
-
-
 }
 
 .bullhorn {
-	background-color: cornflowerblue;
-	background-color: #c4ffe4;
 	background-color: #c4ffc6;
-
-	background-color: #e5f8e5;
 	background-color: #c97eea;
-
-	background-color: #4fcbe9;
-	background-color: #ea7ed5;
 	background-color: #978ff3;
-
-	background-color: #7ed5ea;
-	background-color: var(--accent-color);
-	background-color: #ea937e;
-	background-color: var(--secondary-complementary);
-	background-color:  #8F9779;
-	background-color: #50C878;
-	background-color: #7850C8;
-	background-color: #de5935;
 	background-color: #f7cd46;
-
-
-
 }
 
 .users {
-	background-color: bisque;
-	background-color: #ffc4fc;
-	background-color: #ebf38f;
-	background-color: var(--light-green);
-	background-color: #cbe94f;
-	background-color: #f8e5e5;
 	background-color: #d5ea7e;
-
-	background-color: #7ed5ea;
-	background-color: var(--accent-color);
-	background-color: #ea937e;
-	background-color: var(--secondary-complementary);
-	background-color:  #8F9779;
-	background-color: #50C878;
 	background-color: #C87850;
-	
 	background-color: #de5935;
-
 	background-color: var(--accent-color);
-	
-
-
-
-
-
 }
 
 .icon-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: white;
-	background-color: blue;
-	background-color: darkblue;
-	background-color: #3559fd;
 	background-color: var(--primary-color);
 	background-color: #1d1d2c;
 	background-color: var(--dark-accent-color);
-
 	border-radius: 50%;
 	height: 160px;
 	width: 160px;
 	margin: auto;
 }
-
-/* .comments {
-    background-color: orangered;
-} */
 
 .icon {
 	font-size: 5rem;
