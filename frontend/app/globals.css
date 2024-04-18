@@ -13,10 +13,6 @@
 	--complementary-color: orange;
 	--light-green: #8ff397;
 	--light-green: #8ff3c9;
-	--accent-color: #0516ff;
-	--accent-color: #4a2c40;
-	--accent-color: #df3062;
-	--accent-color: #78184a;
 	--accent-color: #f06769;
 	--accent-color: #f06767;
 
@@ -37,11 +33,6 @@
 
 	--body-background: #ffffff;
 	--primary-text-color: black;
-	--secondary-color: #4bac3f;
-	--secondary-color: #4bac3f;
-	--secondary-color: #006b3c;
-	--secondary-color: #009a44;
-	--secondary-color: #177245;
 	--secondary-color: #0e9b4a;
 
 	--secondary-complementary: #a03fac;
@@ -62,8 +53,6 @@
 	--overlay-text-color: #373833;
 	--overlay-text-color: #ffffff;
 	--overlay-text-bg: rgba(225, 225, 225, 0.6);
-	--overlay-text-bg: rgba(223, 48, 98, 0.5);
-	--overlay-text-bg: rgba(130, 224, 22, 0.5);
 	--overlay-text-bg: rgba(75, 172, 63, 0.6);
 	--overlay-text-bg: rgba(67, 31, 31, 0.5);
 	--overlay-text-shadow: #df3062;
