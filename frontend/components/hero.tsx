@@ -7,10 +7,7 @@ import AnimateCharacters from '@/animations/character-animation'
 import {
 	montserrat,
 	raleway,
-	playfairDisplay,
 	playfairDisplayItalic,
-	oswald,
-	concertOne,
 } from '@/styles/fonts'
 import styles from '@/styles/hero.module.css'
 
@@ -34,24 +31,25 @@ export default function Hero({ hero }: { hero: HeroProps }) {
 					className={styles['hero-img']}
 					sizes='100vw'
 				/>
-				<div className={styles.overlay}>
+				<div className={`${styles.overlay}`}>
 					<AnimateCharacters
 						text={hero.brand}
 						el='h1'
-						className={`${styles.brand} ${playfairDisplayItalic.className}`}
 						delay={1}
 						x={40}
+						className={styles.brand}
 					/>
 					<AnimateCharacters
 						text={hero.motto.replace(/\b[a-z]/g, (x: string) =>
 							x.toUpperCase()
 						)}
 						el='h2'
-						className={`${styles.motto} ${raleway.className}`}
 						delay={2}
 						duration={1}
 						y={-20}
 						rotateX={380}
+						className={`${styles.motto} ${raleway.className}`}
+						isRaleway
 					/>
 				</div>
 			</div>

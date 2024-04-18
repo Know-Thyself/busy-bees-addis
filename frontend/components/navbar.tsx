@@ -86,9 +86,7 @@ export default function Navbar({
 					<span></span>
 				</label>
 				{(toggleMenu || screenWidth > 868) && (
-					<div
-						className={`text-center ${styles['menu__box']} ${raleway.className}`}
-					>
+					<div className={`text-center ${styles['menu__box']}`}>
 						<ul className={`navbar-nav ms-auto border-0`}>
 							{links.map((link, index) => (
 								<li
@@ -103,7 +101,7 @@ export default function Navbar({
 											activeSection === link
 												? styles.active
 												: styles['menu__item']
-										}`}
+										} ${raleway.className}`}
 										scroll={false}
 										style={{ scrollBehavior: 'smooth' }}
 										onClick={e => {

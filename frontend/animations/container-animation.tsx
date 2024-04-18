@@ -135,7 +135,7 @@ export default function AnimateContainer({
 					animate={controls}
 					viewport={{ amount, once }}
 					exit={{
-						opacity: 1,
+						opacity: 0,
 						x: 0,
 						y: 0,
 						scale: 1,

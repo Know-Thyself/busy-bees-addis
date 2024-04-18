@@ -23,10 +23,6 @@ import hiBeeImage from '@/public/images/footer/hiBee.png'
 import {
 	montserrat,
 	raleway,
-	playfairDisplay,
-	playfairDisplayItalic,
-	oswald,
-	concertOne,
 } from '@/styles/fonts'
 import AnimateContainer from '@/animations/container-animation'
 import styles from '@/styles/footer.module.css'
@@ -58,11 +54,18 @@ export default function Footer({
 		setActiveNav(`#${href}`)
 	}
 	return (
-		<section id='footer' className={styles['footer-section']}>
+		<AnimateContainer
+			el='section'
+			y={-40}
+			delay={0.4}
+			duration={2}
+			id='footer'
+			className={styles['footer-section']}
+		>
 			<div className={`${styles.footer} ${raleway.className}`}>
 				<div className={`${styles.addresses} ${styles['footer-item']}`}>
 					<div>
-						<h3 className={`${playfairDisplay.className}`}>Contact us</h3>
+						<h3 className={``}>Contact us</h3>
 						<div>
 							<h5 className={styles.address}>
 								<FontAwesomeIcon icon={faMapLocationDot} /> &nbsp;Address:
@@ -97,11 +100,13 @@ export default function Footer({
 				<ul
 					className={`navbar-nav ${styles.navigation} ${styles['footer-item']}`}
 				>
-					<h3 className={`${playfairDisplay.className}`}>Site Navigation</h3>
+					<h3 className={``}>Site Navigation</h3>
 					{links.map((link, index) => (
 						<li
 							key={index}
-							className={`nav-item me-1 ${styles['custom-nav-item']}`}
+							className={`nav-item me-1 ${styles['custom-nav-item']} ${
+								link === 'hero' ? 'd-none' : ''
+							}`}
 							onClick={() =>
 								handleClick(`${link === 'contact'} ? 'footer' : ${link}`)
 							}
@@ -182,6 +187,6 @@ export default function Footer({
 					</div>
 				</div>
 			</div>
-		</section>
+		</AnimateContainer>
 	)
 }

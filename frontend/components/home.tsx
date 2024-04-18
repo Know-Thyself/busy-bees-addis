@@ -109,7 +109,14 @@ export default function Home({
 
 	const [activeSection, setActiveSection] = useState<string>('')
 
-	const links: string[] = ['hero', 'program', 'features', 'gallery', 'team', 'contact']
+	const links: string[] = [
+		'hero',
+		'program',
+		'features',
+		'gallery',
+		'team',
+		'contact',
+	]
 
 	const { scrollYProgress } = useScroll()
 	const scrollRef = useRef(null)
@@ -166,7 +173,6 @@ export default function Home({
 		sections.forEach(section => {
 			section && observer.observe(section)
 		})
-		
 	}, [activeSection])
 
 	return (

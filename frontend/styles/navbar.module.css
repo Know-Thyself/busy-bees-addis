@@ -173,7 +173,7 @@
 	}
 
 	.custom-nav-item .active {
-		font-size: 12px;
+		font-size: 0.8rem;
 		border-bottom: 2px solid var(--secondary-color);
 		border-bottom: 2px solid var(--accent-color);
 		border-bottom: 2px solid var(--accent-color-brighter) !important;
@@ -187,7 +187,7 @@
 	}
 
 	.custom-nav-item .menu__item {
-		font-size: 12px;
+		font-size: 0.8rem;
 		border-bottom: 2px solid var(--primary-color);
 		margin-top: 2px;
 		font-weight: 600;

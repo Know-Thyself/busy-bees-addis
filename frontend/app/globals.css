@@ -10,7 +10,6 @@
 	--tertiary-color: #825f1d;
 	--tertiary-color: #653615;
 	--tertiary-color: #643634;
-
 	--complementary-color: orange;
 	--light-green: #8ff397;
 	--light-green: #8ff3c9;
@@ -26,58 +25,23 @@
 	--accent-color-light: #f28b82;
 	--accent-color-light: #f3978f;
 	--accent-color-light: #f3978f;
-
-	--accent-color-light: #fab162;
-	--accent-color-light: #f1e821;
-	--accent-color-light: #acbfe6;
-	--accent-color-light: #f8e5e5;
-	--accent-color-light: #f2c1d1;
-	--accent-color-light: #f4abaa;
 	--accent-color-light: #f58c84;
 	--accent-color-light: #f06668;
 	--accent-color-brighter: #eb3939;
 	--accent-color-brighter: #df3062;
 
 	--dark-accent-color: #1d1d2c;
-
-	--primary-color: #ffee05;
-	--primary-color: #f7cd46;
-	--primary-color: #abf62d;
-	--primary-color: #d6acfb;
-
-	--primary-color: #fdee30;
-	--primary-color: #fecd45;
-	--primary-color: #fab162;
 	--primary-color: #f5b935;
 	--primary-color: #ffb600;
 	--primary-color: #fdd935;
 
 	--body-background: #ffffff;
 	--primary-text-color: black;
-	--secondary-color: #82e016;
-	--secondary-color: #45af2a;
 	--secondary-color: #4bac3f;
-
-	--secondary-color: #5daa68;
-	--secondary-color: #4a5d23;
 	--secondary-color: #4bac3f;
-
-	--secondary-color: #007848;
-	--secondary-color: #00563b;
-	--secondary-color: #006a4e;
-	--secondary-color: #78184a;
 	--secondary-color: #006b3c;
-
-	--secondary-color: #00ab66;
 	--secondary-color: #009a44;
-
-	--secondary-color: #00873e;
-	--secondary-color: #01735c;
-	--secondary-color: #354230;
 	--secondary-color: #177245;
-
-	--secondary-color: #1a2421;
-	--secondary-color: #007848;
 	--secondary-color: #0e9b4a;
 
 	--secondary-complementary: #a03fac;
@@ -90,77 +54,28 @@
 	--nav-links-color: rgba(101, 55, 20, 1);
 
 	--mobile-active-nav: #000ed1;
-	--overlay-text-color: #1a2238;
-	--overlay-text-color: #394f8a;
-	--overlay-text-color: #9cf6fb;
 	--overlay-text-color: #df3062;
 	--overlay-text-color: #bd1e51;
-
-	--overlay-text-color: #fdd935;
 	--overlay-text-color: #fa2742;
 	--overlay-text-color: #ef0d50;
 
 	--overlay-text-color: #373833;
-
-	--overlay-text-color: #1d1d2c;
-	--overlay-text-color: #2a3166;
-	--overlay-text-color: #4a2c40;
-	--overlay-text-color: #e40c28;
-	--overlay-text-color: #2568fb;
-	--overlay-text-color: #0049ff;
-	--overlay-text-color: #4d724d;
-	--overlay-text-color: #61082b;
-	--overlay-text-color: #182978;
-	--overlay-text-color: #78184a;
-	--overlay-text-color: #0b4141;
-	--overlay-text-color: yellow;
 	--overlay-text-color: #ffffff;
-
-	--overlay-text-bg: rgba(255, 238, 5, 0.3);
-	--overlay-text-bg: rgba(151, 143, 243, 0.5);
-	--overlay-text-bg: rgba(63, 132, 235, 0.5);
 	--overlay-text-bg: rgba(225, 225, 225, 0.6);
 	--overlay-text-bg: rgba(223, 48, 98, 0.5);
-	--overlay-text-bg: rgba(37, 104, 251, 0.6);
 	--overlay-text-bg: rgba(130, 224, 22, 0.5);
-	--overlay-text-bg: rgba(253, 217, 53, 0.2);
 	--overlay-text-bg: rgba(75, 172, 63, 0.6);
 	--overlay-text-bg: rgba(67, 31, 31, 0.5);
-
-	--overlay-text-shadow: #2568fb;
-	--overlay-text-shadow: #4a2c40;
-	--overlay-text-shadow: #e9bd43;
-	--overlay-text-shadow: #e9bd43;
-	--overlay-text-shadow: #438945;
-	--overlay-text-shadow: #4bac3f;
-	--overlay-text-shadow: #4ecb4a;
-	--overlay-text-shadow: #8db48e;
-	--overlay-text-shadow: #45af2a;
-	--overlay-text-shadow: #1181b2;
-	--overlay-text-shadow: #825f1d;
 	--overlay-text-shadow: #df3062;
-
-	--hero-background: #ac7d26;
-	--hero-background: #fbacf8;
-	--hero-background: #afacfb;
-	--hero-background: #e9bd43;
-	--hero-background: #0049ff;
-	--hero-background: #2568fb;
-	--hero-background: #8db48e;
-	--hero-background: #11abc1;
 	--hero-background: #1181b2;
-
-	--hero-background: #4ecb4a;
-	--hero-background: #45af2a;
-	--hero-background: #438945;
 	--hero-background: #8db48e;
-
 	--hero-background: #e0d916;
 	--hero-background: #4bac3f;
 	--headings-mobile-font-size: 1.5rem;
 	--headings-desktop-font-size: 3rem;
 	--headings-mobile-font-weight: 500;
 	--headings-desktop-font-weight: 900;
+	--headings-desktop-font-weight: 500;
 }
 
 * {
@@ -180,14 +95,15 @@ html {
 	scroll-behavior: smooth;
 	--scroll-behavior: smooth !important;
 	scroll-behavior: smooth !important;
+	font-family: var(--font-playfair-display-italic);
+	font-size: 16px;
 }
 
 body {
 	background: var(--body-background);
 	color: var(--primary-text-color);
-	font-size: 20px;
 	font-weight: 500;
-	overflow-y:hidden;
+	/* overflow-y:hidden; */
 }
 
 a {

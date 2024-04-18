@@ -3,6 +3,7 @@
 import { motion, useAnimation, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 import { clearTimeout } from 'timers'
+import { raleway, playfairDisplayItalic } from '@/styles/fonts'
 
 type AnimateCharacterProps = {
 	text: string
@@ -21,6 +22,7 @@ type AnimateCharacterProps = {
 	rotateX?: number
 	rotateY?: number
 	stagger?: number
+	isRaleway?: boolean
 }
 
 export default function AnimateCharacters({
@@ -40,6 +42,7 @@ export default function AnimateCharacters({
 	rotateX,
 	rotateY,
 	stagger = 0.035,
+	isRaleway,
 }: AnimateCharacterProps) {
 	const textArray = Array.isArray(text) ? text : [text]
 	const controls = useAnimation()
@@ -81,7 +84,7 @@ export default function AnimateCharacters({
 	}, [isInView, controls, repeatInterval, delayTimeout])
 
 	return (
-		<Wrapper className={className} key='animated-text'>
+		<Wrapper className={`${className} ${isRaleway && raleway.className}`} key='animated-text'>
 			<motion.span
 				aria-hidden
 				ref={ref}

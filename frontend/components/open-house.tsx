@@ -5,10 +5,6 @@ import Image from 'next/image'
 import {
 	montserrat,
 	raleway,
-	playfairDisplay,
-	playfairDisplayItalic,
-	oswald,
-	concertOne,
 } from '@/styles/fonts'
 import AnimateCharacters from '@/animations/character-animation'
 import styles from '@/styles/open.module.css'
@@ -26,7 +22,6 @@ type RegisterProps = {
 	requirements: string
 }
 
-
 export default function OpenHouse({
 	open_house_images,
 	register,
@@ -36,7 +31,7 @@ export default function OpenHouse({
 }) {
 	let registerObj: object | any = register
 	registerObj = registerObj[0]
-	
+
 	return (
 		<div>
 			<div className={styles['heading-wrapper']}>
@@ -48,7 +43,7 @@ export default function OpenHouse({
 					// rotateY={180}
 					delay={0.5}
 					duration={1}
-					className={`${styles.heading} ${playfairDisplayItalic.className}`}
+					className={`${styles.heading}`}
 				/>
 				<div className={styles.line}></div>
 			</div>
@@ -68,14 +63,14 @@ export default function OpenHouse({
 			<div className={styles.registration}>
 				<div className={styles['heading-wrapper']}>
 					<h1
-						className={`${playfairDisplayItalic.className} ${styles.heading}`}
+						className={`${styles.heading}`}
 					>
 						{registerObj.title}
 					</h1>
 					<div className={styles.line}></div>
 				</div>
 
-				<h3 className={`${playfairDisplay.className} ${styles.title}`}>
+				<h3 className={`${styles.title}`}>
 					{registerObj.subtitle}
 				</h3>
 				<ol className={`${raleway.className}`}>
