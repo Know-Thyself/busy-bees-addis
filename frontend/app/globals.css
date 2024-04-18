@@ -5,6 +5,8 @@
 		'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
 		'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 	--primary-color: yellow;
+	--primary-font : var(--font-playfair-display-italic);
+	--secondary-font: var(--font-raleway);
 	--secondary-color: #4bac3f;
 	--tertiary-color: rgba(101, 55, 20, 1);
 	--tertiary-color: #825f1d;
@@ -180,6 +182,7 @@ html {
 	scroll-behavior: smooth;
 	--scroll-behavior: smooth !important;
 	scroll-behavior: smooth !important;
+	font-family: var(--font-playfair-display-italic);
 }
 
 body {
@@ -187,7 +190,12 @@ body {
 	color: var(--primary-text-color);
 	font-size: 20px;
 	font-weight: 500;
-	overflow-y:hidden;
+	/* overflow-y:hidden; */
+}
+
+h1 {
+	font-family: var(--font-playfair-display-italic);
+	font-weight: 900;
 }
 
 a {

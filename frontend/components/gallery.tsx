@@ -4,8 +4,6 @@ import Image from 'next/image'
 import {
 	montserrat,
 	raleway,
-	playfairDisplay,
-	playfairDisplayItalic,
 } from '@/styles/fonts'
 import OpenHouse from './open-house'
 import AnimateContainer from '@/animations/container-animation'
@@ -41,15 +39,19 @@ export default function PhotoGallery({
 	register: RegisterProps
 }) {
 	compound_images.sort((a, b) => b.id - a.id)
-	
+
 	return (
 		<section id='gallery' className={styles['photo-galleries']}>
-			<div className={styles['heading-wrapper']}>
-				<h1 className={`${styles.heading} ${playfairDisplayItalic.className}`}>
-					Compound Photos Gallery
-				</h1>
-				<div className={styles.line}></div>
-			</div>
+			<AnimateContainer y={20} delay={0.4} duration={1}>
+				<div className={styles['heading-wrapper']}>
+					<h1
+						className={`${styles.heading}`}
+					>
+						Compound Photos Gallery
+					</h1>
+					<div className={styles.line}></div>
+				</div>
+			</AnimateContainer>
 			<div className={styles.gallery}>
 				{compound_images.map((image, index) => (
 					<figure key={image.id} className={styles['gallery-item']}>

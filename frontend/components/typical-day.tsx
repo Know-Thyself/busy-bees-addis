@@ -5,8 +5,6 @@ import { CldImage } from 'next-cloudinary'
 import {
 	montserrat,
 	raleway,
-	playfairDisplay,
-	playfairDisplayItalic,
 } from '@/styles/fonts'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -31,12 +29,7 @@ type TypicalDayProps = {
 
 export default function TypicalDay({ day }: { day: TypicalDayProps[] }) {
 	return (
-		<section className={styles.main}>
-			{/* <h1
-				className={`${styles['activities-title']} ${playfairDisplayItalic.className}`}
-			>
-				{day[0].title.replace(/\b[a-z]/g, (x: string) => x.toUpperCase())}
-			</h1> */}
+		<section className={`${styles.main} ${raleway.className}`}>
 			<AnimateCharacters
 				text={day[0].title.replace(/\b[a-z]/g, (x: string) => x.toUpperCase())}
 				x={100}
@@ -45,10 +38,16 @@ export default function TypicalDay({ day }: { day: TypicalDayProps[] }) {
 				// rotateY={180}
 				delay={0.5}
 				duration={1}
-				className={`${styles['activities-title']} ${playfairDisplayItalic.className}`}
+				className={`${styles['activities-title']}`}
 			/>
 			<div className={styles['activities-grid-container']}>
-				<AnimateContainer x={-100} delay={1} duration={1} once>
+				<AnimateContainer
+					x={-40}
+					delay={0.4}
+					duration={1}
+					once
+					className={styles['animate-activities']}
+				>
 					<div className={styles.activities}>
 						{day[0].activities
 							.split('\r\n')
@@ -64,8 +63,8 @@ export default function TypicalDay({ day }: { day: TypicalDayProps[] }) {
 					</div>
 				</AnimateContainer>
 				<AnimateContainer
-					x={100}
-					delay={1}
+					x={40}
+					delay={0.4}
 					duration={1}
 					once
 					className={styles.animate}

@@ -187,13 +187,8 @@
 		scroll-margin: 83px;
 	}
 
-	.heading-wrapper {
-		padding: 1rem;
-		padding: 1.5rem 0 2rem 0;
-	}
-
     .heading-wrapper {
-		padding: 1rem 7.5% 1.5rem 7.5%;
+		padding: 1.25rem 7.5% 1.5rem 7.5%;
 	}
 
 	.heading {

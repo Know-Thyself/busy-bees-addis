@@ -3,8 +3,6 @@
 import {
 	montserrat,
 	raleway,
-	playfairDisplay,
-	playfairDisplayItalic,
 } from '@/styles/fonts'
 import TypicalDay from './typical-day'
 import AnimateContainer from '@/animations/container-animation'
@@ -41,24 +39,30 @@ export default function Program({
 		)
 	return (
 		<section id='program' className={styles['program-section']}>
-			<div className={styles['heading-wrapper']}>
-				<h1 className={`${styles.heading} ${playfairDisplayItalic.className}`}>
-					{program.title}
-				</h1>
-				<div className={styles.line}></div>
-			</div>
-			<div className={styles.program}>
-				<div className={styles.left}>
-					{left.map((paragraph: string, index: number) => (
-						<p key={index}>{paragraph}</p>
-					))}
+			<AnimateContainer y={20} delay={0.4} duration={1}>
+				<div className={styles['heading-wrapper']}>
+					<h1
+						className={`${styles.heading}`}
+					>
+						{program.title}
+					</h1>
+					<div className={styles.line}></div>
 				</div>
-				<div className={styles.right}>
-					{right.map((paragraph: string, index: number) => (
-						<p key={index}>{paragraph}</p>
-					))}
+			</AnimateContainer>
+			<AnimateContainer y={20} delay={0.4} duration={1} once>
+				<div className={`${styles.program} ${raleway.className}`}>
+					<div className={styles.left}>
+						{left.map((paragraph: string, index: number) => (
+							<p key={index}>{paragraph}</p>
+						))}
+					</div>
+					<div className={styles.right}>
+						{right.map((paragraph: string, index: number) => (
+							<p key={index}>{paragraph}</p>
+						))}
+					</div>
 				</div>
-			</div>
+			</AnimateContainer>
 			<TypicalDay day={day} />
 		</section>
 	)

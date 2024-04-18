@@ -1,19 +1,6 @@
-import {
-	Playfair_Display,
-	Montserrat,
-	Oswald,
-	Raleway,
-	Concert_One,
-} from 'next/font/google'
+import { Montserrat, Oswald, Raleway, Playfair_Display } from 'next/font/google'
 
-const playfairDisplay = Playfair_Display({
-	subsets: ['cyrillic'],
-	weight: 'variable',
-	display: 'swap',
-	preload: true,
-})
-
-const playfairDisplayItalic = Playfair_Display({
+export const playfairDisplayItalic = Playfair_Display({
 	subsets: ['cyrillic'],
 	weight: 'variable',
 	display: 'swap',
@@ -21,34 +8,19 @@ const playfairDisplayItalic = Playfair_Display({
 	preload: true,
 })
 
-const raleway = Raleway({
+export const raleway = Raleway({
 	subsets: ['cyrillic'],
 	display: 'swap',
 	preload: true,
 	weight: 'variable',
 })
 
-const concertOne = Concert_One({
-	subsets: ['latin'],
-	display: 'swap',
-	preload: true,
-	weight: '400',
-})
-
-const montserrat = Montserrat({
+export const montserrat = Montserrat({
 	subsets: ['latin'],
 	weight: 'variable',
 	display: 'swap',
 	preload: true,
 })
 
-const oswald = Oswald({ subsets: ['latin'], display: 'swap', preload: true })
+export const oswald = Oswald({ subsets: ['latin'], display: 'swap', preload: true })
 
-export {
-	playfairDisplay,
-	playfairDisplayItalic,
-	raleway,
-	montserrat,
-	oswald,
-	concertOne,
-}
