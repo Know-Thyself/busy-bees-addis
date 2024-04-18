@@ -88,7 +88,7 @@ export default function Features({
 								</div>
 								<Card.Body className='mt-0 pt-0'>
 									<Card.Title
-										className={`m-0 p-0 ${styles.title}`}
+										className={`m-1 p-1 ${styles.title}`}
 									>
 										{feature.title}
 									</Card.Title>

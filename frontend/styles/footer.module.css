@@ -14,6 +14,7 @@
 	grid-template-columns: repeat(1, 1fr);
 	grid-auto-rows: 1fr;
 	height: 100%;
+	width: 100%;
 	gap: 4px;
 }
 
@@ -57,7 +58,6 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	/* align-items: center; */
 	text-align: left;
 	padding-left: 7.5%;
 }
@@ -79,7 +79,8 @@
 .navigation {
 	display: flex;
 	justify-content: center;
-	padding: 0.5rem 0 0.54em 7.5%;
+	padding: 0.5rem 0;
+	padding-left: 7.5%;
 }
 
 .icons-and-copyright {
@@ -114,7 +115,6 @@
 	.footer {
 		grid-template-columns: repeat(8, 1fr);
 		grid-template-rows: repeat(9, 6vw);
-		/* gap: 2px; */
 	}
 
 	.footer-item {
