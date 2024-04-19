@@ -81,7 +81,7 @@ export default function Team({ team }: { team: TeamProps[] }) {
 										{member.name}
 									</Card.Title>
 									<Card.Title
-										className={`text-muted ${styles.position} ${raleway.className} `}
+										className={`text-muted ${styles.position} ${playfairDisplayItalic.className} `}
 									>
 										{member.position}
 									</Card.Title>

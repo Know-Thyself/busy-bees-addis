@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { playfairDisplayItalic, raleway } from '@/styles/fonts'
+import { raleway } from '@/styles/fonts'
 
 export const metadata: Metadata = {
 	title: 'Busy Bees Addis',
@@ -14,7 +14,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en' className='scroll-smooth'>
-			<body className={playfairDisplayItalic.className}>{children}</body>
+			<head>
+				<link rel='icon' href='/icon.ico' sizes='any' />
+			</head>
+			<body className={raleway.className}>{children}</body>
 		</html>
 	)
 }
