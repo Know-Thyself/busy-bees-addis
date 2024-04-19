@@ -34,42 +34,13 @@
 }
 
 .animate .comments {
-	background-color: #7ed5ea;
-	background-color: #67F0EE;
-	
-	background-color: #53a1a3;
-	background-color: #619B8F;
-	background-color: #98FB98;
-	background-color: #B8E8FC;
-
-	background-color: #BFD8B8;
-	background-color: #98DDCA;
-
-	background-color: #b2d8d8;
-	background-color: #66b2b2;
-
-
+	background-color: var(--light-green);
+	background-color: var(--sage-green);
 
 }
 
 .animate .bullhorn {
-	background-color: #c4ffc6;
-	background-color: #c97eea;
-	background-color: #978ff3;
-	background-color: #FFF38C;
-	background-color: #FFF47D;
-	background-color: #FCE38A;
-	background-color: #f2d349;
-	background-color: #fdee30;
-	background-color: #f7cd46;
-
-	background-color: #FFDA77;
-	background-color: #EEBB4D;
-	background-color: #FFD36B;
-
-
-
-
+	background-color: var(--light-yellow);
 }
 
 .animate .users {

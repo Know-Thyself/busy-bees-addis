@@ -149,6 +149,9 @@
 	background-color: #D0F0C0;
 	background-color: #50C878;
 	background-color: #cae7df;
+	background-color: var(--light-yellow);
+	background-color: var(--light-green);
+
 }
 
 .registration ol li {
