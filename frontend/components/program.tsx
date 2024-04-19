@@ -36,7 +36,7 @@ export default function Program({
 		)
 	return (
 		<section id='program' className={styles['program-section']}>
-			<AnimateContainer y={20} delay={0.4} duration={1} amount={0.2}>
+			<AnimateContainer y={20} delay={0.4} duration={1} amount={0.05}>
 				<div className={styles['heading-wrapper']}>
 					<h1
 						className={`${styles.heading} ${playfairDisplayItalic.className}`}
