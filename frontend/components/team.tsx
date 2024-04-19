@@ -32,7 +32,7 @@ export default function Team({ team }: { team: TeamProps[] }) {
 					<h1
 						className={`${styles.heading} ${playfairDisplayItalic.className}`}
 					>
-						Meet The Team
+						Meet the Team
 					</h1>
 					<div className={styles.line}></div>
 				</div>

@@ -13,7 +13,8 @@
 	font-weight: var(--headings-mobile-font-weight);
 	color: var(--tertiary-color);
 	text-align: center;
-	text-transform: capitalize;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
 }
 
 .line {
@@ -174,7 +175,6 @@
 
 	.heading {
 		font-size: var(--headings-desktop-font-size);
-		font-size: 88px;
 		font-weight: var(--headings-desktop-font-weight);
 	}
 

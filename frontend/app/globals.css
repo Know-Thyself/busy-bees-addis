@@ -44,6 +44,8 @@
 	--accent-color-light: #f06668;
 	--accent-color-brighter: #eb3939;
 	--accent-color-brighter: #df3062;
+	--accent-color-brighter: #F2003C;
+
 
 	--dark-accent-color: #1d1d2c;
 	--primary-color: #ffb600;
@@ -83,6 +85,7 @@
 	--hero-background: #4bac3f;
 	--headings-mobile-font-size: 1.5rem;
 	--headings-desktop-font-size: 3rem;
+	--headings-desktop-font-size: 60px;
 	--headings-mobile-font-weight: 500;
 	--headings-desktop-font-weight: 500;
 	--headings-desktop-font-weight: 900;

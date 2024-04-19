@@ -64,6 +64,8 @@
 	/* font-family: var(--font-playfair-display-italic); */
 	font-size: 2rem;
 	font-weight: 900;
+	text-transform: uppercase;
+
 }
 
 .motto {
@@ -101,7 +103,8 @@
 	}
 
 	.brand {
-		font-size: 9rem;
+		font-size: 10rem;
+		font-size: 120px;
 		font-weight: 900;
 	}
 

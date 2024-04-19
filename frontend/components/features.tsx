@@ -11,7 +11,7 @@ config.autoAddCss = false
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
-import { raleway, playfairDisplayItalic } from '@/styles/fonts'
+import { raleway, playfairDisplayItalic, playfairDisplay } from '@/styles/fonts'
 import AnimateContainer from '@/animations/container-animation'
 import styles from '@/styles/features.module.css'
 
@@ -32,7 +32,7 @@ export default function Features({
 	features.sort((a, b) => a.id - b.id)
 	return (
 		<section id='features' className={styles.features}>
-			<AnimateContainer y={20} delay={0.4} duration={1}>
+			<AnimateContainer y={20} delay={0.4} duration={1} amount={0.3}>
 				<div className={styles['heading-wrapper']}>
 					<h1
 						className={`${styles.heading} ${playfairDisplayItalic.className}`}
@@ -56,6 +56,7 @@ export default function Features({
 							delay={0.4}
 							duration={1.5}
 							once
+							amount={0.2}
 							type='spring'
 							stiffness={20}
 							className={styles.animate}

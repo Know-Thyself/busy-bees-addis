@@ -41,7 +41,7 @@ export default function Program({
 					<h1
 						className={`${styles.heading} ${playfairDisplayItalic.className}`}
 					>
-						{program.title}
+						{program.title.toLowerCase()}
 					</h1>
 					<div className={styles.line}></div>
 				</div>

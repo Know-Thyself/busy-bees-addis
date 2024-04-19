@@ -12,8 +12,10 @@
 .heading {
 	color: var(--tertiary-color);
 	text-align: left;
+	text-transform: uppercase;
 	font-size: var(--headings-mobile-font-size);
 	font-weight: var(--headings-mobile-font-weight);
+	letter-spacing: 2.5px;
 }
 
 .line {
@@ -43,7 +45,6 @@
 
 	.heading {
 		font-size: var(--headings-desktop-font-size);
-		font-size: 88px;
 		font-weight: var(--headings-desktop-font-weight);
 	}
 

@@ -3,7 +3,7 @@
 import { motion, useAnimation, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 import { clearTimeout } from 'timers'
-import { raleway, playfairDisplayItalic } from '@/styles/fonts'
+import { raleway, playfairDisplayItalic, playfairDisplay } from '@/styles/fonts'
 
 type AnimateCharacterProps = {
 	text: string
@@ -90,7 +90,7 @@ export default function AnimateCharacters({
 	return (
 		<Wrapper
 			className={`${className} ${
-				playfair ? playfairDisplayItalic.className : raleway.className
+				playfair ? playfairDisplay.className : raleway.className
 			}`}
 			key='animated-text'
 		>

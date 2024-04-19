@@ -23,7 +23,6 @@
 	background-color: #0f0c24;
   background-color: var(--dark-accent-color);
   background-color: #122112;
-  background: var(--accent-color-brighter);
   background-color: #c1436d;
   background: #df3062;
   background: #11abc1;
@@ -43,6 +42,7 @@
   background: #3cbcc3;
 	background-color: #333333;
   background-color: var(--rich-gray);
+  background: var(--accent-color-brighter);
   transform-origin: 0%;
   z-index: 1000;
 }

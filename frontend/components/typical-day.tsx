@@ -31,7 +31,7 @@ export default function TypicalDay({ day }: { day: TypicalDayProps[] }) {
 	return (
 		<section className={`${styles.main} ${raleway.className}`}>
 			<AnimateCharacters
-				text={day[0].title.replace(/\b[a-z]/g, (x: string) => x.toUpperCase())}
+				text={day[0].title}
 				x={100}
 				el='h1'
 				rotateX={180}

@@ -176,8 +176,8 @@
 		font-size: 0.8rem;
 		border-bottom: 2px solid var(--secondary-color);
 		border-bottom: 2px solid var(--accent-color);
-		border-bottom: 2px solid var(--accent-color-brighter) !important;
 		border-bottom: 2px solid var(--dark-charcoal) !important;
+		border-bottom: 2px solid var(--accent-color-brighter) !important;
 		margin-top: 2px;
 		color: var(--accent-color);
 		color: var(--overlay-text-color);
@@ -199,8 +199,8 @@
 	.custom-nav-item .menu__item:hover {
 		border-bottom: 2px solid var(--secondary-color) !important;
 		border-bottom: 2px solid var(--secondary-color) !important;
-		border-bottom: 2px solid var(--accent-color-brighter) !important;
 		border-bottom: 2px solid var(--dark-charcoal) !important;
+		border-bottom: 2px solid var(--accent-color-brighter) !important;
 
 
 	}
