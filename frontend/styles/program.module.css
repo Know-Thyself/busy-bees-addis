@@ -15,7 +15,6 @@
 	text-transform: uppercase;
 	font-size: var(--headings-mobile-font-size);
 	font-weight: var(--headings-mobile-font-weight);
-	letter-spacing: 2.5px;
 }
 
 .line {

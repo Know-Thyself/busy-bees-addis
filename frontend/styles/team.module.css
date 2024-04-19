@@ -19,7 +19,6 @@
 	font-weight: var(--headings-mobile-font-weight);
 	color: var(--tertiary-color);
 	text-align: center;
-	letter-spacing: 2.5px;
 	text-transform: uppercase;
 }
 
