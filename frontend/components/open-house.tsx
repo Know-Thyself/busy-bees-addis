@@ -60,7 +60,7 @@ export default function OpenHouse({
 			</div>
 			<div className={styles.registration}>
 				<div className={styles['heading-wrapper']}>
-					<h1 className={`${styles.heading} ${playfairDisplayItalic}`}>
+					<h1 className={`${styles.heading} ${playfairDisplayItalic.className}`}>
 						{registerObj.title}
 					</h1>
 					<div className={styles.line}></div>
