@@ -4,11 +4,7 @@ import Image from 'next/image'
 import AnimateContainer from '@/animations/container-animation'
 import AnimateCharacters from '@/animations/character-animation'
 
-import {
-	montserrat,
-	raleway,
-	playfairDisplayItalic,
-} from '@/styles/fonts'
+import { montserrat, raleway, playfairDisplayItalic } from '@/styles/fonts'
 import styles from '@/styles/hero.module.css'
 
 type HeroProps = {
@@ -45,7 +41,7 @@ export default function Hero({ hero }: { hero: HeroProps }) {
 					/>
 					<AnimateCharacters
 						text={hero.motto.replace(/\b[a-z]/g, (x: string) =>
-							x.toUpperCase()
+							x !== 'a' ? x.toUpperCase() : x
 						)}
 						el='h2'
 						delay={1.4}
