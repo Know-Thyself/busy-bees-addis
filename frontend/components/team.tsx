@@ -76,12 +76,12 @@ export default function Team({ team }: { team: TeamProps[] }) {
 								</div>
 								<Card.Body className={`${styles['card-body']}`}>
 									<Card.Title
-										className={`${styles.title} ${raleway.className} `}
+										className={`fw-semibold ${styles.title} ${raleway.className} `}
 									>
 										{member.name}
 									</Card.Title>
 									<Card.Title
-										className={`text-muted ${styles.position} ${playfairDisplayItalic.className} `}
+										className={`text-muted fw-semibold ${styles.position} ${playfairDisplayItalic.className} `}
 									>
 										{member.position}
 									</Card.Title>

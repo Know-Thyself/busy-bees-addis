@@ -2,10 +2,7 @@
 
 import { CldImage } from 'next-cloudinary'
 import Image from 'next/image'
-import {
-	montserrat,
-	raleway,
-} from '@/styles/fonts'
+import { montserrat, playfairDisplayItalic, raleway } from '@/styles/fonts'
 import AnimateCharacters from '@/animations/character-animation'
 import styles from '@/styles/open.module.css'
 
@@ -63,17 +60,13 @@ export default function OpenHouse({
 			</div>
 			<div className={styles.registration}>
 				<div className={styles['heading-wrapper']}>
-					<h1
-						className={`${styles.heading}`}
-					>
+					<h1 className={`${styles.heading} ${playfairDisplayItalic}`}>
 						{registerObj.title}
 					</h1>
 					<div className={styles.line}></div>
 				</div>
 
-				<h3 className={`${styles.title}`}>
-					{registerObj.subtitle}
-				</h3>
+				<h3 className={`${styles.title}`}>{registerObj.subtitle}</h3>
 				<ol className={`${raleway.className}`}>
 					{registerObj.requirements
 						.split('\r\n')
