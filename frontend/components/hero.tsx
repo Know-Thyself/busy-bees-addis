@@ -8,7 +8,6 @@ import {
 	montserrat,
 	raleway,
 	playfairDisplayItalic,
-	oswald
 } from '@/styles/fonts'
 import styles from '@/styles/hero.module.css'
 
@@ -32,7 +31,7 @@ export default function Hero({ hero }: { hero: HeroProps }) {
 					className={styles['hero-img']}
 					sizes='100vw'
 				/>
-				<div className={`${styles.overlay} ${oswald.className}`}>
+				<div className={`${styles.overlay}`}>
 					<AnimateCharacters
 						text={hero.brand}
 						el='h1'
@@ -43,6 +42,7 @@ export default function Hero({ hero }: { hero: HeroProps }) {
 						type='spring'
 						stiffness={100}
 						className={styles.brand}
+						playfair
 					/>
 					<AnimateCharacters
 						text={hero.motto.replace(/\b[a-z]/g, (x: string) =>
@@ -55,7 +55,6 @@ export default function Hero({ hero }: { hero: HeroProps }) {
 						x={-40}
 						// rotateX={360}
 						className={`${styles.motto} ${raleway.className}`}
-						isRaleway
 					/>
 				</div>
 			</div>

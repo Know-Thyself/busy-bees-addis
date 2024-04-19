@@ -1,6 +1,5 @@
 import {
 	Montserrat,
-	Oswald,
 	Raleway,
 	Playfair_Display,
 	Open_Sans,
@@ -25,13 +24,6 @@ export const montserrat = Montserrat({
 	weight: 'variable',
 	display: 'swap',
 	preload: true,
-})
-
-export const oswald = Oswald({
-	subsets: ['latin'],
-	display: 'swap',
-	preload: true,
-	weight: 'variable',
 })
 
 export const openSans = Open_Sans({

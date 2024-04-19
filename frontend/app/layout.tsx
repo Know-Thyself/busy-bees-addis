@@ -1,15 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { Playfair_Display } from 'next/font/google'
-import { raleway, oswald, openSans } from '@/styles/fonts'
-
-const playfairDisplayItalic = Playfair_Display({
-	subsets: ['cyrillic'],
-	weight: 'variable',
-	display: 'swap',
-	style: 'italic',
-	preload: true,
-})
+import { playfairDisplayItalic, raleway } from '@/styles/fonts'
 
 export const metadata: Metadata = {
 	title: 'Busy Bees Addis',

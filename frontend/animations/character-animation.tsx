@@ -22,7 +22,7 @@ type AnimateCharacterProps = {
 	rotateX?: number
 	rotateY?: number
 	stagger?: number
-	isRaleway?: boolean
+	playfair?: boolean
 	type?: string
 	stiffness?: number
 }
@@ -44,7 +44,7 @@ export default function AnimateCharacters({
 	rotateX,
 	rotateY,
 	stagger = 0.035,
-	isRaleway,
+	playfair,
 	type,
 	stiffness,
 }: AnimateCharacterProps) {
@@ -88,7 +88,12 @@ export default function AnimateCharacters({
 	}, [isInView, controls, repeatInterval, delayTimeout])
 
 	return (
-		<Wrapper className={`${className} ${isRaleway && raleway.className}`} key='animated-text'>
+		<Wrapper
+			className={`${className} ${
+				playfair ? playfairDisplayItalic.className : raleway.className
+			}`}
+			key='animated-text'
+		>
 			<motion.span
 				aria-hidden
 				ref={ref}
@@ -97,7 +102,12 @@ export default function AnimateCharacters({
 				variants={{
 					hidden: {},
 					visible: {
-						transition: { staggerChildren: stagger, delayChildren: delay, type, stiffness },
+						transition: {
+							staggerChildren: stagger,
+							delayChildren: delay,
+							type,
+							stiffness,
+						},
 					},
 				}}
 			>
