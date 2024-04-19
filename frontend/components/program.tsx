@@ -36,7 +36,7 @@ export default function Program({
 		)
 	return (
 		<section id='program' className={styles['program-section']}>
-			<AnimateContainer y={20} delay={0.4} duration={1}>
+			<AnimateContainer y={20} delay={0.4} duration={1} amount={0.2}>
 				<div className={styles['heading-wrapper']}>
 					<h1
 						className={`${styles.heading} ${playfairDisplayItalic.className}`}
@@ -46,7 +46,7 @@ export default function Program({
 					<div className={styles.line}></div>
 				</div>
 			</AnimateContainer>
-			<AnimateContainer y={20} delay={0.4} duration={1} once amount={0.2}>
+			<AnimateContainer y={20} delay={0.4} duration={1} once amount={0.1}>
 				<div className={`${styles.program} ${raleway.className}`}>
 					<div className={styles.left}>
 						{left.map((paragraph: string, index: number) => (
