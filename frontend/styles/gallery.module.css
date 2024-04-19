@@ -13,7 +13,7 @@
 	font-weight: var(--headings-mobile-font-weight);
 	color: var(--tertiary-color);
 	text-align: center;
-	text-transform: uppercase;
+	text-transform: capitalize;
 }
 
 .line {

@@ -14,7 +14,8 @@
 	font-size: var(--headings-mobile-font-size);
 	font-weight: var(--headings-mobile-font-weight);
 	text-align: center;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
+	text-transform: capitalize;
 	color: var(--tertiary-color);
 }
 
