@@ -27,7 +27,7 @@ export default function Team({ team }: { team: TeamProps[] }) {
 			className={styles.team}
 			// className={styles['team-section']}
 		>
-			<AnimateContainer y={20} delay={0.4} duration={1}>
+			<AnimateContainer y={20} delay={0.4} duration={1} amount={0.3}>
 				<div className={styles['heading-wrapper']}>
 					<h1
 						className={`${styles.heading} ${playfairDisplayItalic.className}`}
@@ -45,6 +45,7 @@ export default function Team({ team }: { team: TeamProps[] }) {
 							duration={1.5}
 							scale={0}
 							once
+							amount={0.1}
 							className={styles['animate-card']}
 						>
 							<Card
