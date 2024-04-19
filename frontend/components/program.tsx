@@ -1,9 +1,6 @@
 'use client'
 
-import {
-	montserrat,
-	raleway,
-} from '@/styles/fonts'
+import { montserrat, raleway, playfairDisplayItalic } from '@/styles/fonts'
 import TypicalDay from './typical-day'
 import AnimateContainer from '@/animations/container-animation'
 import AnimateCharacters from '@/animations/character-animation'
@@ -42,7 +39,7 @@ export default function Program({
 			<AnimateContainer y={20} delay={0.4} duration={1}>
 				<div className={styles['heading-wrapper']}>
 					<h1
-						className={`${styles.heading}`}
+						className={`${styles.heading} ${playfairDisplayItalic.className}`}
 					>
 						{program.title}
 					</h1>

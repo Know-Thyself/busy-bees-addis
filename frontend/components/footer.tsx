@@ -20,10 +20,7 @@ import Image from 'next/image'
 import { CldImage } from 'next-cloudinary'
 import logo from '@/public/images/logo/busy-bees-addis-logo.png'
 import hiBeeImage from '@/public/images/footer/hiBee.png'
-import {
-	montserrat,
-	raleway,
-} from '@/styles/fonts'
+import { raleway } from '@/styles/fonts'
 import AnimateContainer from '@/animations/container-animation'
 import styles from '@/styles/footer.module.css'
 

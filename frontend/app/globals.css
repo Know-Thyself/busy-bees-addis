@@ -84,8 +84,8 @@
 	--headings-mobile-font-size: 1.5rem;
 	--headings-desktop-font-size: 3rem;
 	--headings-mobile-font-weight: 500;
-	--headings-desktop-font-weight: 900;
 	--headings-desktop-font-weight: 500;
+	--headings-desktop-font-weight: 900;
 }
 
 * {

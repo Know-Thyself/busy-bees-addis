@@ -4,6 +4,7 @@ import Image from 'next/image'
 import {
 	montserrat,
 	raleway,
+	playfairDisplayItalic,
 } from '@/styles/fonts'
 import OpenHouse from './open-house'
 import AnimateContainer from '@/animations/container-animation'
@@ -45,7 +46,7 @@ export default function PhotoGallery({
 			<AnimateContainer y={20} delay={0.4} duration={1}>
 				<div className={styles['heading-wrapper']}>
 					<h1
-						className={`${styles.heading}`}
+						className={`${styles.heading} ${playfairDisplayItalic.className}`}
 					>
 						Compound Photos Gallery
 					</h1>

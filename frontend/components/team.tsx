@@ -6,7 +6,7 @@ import { CldImage } from 'next-cloudinary'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
-import { raleway } from '@/styles/fonts'
+import { raleway, playfairDisplayItalic } from '@/styles/fonts'
 import AnimateContainer from '@/animations/container-animation'
 import styles from '@/styles/team.module.css'
 
@@ -29,7 +29,11 @@ export default function Team({ team }: { team: TeamProps[] }) {
 		>
 			<AnimateContainer y={20} delay={0.4} duration={1}>
 				<div className={styles['heading-wrapper']}>
-					<h1 className={`${styles.heading}`}>Meet The Team</h1>
+					<h1
+						className={`${styles.heading} ${playfairDisplayItalic.className}`}
+					>
+						Meet The Team
+					</h1>
 					<div className={styles.line}></div>
 				</div>
 			</AnimateContainer>

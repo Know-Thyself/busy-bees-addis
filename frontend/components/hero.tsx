@@ -36,7 +36,6 @@ export default function Hero({ hero }: { hero: HeroProps }) {
 						text={hero.brand}
 						el='h1'
 						delay={0.4}
-						// x={40}
 						rotateX={360}
 						duration={1}
 						type='spring'

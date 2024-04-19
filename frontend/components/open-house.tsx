@@ -44,6 +44,7 @@ export default function OpenHouse({
 					delay={0.5}
 					duration={1}
 					className={`${styles.heading}`}
+					playfair
 				/>
 				<div className={styles.line}></div>
 			</div>

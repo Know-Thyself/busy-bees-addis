@@ -39,6 +39,7 @@ export default function TypicalDay({ day }: { day: TypicalDayProps[] }) {
 				delay={0.5}
 				duration={1}
 				className={`${styles['activities-title']}`}
+				playfair
 			/>
 			<div className={styles['activities-grid-container']}>
 				<AnimateContainer
