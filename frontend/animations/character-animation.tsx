@@ -23,6 +23,8 @@ type AnimateCharacterProps = {
 	rotateY?: number
 	stagger?: number
 	isRaleway?: boolean
+	type?: string
+	stiffness?: number
 }
 
 export default function AnimateCharacters({
@@ -43,6 +45,8 @@ export default function AnimateCharacters({
 	rotateY,
 	stagger = 0.035,
 	isRaleway,
+	type,
+	stiffness,
 }: AnimateCharacterProps) {
 	const textArray = Array.isArray(text) ? text : [text]
 	const controls = useAnimation()
@@ -93,7 +97,7 @@ export default function AnimateCharacters({
 				variants={{
 					hidden: {},
 					visible: {
-						transition: { staggerChildren: stagger, delayChildren: delay },
+						transition: { staggerChildren: stagger, delayChildren: delay, type, stiffness },
 					},
 				}}
 			>

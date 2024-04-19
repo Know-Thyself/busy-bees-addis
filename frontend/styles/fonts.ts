@@ -1,4 +1,10 @@
-import { Montserrat, Oswald, Raleway, Playfair_Display } from 'next/font/google'
+import {
+	Montserrat,
+	Oswald,
+	Raleway,
+	Playfair_Display,
+	Open_Sans,
+} from 'next/font/google'
 
 export const playfairDisplayItalic = Playfair_Display({
 	subsets: ['cyrillic'],
@@ -21,5 +27,15 @@ export const montserrat = Montserrat({
 	preload: true,
 })
 
-export const oswald = Oswald({ subsets: ['latin'], display: 'swap', preload: true })
+export const oswald = Oswald({
+	subsets: ['latin'],
+	display: 'swap',
+	preload: true,
+	weight: 'variable',
+})
 
+export const openSans = Open_Sans({
+	subsets: ['cyrillic'],
+	display: 'swap',
+	weight: 'variable',
+})

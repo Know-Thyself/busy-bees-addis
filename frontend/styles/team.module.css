@@ -27,7 +27,7 @@
 	background-color: #a9ba9d;
 	background-color: #a77c92;
 	background-color: var(--secondary-color);
-	background-color: var(--accent-color-brighter);;
+	background-color: var(--accent-color-brighter);
 
 	margin: 0 auto;
 }
@@ -41,12 +41,14 @@
 	background-color: var(--secondary-color);
 	background-color: var(--accent-color);
 	background-color: var(--dark-accent-color);
-	background-color: #644E34;
-	background-color: #4A6434;
+	background-color: #644e34;
+	background-color: #4a6434;
 	background-color: var(--tertiary-color);
 	background-color: #346264;
 	background-color: #7ca791;
 
+	background-color: #66b2b2;
+	background-color: #4D9898;
 
 	width: 100%;
 }
@@ -63,7 +65,7 @@
 	color: var(--tertiary-color);
 	color: var(--overlay-text-color);
 	color: var(--dark-accent-color);
-	color: var(--accent-color-brighter);;
+	color: var(--accent-color-brighter);
 	color: var(--accent-color);
 	color: var(--overlay-text-color);
 	font-weight: 500;
@@ -74,8 +76,10 @@
 	background-color: var(--secondary-color);
 
 	border: none;
-	border: 1px solid var(--accent-color-brighter);
 	border: 1px solid var(--overlay-text-color);
+	border: 2px solid var(--accent-color-brighter);
+	border: 2px solid #7ca791;
+
 
 	padding: 0.35rem 0.75rem;
 	align-self: center;
@@ -88,19 +92,28 @@
 }
 
 .position,
-.description  {
+.description {
 	font-weight: 500;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
 	.team {
 		width: 85%;
 	}
-	/* .team-section {
-		width: 85%;
-		margin: auto;
-	} */
+	.grid {
+		grid-auto-rows: 1fr;
+	}
+	.animate-card {
+		height: 100%;
+		display: flex;
+	}
 
+	.card {
+		height: 100%;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
 	.heading-wrapper {
 		padding: 1.25rem 5% 1.5rem 5%;
 	}
@@ -112,17 +125,5 @@
 
 	.line {
 		height: 4px;
-	}
-	.grid {
-		grid-auto-rows: 1fr;
-	}
-
-	.animate-card {
-		height: 100%;
-		display: flex;
-	}
-	
-	.card {
-		height: 100%;
 	}
 }

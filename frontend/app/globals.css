@@ -10,11 +10,30 @@
 	--tertiary-color: #825f1d;
 	--tertiary-color: #653615;
 	--tertiary-color: #643634;
+	--dark-charcoal: #333333;
+	--rich-gray: #1f2022;
 	--complementary-color: orange;
 	--light-green: #8ff397;
 	--light-green: #8ff3c9;
 	--accent-color: #f06769;
 	--accent-color: #f06767;
+
+	--accent-color: #dda882;
+	--accent-color: #e7eeef;
+	--accent-color: #EAC7C7;
+	--accent-color: #FF9F9F;
+	--accent-color: #FF9F9F;
+	--accent-color: #FFB4B4;
+	--accent-color: #F6A9A9;
+	--accent-color: #e3c4b4;
+	--accent-color: #FF9292;
+
+
+
+
+
+
+
 
 	--accent-color-light: #e24572;
 	--accent-color-light: #f07e74;
@@ -27,9 +46,11 @@
 	--accent-color-brighter: #df3062;
 
 	--dark-accent-color: #1d1d2c;
-	--primary-color: #f5b935;
 	--primary-color: #ffb600;
+	--primary-color: #f5b935;
+	--primary-color: #facd3d;
 	--primary-color: #fdd935;
+
 
 	--body-background: #ffffff;
 	--primary-text-color: black;

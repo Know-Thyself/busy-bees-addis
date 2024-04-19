@@ -56,9 +56,10 @@ export default function Footer({
 	return (
 		<AnimateContainer
 			el='section'
-			y={-40}
 			delay={0.4}
-			duration={2}
+			duration={1}
+			once
+			amount={0.1}
 			id='footer'
 			className={styles['footer-section']}
 		>
@@ -112,7 +113,7 @@ export default function Footer({
 							}
 						>
 							<Link
-								href={`#${link}`}
+								href={`#${link === 'contact' ? 'footer' : link}`}
 								className={`nav-link border-start-0 border-end-0 ${
 									activeNav === link || activeSection === link
 										? styles.active

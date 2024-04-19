@@ -3,26 +3,28 @@
 }
 
 .footer {
-	margin-top: 2rem;
+	margin-top: 3rem;
+	color: var(--tertiary-color);
+	color: var(--accent-color);
 	color: var(--tertiary-color);
 	color: var(--dark-accent-color);
-	color: var(--accent-color);
 	color: var(--overlay-text-color);
 	background-color: var(--tertiary-color);
 	background-color: var(--primary-color);
+	background-color: #c1436d;
+	background-color: var(--overlay-text-color);
+
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
 	grid-auto-rows: 1fr;
 	height: 100%;
 	width: 100%;
-	gap: 4px;
+	gap: 1px;
 }
 
 .footer-item {
 	height: 100%;
-	background-color: var(--tertiary-color);
-	background-color: var(--accent-color);
-	background-color: var(--secondary-color);
+	background-color: #36454F;
 }
 .brand {
 	display: flex;
@@ -34,6 +36,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	/* background-color: var(--secondary-color); */
 }
 
 .hiBee,
@@ -64,21 +67,50 @@
 
 .address,
 .phone,
-.copyright,
-.menu__item,
-.active {
+.active,
+.facebook,
+.instagram {
+	color: #fab162;
+	color: #c1436d;
+	color: var(--primary-color);
+
+}
+/* .facebook,
+.instagram {
+	color: lightblue;
+	color: #c1436d;
+
+} */
+
+.address,
+.phone {
+	color: #2568fb;
 	color: var(--primary-color);
 }
+
+
 
 .facebook,
 .instagram {
 	font-size: 2rem;
-	color: var(--primary-color);
+	/* color: var(--primary-color); */
 }
 
 .navigation {
 	padding: 0.5rem 0;
 	background-color: var(--accent-color-brighter);
+	background-color: #E1341E;
+	background-color: #0E9B91;
+	background-color: #9B4A0E;
+	background-color: #9B0E5F;
+	background-color: #0b4141;
+	background-color: var(--tertiary-color);
+	background-color: #c1436d;
+	background-color: #191919;
+	background-color: #211221;
+	background-color: #0f0c24;
+	background-color: #122112;
+	
 }
 
 .navigation h4 {
@@ -97,6 +129,25 @@
 	gap: 1rem;
 	padding: 1rem 7.5%;
 	background-color: var(--accent-color-brighter);
+	background-color: #E1341E;
+	background-color: #0E9B91;
+	background-color: #9B4A0E;
+	background-color: #9B0E5F;
+	background-color: #0b4141;
+	background-color: #7d3780;
+	background-color: var(--tertiary-color);
+	background-color: #191919;
+	background-color: #211221;
+	background-color: #0f0c24;
+	background-color: #122112;
+
+}
+
+.navigation,
+.icons-and-copyright {
+	background-color: var(--dark-charcoal);
+	background-color: #353839;
+
 }
 
 .icons {
@@ -104,9 +155,9 @@
 	gap: 1rem;
 }
 
-.admin {
+/* .admin {
 	color: var(--primary-color);
-}
+} */
 
 @media only screen and (min-width: 678px) {
 	.footer {

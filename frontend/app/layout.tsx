@@ -1,6 +1,15 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { raleway } from '@/styles/fonts'
+import { Playfair_Display } from 'next/font/google'
+import { raleway, oswald, openSans } from '@/styles/fonts'
+
+const playfairDisplayItalic = Playfair_Display({
+	subsets: ['cyrillic'],
+	weight: 'variable',
+	display: 'swap',
+	style: 'italic',
+	preload: true,
+})
 
 export const metadata: Metadata = {
 	title: 'Busy Bees Addis',
@@ -14,7 +23,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en' className='scroll-smooth'>
-			<body className={raleway.className}>{children}</body>
+			<body className={playfairDisplayItalic.className}>{children}</body>
 		</html>
 	)
 }

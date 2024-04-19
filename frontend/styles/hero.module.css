@@ -82,7 +82,7 @@
 	}
 
 	.brand {
-		font-size: 8rem;
+		font-size: 4rem;
 	}
 
 	.motto {
@@ -101,7 +101,8 @@
 	}
 
 	.brand {
-		font-size: 7rem;
+		font-size: 9rem;
+		font-weight: 900;
 	}
 
 	.motto {

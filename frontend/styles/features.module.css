@@ -32,23 +32,52 @@
 }
 
 .animate .comments {
-	background-color: #98FB98;
 	background-color: #7ed5ea;
 	background-color: #67F0EE;
+	
+	background-color: #53a1a3;
+	background-color: #619B8F;
+	background-color: #98FB98;
+	background-color: #B8E8FC;
+
+	background-color: #BFD8B8;
+	background-color: #98DDCA;
+
+	background-color: #b2d8d8;
+	background-color: #66b2b2;
+
+
+
 }
 
 .animate .bullhorn {
 	background-color: #c4ffc6;
 	background-color: #c97eea;
 	background-color: #978ff3;
+	background-color: #FFF38C;
+	background-color: #FFF47D;
+	background-color: #FCE38A;
+	background-color: #f2d349;
+	background-color: #fdee30;
 	background-color: #f7cd46;
+
+	background-color: #FFDA77;
+	background-color: #EEBB4D;
+	background-color: #FFD36B;
+
+
+
+
 }
 
 .animate .users {
 	background-color: #d5ea7e;
 	background-color: #C87850;
 	background-color: #de5935;
+	background-color: #FFB4B4;
+	background-color: #F6A9A9;
 	background-color: var(--accent-color);
+
 }
 
 .icon-container {
@@ -85,6 +114,7 @@
 
 @media only screen and (min-width: 768px) {
 	.features {
+		width: 85%;
 		margin: 0 auto;
 	}
 }

@@ -33,9 +33,9 @@ export default function Team({ team }: { team: TeamProps[] }) {
 					<div className={styles.line}></div>
 				</div>
 			</AnimateContainer>
-			<Row xs={1} md={2} xl={3} className={`g-3 ${styles.grid}`}>
+			<Row xs={1} md={2} xl={3} className={`g-md-3 ${styles.grid}`}>
 				{team.map((member, index) => (
-					<Col key={member.id} className=''>
+					<Col key={member.id} className={styles.col}>
 						<AnimateContainer
 							delay={0.4}
 							duration={1.5}
@@ -55,8 +55,8 @@ export default function Team({ team }: { team: TeamProps[] }) {
 										<Image
 											alt={member.name}
 											src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}/${member.image}`}
-											width={180}
-											height={180}
+											width={210}
+											height={210}
 											style={{ borderRadius: '50%' }}
 										/>
 									) : (

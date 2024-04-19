@@ -177,13 +177,13 @@
 		border-bottom: 2px solid var(--secondary-color);
 		border-bottom: 2px solid var(--accent-color);
 		border-bottom: 2px solid var(--accent-color-brighter) !important;
+		border-bottom: 2px solid var(--dark-charcoal) !important;
 		margin-top: 2px;
 		color: var(--accent-color);
 		color: var(--overlay-text-color);
 		color: var(--nav-links-color);
 
 		font-weight: 600;
-		cursor: default;
 	}
 
 	.custom-nav-item .menu__item {
@@ -198,9 +198,10 @@
 
 	.custom-nav-item .menu__item:hover {
 		border-bottom: 2px solid var(--secondary-color) !important;
-		border-bottom: 2px solid var(--accent-color) !important;
 		border-bottom: 2px solid var(--secondary-color) !important;
 		border-bottom: 2px solid var(--accent-color-brighter) !important;
+		border-bottom: 2px solid var(--dark-charcoal) !important;
+
 
 	}
 	.menu__btn {
