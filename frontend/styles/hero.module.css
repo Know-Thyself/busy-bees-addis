@@ -64,7 +64,7 @@
 	/* font-family: var(--font-playfair-display-italic); */
 	font-size: 2rem;
 	font-weight: 900;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 
 }
 
@@ -103,8 +103,8 @@
 	}
 
 	.brand {
-		font-size: 10rem;
 		font-size: 120px;
+		font-size: 9.5rem;
 		font-weight: 900;
 	}
 

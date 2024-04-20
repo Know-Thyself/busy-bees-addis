@@ -90,7 +90,7 @@ export default function AnimateCharacters({
 	return (
 		<Wrapper
 			className={`${className} ${
-				playfair ? playfairDisplay.className : raleway.className
+				playfair ? playfairDisplayItalic.className : raleway.className
 			}`}
 			key='animated-text'
 		>
