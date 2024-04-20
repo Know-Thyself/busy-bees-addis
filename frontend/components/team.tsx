@@ -38,7 +38,7 @@ export default function Team({ team }: { team: TeamProps[] }) {
 				</div>
 			</AnimateContainer>
 			<Row xs={1} md={2} xl={3} className={`g-md-3 ${styles.grid}`}>
-				{team.map((member, index) => (
+				{team.map(member => (
 					<Col key={member.id} className={styles.col}>
 						<AnimateContainer
 							delay={0.4}
