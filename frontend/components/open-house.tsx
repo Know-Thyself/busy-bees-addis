@@ -33,7 +33,7 @@ export default function OpenHouse({
 		<div>
 			<div className={styles['heading-wrapper']}>
 				<AnimateCharacters
-					text='Open House Photos Gallery'
+					text='Open House'
 					x={40}
 					el='h1'
 					rotateX={180}

@@ -48,7 +48,7 @@ export default function PhotoGallery({
 					<h1
 						className={`${styles.heading} ${playfairDisplayItalic.className}`}
 					>
-						Compound Photos Gallery
+						Our Compound
 					</h1>
 					<div className={styles.line}></div>
 				</div>

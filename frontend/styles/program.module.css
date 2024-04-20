@@ -7,11 +7,12 @@
 
 .heading-wrapper {
 	padding: 1rem 0;
+	margin: auto;
 }
 
 .heading {
 	color: var(--tertiary-color);
-	text-align: left;
+	text-align: center;
 	text-transform: uppercase;
 	font-size: var(--headings-mobile-font-size);
 	font-weight: var(--headings-mobile-font-weight);
@@ -23,6 +24,7 @@
 	background-color: var(--secondary-color);
 	background-color: var(--dark-charcoal);
 	background-color: var(--accent-color-brighter);
+	margin: 0 auto;
 
 }
 
