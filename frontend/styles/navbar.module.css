@@ -181,7 +181,7 @@
 		margin-top: 2px;
 		color: var(--accent-color);
 		color: var(--overlay-text-color);
-		color: var(--nav-links-color);
+		color: var(--nav-links-color) !important;
 
 		font-weight: 600;
 	}
@@ -201,8 +201,7 @@
 		border-bottom: 2px solid var(--secondary-color) !important;
 		border-bottom: 2px solid var(--dark-charcoal) !important;
 		border-bottom: 2px solid var(--accent-color-brighter) !important;
-
-
+		color: var(--nav-links-color) !important;
 	}
 	.menu__btn {
 		display: none;
