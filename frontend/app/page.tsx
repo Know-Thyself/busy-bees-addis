@@ -109,7 +109,6 @@ export default async function HomePage() {
 
 	const register = await getRegister()
 
-
 	return (
 		<Home
 			hero={hero}

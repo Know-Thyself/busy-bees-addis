@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import {
 	faPhone,
@@ -9,7 +10,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-	faFacebook,
 	faInstagram,
 	faFacebookSquare,
 } from '@fortawesome/free-brands-svg-icons'
@@ -17,9 +17,7 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import Image from 'next/image'
-import { CldImage } from 'next-cloudinary'
 import logo from '@/public/images/logo/busy-bees-addis-logo.png'
-import hiBeeImage from '@/public/images/footer/hiBee.png'
 import { raleway } from '@/styles/fonts'
 import AnimateContainer from '@/animations/container-animation'
 import styles from '@/styles/footer.module.css'
@@ -50,6 +48,19 @@ export default function Footer({
 	const handleClick = (href: string) => {
 		setActiveNav(`#${href}`)
 	}
+	const router = useRouter()
+
+	async function triggerDeployHook() {
+		const res = await fetch(`${process.env.NEXT_PUBLIC_DEPLOY_HOOK_URL}`)
+		if (!res.ok) {
+			throw new Error('Failed to fetch data')
+		}
+
+		router.refresh()
+
+		return res.json()
+	}
+	
 	return (
 		<AnimateContainer
 			el='section'
@@ -176,6 +187,7 @@ export default function Footer({
 							{' '}
 							Admin Login
 						</a>
+						<a href='/' className={styles.deploy} onClick={triggerDeployHook}>|</a>
 					</div>
 					<div className={styles.copyright}>
 						<p>

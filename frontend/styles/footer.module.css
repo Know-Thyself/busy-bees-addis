@@ -152,12 +152,20 @@
 
 .icons {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	gap: 1rem;
 }
 
 /* .admin {
 	color: var(--primary-color);
 } */
+
+.deploy {
+	font-size: 1.75rem;
+	font-weight: 900;
+	color: var(--primary-color);
+}
 
 @media only screen and (min-width: 678px) {
 	.footer {
