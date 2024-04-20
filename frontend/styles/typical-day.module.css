@@ -51,11 +51,15 @@
 
 .fa-square-check {
 	font-size: 1.5rem;
-	color: var(--primary-color);
 	color: #84edf5;
 	color: #B8E8FC;
-	color: var(--dark-accent-color);
 	color: var(--dark-charcoal);
+	color: var(--dark-accent-color);
+	color: var(--rich-gray);
+	color: #36454F;
+	color: var(--primary-color);
+	color: var(--secondary-color);
+
 
 
 }

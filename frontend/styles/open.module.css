@@ -138,20 +138,9 @@
 	margin: auto;
 	padding: 0 1rem;
 	padding-bottom: 1rem;
-	background-color: #f7cd46;
-	background-color: #de5935;
-	background-color: #5ac3b0;
-	background-color: #f4abaa;
-	background-color: #50C878;
-	background-color: #9DC183;
-	background-color: #C7EA46;
-	background-color: #98FB98;
-	background-color: #D0F0C0;
-	background-color: #50C878;
-	background-color: #cae7df;
-	background-color: var(--light-yellow);
 	background-color: var(--light-green);
-
+	background-color: var(--sage-green);
+	background-color: var(--light-yellow);
 }
 
 .registration ol li {

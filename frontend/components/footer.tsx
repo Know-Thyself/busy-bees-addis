@@ -51,7 +51,8 @@ export default function Footer({
 	const router = useRouter()
 
 	async function triggerDeployHook() {
-		const res = await fetch(`${process.env.NEXT_PUBLIC_DEPLOY_HOOK_URL}`)
+		const res = await fetch(`${process.env.DEPLOY_HOOK_URL}`)
+		console.log(res)
 		if (!res.ok) {
 			throw new Error('Failed to fetch data')
 		}
@@ -60,7 +61,7 @@ export default function Footer({
 
 		return res.json()
 	}
-	
+
 	return (
 		<AnimateContainer
 			el='section'
@@ -187,7 +188,16 @@ export default function Footer({
 							{' '}
 							Admin Login
 						</a>
-						<a href='/' className={styles.deploy} onClick={triggerDeployHook}>|</a>
+						<a
+							href='/'
+							className={styles.deploy}
+							onClick={e => {
+								e.preventDefault()
+								triggerDeployHook()
+							}}
+						>
+							|
+						</a>
 					</div>
 					<div className={styles.copyright}>
 						<p>

@@ -34,8 +34,8 @@
 }
 
 .animate .comments {
-	background-color: var(--light-green);
 	background-color: var(--sage-green);
+	background-color: var(--light-green);
 
 }
 

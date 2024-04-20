@@ -60,14 +60,14 @@ export default function OpenHouse({
 			</div>
 			<div className={styles.registration}>
 				<div className={styles['heading-wrapper']}>
-					<h1 className={`${styles.heading} ${playfairDisplayItalic.className}`}>
+					<h1 className={`${styles.heading} ${playfairDisplayItalic.className} text-black fw-bold`}>
 						{registerObj.title}
 					</h1>
 					<div className={styles.line}></div>
 				</div>
 
-				<h3 className={`${styles.title}`}>{registerObj.subtitle}</h3>
-				<ol className={`${raleway.className}`}>
+				<h3 className={`${styles.title} text-black fw-semibold`}>{registerObj.subtitle}</h3>
+				<ol className={`${raleway.className} text-black`}>
 					{registerObj.requirements
 						.split('\r\n')
 						.map((requirement: string, index: number) => (
