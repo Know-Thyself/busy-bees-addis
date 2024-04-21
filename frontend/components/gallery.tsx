@@ -43,7 +43,7 @@ export default function PhotoGallery({
 
 	return (
 		<section id='gallery' className={styles['photo-galleries']}>
-			<AnimateContainer y={20} delay={0.4} duration={1} amount={0.3}>
+			<AnimateContainer y={20} delay={0.4} duration={1}>
 				<div className={styles['heading-wrapper']}>
 					<h1
 						className={`${styles.heading} ${playfairDisplayItalic.className}`}

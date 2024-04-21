@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from 'react'
 import Navbar from '@/components/navbar'
 import Hero from './hero'
 import Program from './program'
-import TypicalDay from './typical-day'
 import Features from './features'
 import PhotoGallery from './gallery'
 import Team from './team'
@@ -135,7 +134,7 @@ export default function Home({
 			if (window.innerWidth <= 868) {
 				return 0.01
 			} else {
-				return 0.02
+				return 0.22
 			}
 		}
 
@@ -148,23 +147,10 @@ export default function Home({
 		const observer = new IntersectionObserver(entries => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
-					if (entry.target.id == 'hero') {
-						setActiveSection('hero')
-					}
-					if (entry.target.id == 'program') {
-						setActiveSection('program')
-					}
-					if (entry.target.id == 'features') {
-						setActiveSection('features')
-					}
-					if (entry.target.id == 'gallery') {
-						setActiveSection('gallery')
-					}
-					if (entry.target.id == 'team') {
-						setActiveSection('team')
-					}
 					if (entry.target.id == 'footer') {
 						setActiveSection('contact')
+					} else {
+						setActiveSection(entry.target.id)
 					}
 				}
 			})
@@ -173,6 +159,8 @@ export default function Home({
 		sections.forEach(section => {
 			section && observer.observe(section)
 		})
+
+		return () => observer.disconnect()
 	}, [activeSection])
 
 	return (
@@ -189,7 +177,7 @@ export default function Home({
 			/>
 			<Hero hero={heroObject} />
 			<Program programResponse={program} day={day} />
-			<Features features={features} active={activeSection} />
+			<Features features={features} />
 			<PhotoGallery
 				compound_images={compound_images}
 				open_house_images={open_house_images}

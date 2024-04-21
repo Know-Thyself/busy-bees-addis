@@ -1,9 +1,8 @@
 'use client'
 
-import { montserrat, raleway, playfairDisplayItalic } from '@/styles/fonts'
+import { raleway, playfairDisplayItalic } from '@/styles/fonts'
 import TypicalDay from './typical-day'
 import AnimateContainer from '@/animations/container-animation'
-import AnimateCharacters from '@/animations/character-animation'
 import styles from '@/styles/program.module.css'
 
 type ProgramProps = {
@@ -36,7 +35,7 @@ export default function Program({
 		)
 	return (
 		<section id='program' className={styles['program-section']}>
-			<AnimateContainer y={20} delay={0.4} duration={1} amount={0.05}>
+			<AnimateContainer y={20} delay={0.4} duration={1}>
 				<div className={styles['heading-wrapper']}>
 					<h1
 						className={`${styles.heading} ${playfairDisplayItalic.className}`}
