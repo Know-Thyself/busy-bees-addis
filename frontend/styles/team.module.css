@@ -4,10 +4,6 @@
 	scroll-margin: 83px;
 }
 
-/* .team-section {
-	width: 100%;
-} */
-
 .heading-wrapper {
 	padding: 1rem 5%;
 	text-align: center;
@@ -25,75 +21,31 @@
 .line {
 	width: 80px;
 	height: 3px;
-	background-color: #a9ba9d;
-	background-color: #a77c92;
-	background-color: var(--secondary-color);
 	background-color: var(--accent-color-brighter);
-
 	margin: 0 auto;
 }
 
 .card {
 	height: 100%;
 	width: 100%;
-	/* background-color: aquamarine; */
 }
 
 .image-container {
-	background-color: #644e34;
-	background-color: #4a6434;
-	background-color: var(--tertiary-color);
-	background-color: #346264;
-	background-color: #7ca791;
-	
-	background-color: #66b2b2;
-	background-color: #4D9898;
-	background-color: var(--light-green);
-	background-color: var(--dark-charcoal);
-	background-color: var(--charcoal);
-	background-color: #A783C1;
-	background-color: var(--secondary-color);
 	background-color: var(--dark-charcoal);
 	width: 100%;
 }
 
 .card-body {
-	background-color: #cae7df;
-	background-color: var(--sage-green);
-	background-color: var(--light-yellow);
 	background-color: var(--sand);
-
 }
 
 .read {
 	margin-left: 0.25rem;
 	cursor: pointer;
-	color: var(--secondary-color);
-	color: var(--nav-links-color);
-	color: var(--overlay-text-color);
-	color: var(--accent-color);
-	color: var(--tertiary-color);
-	color: var(--accent-color-brighter);
-	color: var(--primary-color);
-	color: var(--dark-accent-color);
 	color: var(--overlay-text-color);
 	font-weight: 500;
-	/* background-color: var(--secondary-color);;
-	background-color: var(--accent-color);
-	background-color: var(--accent-color-brighter); */
-	background-color: var(--dark-accent-color);
-	background-color: var(--primary-color);
-	background-color: var(--rich-gray);
-	background-color: var(--dark-charcoal);
-	background-color: var(--light-green);
 	background-color: var(--secondary-color);
-
 	border: none;
-	/* border: 1px solid var(--overlay-text-color);
-	border: 2px solid var(--accent-color-brighter);
-	border: 2px solid #7ca791; */
-
-
 	padding: 0.35rem 0.75rem;
 	align-self: center;
 	border-radius: 50px;

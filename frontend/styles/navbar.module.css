@@ -101,9 +101,7 @@
 
 @media screen and (max-width: 767px) {
 	.custom-nav-item {
-		border-top: solid 1px var(--overlay-text-color);
 		border-top: solid 1px var(--primary-color);
-
 	}
 
 	.logo {
@@ -118,7 +116,6 @@
 
 	.custom-nav-item .active,
 	.custom-nav-item .menu__item:hover {
-		background-color: var(--mobile-active-nav) !important;
 		font-weight: 600;
 		background-color: var(--secondary-color) !important;
 	}
@@ -129,19 +126,12 @@
 	}
 
 	.menu__box {
-		background-color: var(--primary-color);
-		background-color: var(--secondary-color);
 		background-color: var(--tertiary-color) !important;
-
-
 		width: 100%;
-		/* z-index: 100 !important; */
 	}
 
 	.menu__item,
 	.active {
-		color: var(--overlay-text-color) !important;
-		color: var(--nav-links-color) !important;
 		color: var(--primary-color) !important;
 		font-weight: 400 !important;
 		padding: 16px 0;
@@ -163,24 +153,14 @@
 		margin-right: 4%;
 	}
 
-	/* .menu__item,
-	.active {
-		padding: 0;
-	} */
-
 	.brand {
 		margin-left: 4%;
 	}
 
 	.custom-nav-item .active {
 		font-size: 0.8rem;
-		border-bottom: 2px solid var(--secondary-color);
-		border-bottom: 2px solid var(--accent-color);
-		border-bottom: 2px solid var(--dark-charcoal) !important;
 		border-bottom: 2px solid var(--accent-color-brighter) !important;
 		margin-top: 2px;
-		color: var(--accent-color);
-		color: var(--overlay-text-color);
 		color: var(--nav-links-color) !important;
 
 		font-weight: 600;
@@ -191,15 +171,10 @@
 		border-bottom: 2px solid var(--primary-color);
 		margin-top: 2px;
 		font-weight: 600;
-		color: var(--accent-color);
-		color: var(--overlay-text-color);
 		color: var(--nav-links-color);
 	}
 
 	.custom-nav-item .menu__item:hover {
-		border-bottom: 2px solid var(--secondary-color) !important;
-		border-bottom: 2px solid var(--secondary-color) !important;
-		border-bottom: 2px solid var(--dark-charcoal) !important;
 		border-bottom: 2px solid var(--accent-color-brighter) !important;
 		color: var(--nav-links-color) !important;
 	}

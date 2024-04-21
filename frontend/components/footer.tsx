@@ -20,7 +20,7 @@ import Image from 'next/image'
 import logo from '@/public/images/logo/busy-bees-addis-logo.png'
 import { raleway } from '@/styles/fonts'
 import AnimateContainer from '@/animations/container-animation'
-import { motion, useAnimation, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 import styles from '@/styles/footer.module.css'
 
 type AddressProps = {
@@ -125,7 +125,6 @@ export default function Footer({
 										? styles.active
 										: styles['menu__item']
 								}`}
-								// onClick={screenTest}
 							>
 								{link === 'program'
 									? 'our program'

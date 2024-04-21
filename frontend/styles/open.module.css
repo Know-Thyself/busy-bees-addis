@@ -9,25 +9,15 @@
 	font-weight: var(--headings-mobile-font-weight);
 	color: var(--tertiary-color);
 	text-align: center;
-	/* text-transform: uppercase; */
 }
 
 .line {
 	width: 80px;
 	height: 3px;
-	background-color: var(--secondary-color);
 	background-color: var(--accent-color-brighter);
 
 	margin: 0 auto;
 }
-
-/* .line {
-	width: 80px;
-	height: 3px;
-	background-color: var(--secondary-color);
-	margin: 0 auto;
-	margin-top: -0.5rem;
-} */
 
 .gallery {
 	width: 100%;
@@ -139,8 +129,6 @@
 	padding: 0 1rem;
 	padding-bottom: 1rem;
 	background-color: var(--light-green);
-	background-color: var(--sage-green);
-	background-color: var(--light-yellow);
 }
 
 .registration ol li {

@@ -21,11 +21,8 @@
 .line {
 	width: 80px;
 	height: 3px;
-	background-color: var(--secondary-color);
-	background-color: var(--dark-charcoal);
 	background-color: var(--accent-color-brighter);
 	margin: 0 auto;
-
 }
 
 @media only screen and (min-width: 768px) {

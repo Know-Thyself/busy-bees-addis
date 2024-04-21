@@ -4,16 +4,8 @@
 
 .footer {
 	margin-top: 3rem;
-	color: var(--tertiary-color);
-	color: var(--accent-color);
-	color: var(--tertiary-color);
-	color: var(--dark-accent-color);
 	color: var(--overlay-text-color);
-	background-color: var(--tertiary-color);
-	background-color: var(--primary-color);
-	background-color: #c1436d;
 	background-color: var(--overlay-text-color);
-
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
 	grid-auto-rows: 1fr;
@@ -36,7 +28,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* background-color: var(--secondary-color); */
 }
 
 .hiBee,
@@ -70,21 +61,12 @@
 .active,
 .facebook,
 .instagram {
-	color: #fab162;
-	color: #c1436d;
 	color: var(--primary-color);
 
 }
-/* .facebook,
-.instagram {
-	color: lightblue;
-	color: #c1436d;
-
-} */
 
 .address,
 .phone {
-	color: #2568fb;
 	color: var(--primary-color);
 }
 
@@ -93,24 +75,10 @@
 .facebook,
 .instagram {
 	font-size: 2rem;
-	/* color: var(--primary-color); */
 }
 
 .navigation {
 	padding: 0.5rem 0;
-	background-color: var(--accent-color-brighter);
-	background-color: #E1341E;
-	background-color: #0E9B91;
-	background-color: #9B4A0E;
-	background-color: #9B0E5F;
-	background-color: #0b4141;
-	background-color: var(--tertiary-color);
-	background-color: #c1436d;
-	background-color: #191919;
-	background-color: #211221;
-	background-color: #0f0c24;
-	background-color: #122112;
-	
 }
 
 .navigation h4 {
@@ -128,26 +96,11 @@
 	justify-content: space-around;
 	gap: 1rem;
 	padding: 1rem 7.5%;
-	background-color: var(--accent-color-brighter);
-	background-color: #E1341E;
-	background-color: #0E9B91;
-	background-color: #9B4A0E;
-	background-color: #9B0E5F;
-	background-color: #0b4141;
-	background-color: #7d3780;
-	background-color: var(--tertiary-color);
-	background-color: #191919;
-	background-color: #211221;
-	background-color: #0f0c24;
-	background-color: #122112;
-
 }
 
 .navigation,
 .icons-and-copyright {
 	background-color: var(--dark-charcoal);
-	background-color: #353839;
-
 }
 
 .icons {
@@ -157,9 +110,10 @@
 	gap: 1rem;
 }
 
-/* .admin {
+.admin {
 	color: var(--primary-color);
-} */
+	color: var(--light-yellow);
+}
 
 .deploy {
 	font-size: 2rem;

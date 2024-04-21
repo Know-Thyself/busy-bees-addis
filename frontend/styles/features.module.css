@@ -23,8 +23,6 @@
 .line {
 	width: 80px;
 	height: 3px;
-	background-color: #de5935;
-	background-color: var(--secondary-color);
 	background-color: var(--accent-color-brighter);
 	margin: 0 auto;
 }
@@ -34,9 +32,7 @@
 }
 
 .animate .comments {
-	background-color: var(--sage-green);
 	background-color: var(--light-green);
-
 }
 
 .animate .bullhorn {
@@ -44,22 +40,14 @@
 }
 
 .animate .users {
-	background-color: #d5ea7e;
-	background-color: #C87850;
-	background-color: #de5935;
-	background-color: #FFB4B4;
-	background-color: #F6A9A9;
 	background-color: var(--accent-color);
-
 }
 
 .icon-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--primary-color);
-	background-color: #1d1d2c;
-	background-color: var(--dark-accent-color);
+	background-color: var(--rich-gray);
 	border-radius: 50%;
 	height: 160px;
 	width: 160px;
@@ -75,14 +63,13 @@
 	font-size: 1.5rem;
 	text-align: center;
 	font-weight: 700;
-	color: var(--dark-accent-color) !important;
+	color: var(--rich-gray) !important;
 }
 
 .description {
 	font-size: 1.2rem;
 	font-weight: 500;
-	color: var(--tertiary-color);
-	color: var(--dark-accent-color);
+	color: var(--rich-gray);
 }
 
 @media only screen and (min-width: 768px) {

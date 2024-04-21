@@ -25,7 +25,6 @@ export default function Team({ team }: { team: TeamProps[] }) {
 		<section
 			id='team'
 			className={styles.team}
-			// className={styles['team-section']}
 		>
 			<AnimateContainer y={20} delay={0.4} duration={1}>
 				<div className={styles['heading-wrapper']}>
@@ -77,12 +76,12 @@ export default function Team({ team }: { team: TeamProps[] }) {
 								</div>
 								<Card.Body className={`${styles['card-body']}`}>
 									<Card.Title
-										className={`fw-semibold ${styles.title} ${raleway.className} `}
+										className={`fw-semibold text-black ${styles.title} ${raleway.className} `}
 									>
 										{member.name}
 									</Card.Title>
 									<Card.Title
-										className={`text-muted fw-semibold ${styles.position} ${playfairDisplayItalic.className} `}
+										className={`text-dark fw-semibold ${styles.position} ${playfairDisplayItalic.className} `}
 									>
 										{member.position}
 									</Card.Title>

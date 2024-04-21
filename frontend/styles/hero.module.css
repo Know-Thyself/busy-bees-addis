@@ -1,27 +1,8 @@
 .hero {
 	width: 100%;
-	/* display: flex; */
-	/* justify-content: center;
-	align-items: center; */
 	background-color: var(--secondary-color);
 	background-color: var(--hero-background);
 	scroll-margin: 84px;
-	/* background-image: url('/images/wallpaper.jpg');
-	background-image: url('/images/colorful-honeycomb.jpg');
-	background-image: url('/images/honey-comb-pattern.jpg');
-	background-image: url('/images/blue-honey-comb.jpg');
-	background-image: url('/images/bees.jpg');
-	background-image: url('/images/alphabet.png');
-	background-image: url('/images/colors.jpg');
-	background-image: url('/images/green-honeycomb.jpg'); */
-	/* background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover; */
-	/* height: 540px; */
 }
 
 .hero-image-container {
@@ -32,7 +13,6 @@
 .hero-img {
 	width: 100%;
 	height: auto;
-	/* display: none; */
 }
 
 .overlay {
@@ -41,10 +21,6 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: var(--primary-color);
-
-	
-	
-	/* padding: 16px 20px; */
 	text-align: center;
 	width: 90%;
 	margin: auto;
@@ -54,22 +30,15 @@
 	align-items: center;
 	flex-direction: column;
 	height: min-content;
-	/* background-color: aqua; */
-	/* border-radius: 100px; */
-	/* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
 	
 }
 
 .brand {
-	/* font-family: var(--font-playfair-display-italic); */
 	font-size: 2rem;
 	font-weight: 900;
-	/* text-transform: uppercase; */
-
 }
 
 .motto {
-	/* font-family: var(--secondary-font); */
 	font-weight: 400;
 	color: var(--overlay-text-color);
 }
