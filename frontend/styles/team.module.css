@@ -40,27 +40,29 @@
 }
 
 .image-container {
-	background-color: var(--secondary-color);
-	background-color: var(--accent-color);
-	background-color: var(--dark-accent-color);
 	background-color: #644e34;
 	background-color: #4a6434;
 	background-color: var(--tertiary-color);
 	background-color: #346264;
 	background-color: #7ca791;
-
+	
 	background-color: #66b2b2;
 	background-color: #4D9898;
 	background-color: var(--light-green);
 	background-color: var(--dark-charcoal);
-	background-color: #36454F;
-
-
+	background-color: var(--charcoal);
+	background-color: #A783C1;
+	background-color: var(--secondary-color);
+	background-color: var(--dark-charcoal);
 	width: 100%;
 }
 
 .card-body {
 	background-color: #cae7df;
+	background-color: var(--sage-green);
+	background-color: var(--light-yellow);
+	background-color: var(--sand);
+
 }
 
 .read {

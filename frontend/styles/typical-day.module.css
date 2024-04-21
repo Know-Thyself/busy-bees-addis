@@ -21,14 +21,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #84edf5;
-	background-color: #B8E8FC;
-	background-color: #BFD8B8;
-	background-color: #98DDCA;
-	background-color: #66b2b2;
 	background-color: var(--light-green);
-
-
 }
 
 .reading-bee-image {
@@ -37,9 +30,7 @@
 
 .activities {
 	color: var(--dark-accent-color);
-	background-color: var(--accent-color-light);
-	background-color: var(--accent-color);
-
+	background-color: var(--light-yellow);
 	padding: 1rem;
 }
 
@@ -51,17 +42,7 @@
 
 .fa-square-check {
 	font-size: 1.5rem;
-	color: #84edf5;
-	color: #B8E8FC;
-	color: var(--dark-charcoal);
-	color: var(--dark-accent-color);
-	color: var(--rich-gray);
-	color: #36454F;
-	color: var(--primary-color);
 	color: var(--secondary-color);
-
-
-
 }
 
 @media only screen and (min-width: 768px) {

@@ -10,6 +10,7 @@
 	--tertiary-color: #825f1d;
 	--tertiary-color: #653615;
 	--tertiary-color: #643634;
+	--charcoal: #36454F;
 	--dark-charcoal: #333333;
 	--rich-gray: #1f2022;
 	--complementary-color: orange;
@@ -39,16 +40,22 @@
 	--light-green: #50C878;
 	--sage-green: #50C878;
 	--sage-green: #9DC183;
-	--light-yellow: #FFF38C;
 	--light-yellow: #FFF47D;
 	--light-yellow: #FCE38A;
 	--light-yellow: #f2d349;
 	--light-yellow: #fdee30;
 	--light-yellow: #f7cd46;
-
+	
 	--light-yellow: #EEBB4D;
 	--light-yellow: #FFD36B;
 	--light-yellow: #FFDA77;
+	/* Royal yellow */
+	--light-yellow: #FADA5E;
+	/* Greenish yellow */
+	--light-yellow: #EEEA62;
+	--sand: #E2CA76;
+
+
 
 	--accent-color: #f06769;
 	--accent-color: #f06767;
