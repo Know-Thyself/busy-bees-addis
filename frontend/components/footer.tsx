@@ -22,7 +22,6 @@ import { raleway } from '@/styles/fonts'
 import AnimateContainer from '@/animations/container-animation'
 import { motion, useAnimation, useInView } from 'framer-motion'
 import styles from '@/styles/footer.module.css'
-import { triggerDeployHook } from '@/app/page'
 
 type AddressProps = {
 	id: number
@@ -51,6 +50,14 @@ export default function Footer({
 		setActiveNav(`#${href}`)
 	}
 	const router = useRouter()
+
+	async function triggerDeployHook() {
+		const res = await fetch(`${process.env.DEPLOY_HOOK_URL}`)
+		if (!res.ok) {
+			throw new Error('Failed to fetch data')
+		}
+		return
+	}
 
 	return (
 		<AnimateContainer

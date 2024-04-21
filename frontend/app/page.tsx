@@ -89,13 +89,6 @@ async function getRegister() {
 	return res.json()
 }
 
-export async function triggerDeployHook() {
-	const res = await fetch(`${process.env.DEPLOY_HOOK_URL}`)
-	if (!res.ok) {
-		throw new Error('Failed to fetch data')
-	}
-	return
-}
 
 export default async function HomePage() {
 	const hero = await getHero()
