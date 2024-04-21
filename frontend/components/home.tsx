@@ -134,7 +134,7 @@ export default function Home({
 			if (window.innerWidth <= 868) {
 				return 0.01
 			} else {
-				return 0.19
+				return 0.14
 			}
 		}
 
