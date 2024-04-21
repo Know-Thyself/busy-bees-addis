@@ -20,7 +20,9 @@ import Image from 'next/image'
 import logo from '@/public/images/logo/busy-bees-addis-logo.png'
 import { raleway } from '@/styles/fonts'
 import AnimateContainer from '@/animations/container-animation'
+import { motion, useAnimation, useInView } from 'framer-motion'
 import styles from '@/styles/footer.module.css'
+import { triggerDeployHook } from '@/app/page'
 
 type AddressProps = {
 	id: number
@@ -49,18 +51,6 @@ export default function Footer({
 		setActiveNav(`#${href}`)
 	}
 	const router = useRouter()
-
-	async function triggerDeployHook() {
-		const res = await fetch(`${process.env.NEXT_PUBLIC_DEPLOY_HOOK_URL}`)
-		console.log(res)
-		if (!res.ok) {
-			throw new Error('Failed to fetch data')
-		}
-
-		router.refresh()
-
-		return res.json()
-	}
 
 	return (
 		<AnimateContainer
@@ -188,16 +178,22 @@ export default function Footer({
 							{' '}
 							Admin Login
 						</a>
-						<a
+						<motion.a
 							href='/'
 							className={styles.deploy}
 							onClick={e => {
 								e.preventDefault()
 								triggerDeployHook()
+								router.refresh()
 							}}
+							whileHover={{
+								scale: 1.2,
+								transition: { duration: 0.25 },
+							}}
+							whileTap={{ scale: 1.4 }}
 						>
 							|
-						</a>
+						</motion.a>
 					</div>
 					<div className={styles.copyright}>
 						<p>
