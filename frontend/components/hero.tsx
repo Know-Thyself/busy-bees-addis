@@ -1,10 +1,9 @@
 'use client'
 
 import Image from 'next/image'
-import AnimateContainer from '@/animations/container-animation'
 import AnimateCharacters from '@/animations/character-animation'
 
-import { montserrat, raleway, playfairDisplayItalic } from '@/styles/fonts'
+import { raleway } from '@/styles/fonts'
 import styles from '@/styles/hero.module.css'
 
 type HeroProps = {
@@ -46,9 +45,7 @@ export default function Hero({ hero }: { hero: HeroProps }) {
 						el='h2'
 						delay={1.4}
 						duration={0.2}
-						// y={60}
 						x={-40}
-						// rotateX={360}
 						className={`${styles.motto} ${raleway.className}`}
 					/>
 				</div>

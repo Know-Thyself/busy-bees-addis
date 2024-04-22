@@ -1,8 +1,7 @@
 'use client'
 
-import { CldImage } from 'next-cloudinary'
 import Image from 'next/image'
-import { montserrat, playfairDisplayItalic, raleway } from '@/styles/fonts'
+import { playfairDisplayItalic, raleway } from '@/styles/fonts'
 import AnimateCharacters from '@/animations/character-animation'
 import styles from '@/styles/open.module.css'
 

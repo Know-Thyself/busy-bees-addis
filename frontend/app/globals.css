@@ -1,54 +1,22 @@
 :root {
-	--max-width: 1100px;
-	--border-radius: 12px;
-	--font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-		'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-		'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 	--primary-color: #fdd935;
-	--secondary-color: #4bac3f;
-	--tertiary-color: rgba(101, 55, 20, 1);
-	--tertiary-color: #825f1d;
+	--secondary-color: #0e9b4a;
 	--tertiary-color: #643634;
 	--charcoal: #36454F;
 	--dark-charcoal: #333333;
 	--rich-gray: #1f2022;
-	--complementary-color: orange;
-	--light-green: #ACEE62;
-	--light-green: #B8F550;
-	--sage-green: #50C878;
-	--sage-green: #9DC183;
-	/* Royal yellow */
-	--light-yellow: #FADA5E;
-	/* Greenish yellow */
-	--light-yellow: #EEEA62;
+	/* Emerald green */
+	--light-green: #50C878;
 	--light-yellow: #F5E050;
-	--honey: #FFC30B;
 	--sand: #E2CA76;
-
-	--accent-color: #FF9292;
-	--accent-color: #EEA462;
-	--accent-color: #F58D50;
-	--accent-color-light: #f58c84;
+	--accent-color: #F55065;
+	--accent-color: #F16667;
 	--accent-color-brighter: #df3062;
 	--accent-color-brighter: #F2003C;
-	--dark-accent-color: #1d1d2c;
-	--body-background: #ffffff;
-	--primary-text-color: black;
-	--secondary-color: #0e9b4a;
-	--secondary-complementary: #f2c1d1;
 	--nav-links-color: #825f1d;
 	--nav-links-color: #75561a;
 	--nav-links-color: rgba(101, 55, 20, 1);
-	--mobile-active-nav: #000ed1;
 	--overlay-text-color: #ffffff;
-	--overlay-text-bg: rgba(225, 225, 225, 0.6);
-	--overlay-text-bg: rgba(75, 172, 63, 0.6);
-	--overlay-text-bg: rgba(67, 31, 31, 0.5);
-	--overlay-text-shadow: #df3062;
-	--hero-background: #1181b2;
-	--hero-background: #8db48e;
-	--hero-background: #e0d916;
-	--hero-background: #4bac3f;
 	--headings-mobile-font-size: 1.5rem;
 	--headings-desktop-font-size: 3rem;
 	--headings-desktop-font-size: 60px;
@@ -79,16 +47,11 @@ html {
 }
 
 body {
-	background: var(--body-background);
-	color: var(--primary-text-color);
+	color: var(--rich-gray);
 	font-weight: 500;
 	/* overflow-y:hidden; */
 }
 
 a {
 	text-decoration: none;
-}
-
-.mapboxgl-popup-content {
-	padding: 0 !important;
 }

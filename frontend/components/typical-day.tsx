@@ -1,18 +1,9 @@
 'use client'
 
-import Image from 'next/image'
 import { CldImage } from 'next-cloudinary'
-import {
-	montserrat,
-	raleway,
-} from '@/styles/fonts'
+import { raleway } from '@/styles/fonts'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-	faPhone,
-	faMapLocationDot,
-	faCopyright,
-	faSquareCheck,
-} from '@fortawesome/free-solid-svg-icons'
+import { faSquareCheck } from '@fortawesome/free-solid-svg-icons'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
@@ -35,7 +26,6 @@ export default function TypicalDay({ day }: { day: TypicalDayProps[] }) {
 				x={100}
 				el='h1'
 				rotateX={180}
-				// rotateY={180}
 				delay={0.5}
 				duration={1}
 				className={`${styles['activities-title']}`}

@@ -20,6 +20,7 @@
 	justify-content: center;
 	align-items: center;
 	background-color: var(--light-green);
+	
 }
 
 .reading-bee-image {
@@ -27,7 +28,7 @@
 }
 
 .activities {
-	color: var(--dark-accent-color);
+	color: var(--rich-gray);
 	background-color: var(--light-yellow);
 	padding: 1rem;
 }

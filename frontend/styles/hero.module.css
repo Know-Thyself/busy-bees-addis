@@ -1,7 +1,6 @@
 .hero {
 	width: 100%;
 	background-color: var(--secondary-color);
-	background-color: var(--hero-background);
 	scroll-margin: 84px;
 }
 

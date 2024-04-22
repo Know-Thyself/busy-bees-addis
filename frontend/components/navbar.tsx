@@ -46,17 +46,6 @@ export default function Navbar({
 
 	const handleClick = (id: string) => {
 		const element = document.getElementById(id) as HTMLElement
-		// const elRect = element.getBoundingClientRect()
-
-		// const scrollDistance = elRect.top + window.scrollY
-
-		// const offset =
-		// 	Number(element.getAttribute('data-scroll-to-view-offset')) || -84
-
-		// window.scrollTo({
-		// 	top: scrollDistance + offset,
-		// 	behavior: 'smooth',
-		// })
 		element.scrollIntoView({ behavior: 'smooth' })
 	}
 

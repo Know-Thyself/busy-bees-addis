@@ -1,14 +1,9 @@
 'use client'
 
 import Image from 'next/image'
-import {
-	montserrat,
-	raleway,
-	playfairDisplayItalic,
-} from '@/styles/fonts'
+import { playfairDisplayItalic } from '@/styles/fonts'
 import OpenHouse from './open-house'
 import AnimateContainer from '@/animations/container-animation'
-import AnimateCharacters from '@/animations/character-animation'
 import styles from '@/styles/gallery.module.css'
 
 type CompoundImagesProps = {
